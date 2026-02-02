@@ -1,0 +1,40 @@
+{
+  "common": {
+    "title": "Nintendo Museum Ticket Checker",
+    "language": "Language",
+    "timezone": "Timezone",
+    "about": "About",
+    "trademark": "Nintendo is a trademark of Nintendo.",
+    "footerDisclaimer": "This is a fan-made tool and is not affiliated with Nintendo."
+  },
+  "home": {
+    "nextRelease": "Next Ticket Release",
+    "forMonth": "For tickets in {{month}}",
+    "calculator": "Ticket Calculator",
+    "visitDate": "Planned Visit Date",
+    "calculate": "Calculate",
+    "result": "Result",
+    "releaseDateIs": "Ticket release date is:",
+    "canBuy": "You can buy tickets for {{month}} on:",
+    "pleaseSelectDate": "Please select a date",
+    "addToCalendar": "Add to Calendar",
+    "downloadIcs": "Download ICS",
+    "googleCalendar": "Google Calendar",
+    "calendarEventTitle": "Buy Nintendo Museum Tickets (for {{month}})",
+    "calendarEventDesc": "Ticket sales start for {{month}} visit. Be ready to queue!",
+    "days": "d",
+    "hours": "h",
+    "minutes": "m",
+    "seconds": "s",
+    "timeLeft": "In {{time}}"
+  },
+  "about": {
+    "title": "About",
+    "rules": "Ticket Rules",
+    "rulesContent": "Tickets are released on the 2nd Wednesday of every month at 14:00 JST (Japan Standard Time, UTC+9). Tickets are sold for visits 2 months later (e.g., in February, tickets for April are sold).",
+    "guide": "How to use",
+    "guideContent": "Check the 'Next Ticket Release' card on the home page to see the upcoming opportunity. Use the calculator below to plan ahead for a specific trip.",
+    "disclaimerTitle": "Disclaimer",
+    "disclaimerContent": "This tool is fan-made and not affiliated with Nintendo. Ticket release times are based on historical patterns. We are not responsible for any errors or missed tickets."
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "common": {
+    "title": "任天堂博物館購票時間查詢",
+    "language": "語言",
+    "timezone": "時區",
+    "about": "關於",
+    "trademark": "Nintendo 是任天堂的商標。",
+    "footerDisclaimer": "本工具為粉絲製作，與任天堂無關。"
+  },
+  "home": {
+    "nextRelease": "下次放票時間",
+    "forMonth": "可購買 {{month}} 的門票",
+    "calculator": "購票時間計算機",
+    "visitDate": "計劃參觀日期",
+    "calculate": "計算",
+    "result": "查詢結果",
+    "releaseDateIs": "購票時間為：",
+    "canBuy": "您可以在以下時間購買 {{month}} 的門票：",
+    "pleaseSelectDate": "請選擇日期",
+    "addToCalendar": "加入行事曆",
+    "downloadIcs": "下載 ICS 檔案",
+    "googleCalendar": "Google 行事曆",
+    "calendarEventTitle": "購買任天堂博物館門票（{{month}}入場）",
+    "calendarEventDesc": "{{month}}入場的門票開始發售。請準備好排隊搶票！",
+    "days": "天",
+    "hours": "時",
+    "minutes": "分",
+    "seconds": "秒",
+    "timeLeft": "還有 {{time}}"
+  },
+  "about": {
+    "title": "關於",
+    "rules": "購票規則",
+    "rulesContent": "門票於每月第二個星期三的日本標準時間 14:00 (JST, UTC+9) 發售。發售的是 2 個月後的門票（例如：2月發售4月的門票）。",
+    "guide": "使用說明",
+    "guideContent": "在主頁查看“下次放票時間”卡片了解最近的購票機會。使用下方的計算機規劃您的具體行程。"
+  }
+}

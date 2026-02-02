@@ -1,0 +1,40 @@
+{
+  "common": {
+    "title": "Verificador de Entradas del Museo Nintendo",
+    "language": "Idioma",
+    "timezone": "Zona Horaria",
+    "about": "Acerca de",
+    "trademark": "Nintendo es una marca registrada de Nintendo.",
+    "footerDisclaimer": "Esta es una herramienta hecha por fans y no está afiliada a Nintendo."
+  },
+  "home": {
+    "nextRelease": "Próxima Venta de Entradas",
+    "forMonth": "Para entradas en {{month}}",
+    "calculator": "Calculadora de Entradas",
+    "visitDate": "Fecha de Visita Planeada",
+    "calculate": "Calcular",
+    "result": "Resultado",
+    "releaseDateIs": "La fecha de venta es:",
+    "canBuy": "Puedes comprar entradas para {{month}} el:",
+    "pleaseSelectDate": "Por favor selecciona una fecha",
+    "addToCalendar": "Añadir al Calendario",
+    "downloadIcs": "Descargar ICS",
+    "googleCalendar": "Google Calendar",
+    "calendarEventTitle": "Comprar Entradas Museo Nintendo (para {{month}})",
+    "calendarEventDesc": "Inicia venta de entradas para {{month}}. ¡Prepárate para la fila!",
+    "days": "d",
+    "hours": "h",
+    "minutes": "m",
+    "seconds": "s",
+    "timeLeft": "En {{time}}"
+  },
+  "about": {
+    "title": "Acerca de",
+    "rules": "Reglas de Entradas",
+    "rulesContent": "Las entradas se liberan el segundo miércoles de cada mes a las 14:00 JST (Hora Estándar de Japón, UTC+9). Se venden entradas para visitas 2 meses después (ej. en febrero se venden para abril).",
+    "guide": "Cómo usar",
+    "guideContent": "Revisa la tarjeta 'Próxima Venta de Entradas' en la página de inicio. Usa la calculadora abajo para planear un viaje específico.",
+    "disclaimerTitle": "Aviso Legal",
+    "disclaimerContent": "Esta herramienta está hecha por fans y no está afiliada a Nintendo. Los horarios de venta de entradas se basan en patrones históricos. No nos hacemos responsables de errores o entradas perdidas."
+  }
+}

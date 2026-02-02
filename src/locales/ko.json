@@ -1,0 +1,38 @@
+{
+  "common": {
+    "title": "닌텐도 박물관 티켓 구매 시간 확인",
+    "language": "언어",
+    "timezone": "시간대",
+    "about": "정보",
+    "trademark": "Nintendo는 닌텐도의 상표입니다.",
+    "footerDisclaimer": "이 도구는 팬이 제작했으며 Nintendo와 관련이 없습니다."
+  },
+  "home": {
+    "nextRelease": "다음 티켓 오픈",
+    "forMonth": "{{month}} 입장권",
+    "calculator": "티켓 오픈일 계산기",
+    "visitDate": "방문 예정일",
+    "calculate": "계산하기",
+    "result": "결과",
+    "releaseDateIs": "티켓 오픈 일시는:",
+    "canBuy": "{{month}} 티켓은 다음 일시에 구매 가능합니다:",
+    "pleaseSelectDate": "날짜를 선택해주세요",
+    "addToCalendar": "캘린더에 추가",
+    "downloadIcs": "ICS 파일 다운로드",
+    "googleCalendar": "Google 캘린더",
+    "calendarEventTitle": "닌텐도 박물관 티켓 구매 ({{month}} 입장)",
+    "calendarEventDesc": "{{month}} 입장권 판매 시작. 대기열에 참여할 준비를 하세요!",
+    "days": "일",
+    "hours": "시간",
+    "minutes": "분",
+    "seconds": "초",
+    "timeLeft": "{{time}} 후"
+  },
+  "about": {
+    "title": "정보",
+    "rules": "티켓 규칙",
+    "rulesContent": "티켓은 매월 두 번째 수요일 일본 표준시 14:00 (JST, UTC+9)에 발매됩니다. 2개월 후의 입장권이 발매 대상입니다 (예: 2월에 4월분 발매).",
+    "guide": "사용법",
+    "guideContent": "홈 화면의 '다음 티켓 오픈' 카드에서 가장 가까운 기회를 확인하세요. 아래 계산기를 사용하여 여행 계획을 세워보세요."
+  }
+}

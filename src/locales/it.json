@@ -1,0 +1,38 @@
+{
+  "common": {
+    "title": "Verifica Biglietti Nintendo Museum",
+    "language": "Lingua",
+    "timezone": "Fuso orario",
+    "about": "Info"
+  },
+  "home": {
+    "nextRelease": "Prossimo Rilascio Biglietti",
+    "forMonth": "Per biglietti di {{month}}",
+    "calculator": "Calcolatore Biglietti",
+    "visitDate": "Data Visita Prevista",
+    "calculate": "Calcola",
+    "result": "Risultato",
+    "releaseDateIs": "Data rilascio biglietti:",
+    "canBuy": "Puoi acquistare biglietti per {{month}} il:",
+    "pleaseSelectDate": "Seleziona una data",
+    "addToCalendar": "Aggiungi al Calendario",
+    "downloadIcs": "Scarica ICS",
+    "googleCalendar": "Google Calendar",
+    "calendarEventTitle": "Acquista Biglietti Nintendo Museum (per {{month}})",
+    "calendarEventDesc": "Inizia vendita biglietti per {{month}}. Preparati per la coda!",
+    "days": "g",
+    "hours": "o",
+    "minutes": "m",
+    "seconds": "s",
+    "timeLeft": "Tra {{time}}"
+  },
+  "about": {
+    "title": "Info",
+    "rules": "Regole Biglietti",
+    "rulesContent": "I biglietti vengono rilasciati il 2° mercoledì di ogni mese alle 14:00 JST (Japan Standard Time, UTC+9). Si vendono biglietti per visite 2 mesi dopo (es. a febbraio per aprile).",
+    "guide": "Come usare",
+    "guideContent": "Controlla la scheda 'Prossimo Rilascio Biglietti' nella home. Usa il calcolatore qui sotto per pianificare il tuo viaggio.",
+    "disclaimerTitle": "Disclaimer",
+    "disclaimerContent": "Questo strumento è creato dai fan e non è affiliato con Nintendo. Gli orari di rilascio dei biglietti si basano su dati storici. Non siamo responsabili per errori o biglietti persi."
+  }
+}

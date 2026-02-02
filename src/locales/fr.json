@@ -1,0 +1,40 @@
+{
+  "common": {
+    "title": "Vérificateur de Billets Nintendo Museum",
+    "language": "Langue",
+    "timezone": "Fuseau horaire",
+    "about": "À propos",
+    "trademark": "Nintendo est une marque déposée de Nintendo.",
+    "footerDisclaimer": "Cet outil est créé par des fans et n'est pas affilié à Nintendo."
+  },
+  "home": {
+    "nextRelease": "Prochaine Vente de Billets",
+    "forMonth": "Pour les billets de {{month}}",
+    "calculator": "Calculateur de Billets",
+    "visitDate": "Date de Visite Prévue",
+    "calculate": "Calculer",
+    "result": "Résultat",
+    "releaseDateIs": "Date de mise en vente :",
+    "canBuy": "Vous pouvez acheter des billets pour {{month}} le :",
+    "pleaseSelectDate": "Veuillez sélectionner une date",
+    "addToCalendar": "Ajouter au Calendrier",
+    "downloadIcs": "Télécharger ICS",
+    "googleCalendar": "Google Agenda",
+    "calendarEventTitle": "Acheter Billets Musée Nintendo (pour {{month}})",
+    "calendarEventDesc": "Vente des billets pour {{month}}. Préparez-vous à faire la queue !",
+    "days": "j",
+    "hours": "h",
+    "minutes": "m",
+    "seconds": "s",
+    "timeLeft": "Dans {{time}}"
+  },
+  "about": {
+    "title": "À propos",
+    "rules": "Règles des Billets",
+    "rulesContent": "Les billets sont mis en vente le 2ème mercredi de chaque mois à 14:00 JST (Heure Standard du Japon, UTC+9). Les ventes concernent les visites 2 mois plus tard (ex: en février pour avril).",
+    "guide": "Comment utiliser",
+    "guideContent": "Consultez la carte 'Prochaine Vente de Billets' sur la page d'accueil. Utilisez le calculateur ci-dessous pour planifier votre voyage.",
+    "disclaimerTitle": "Avis de non-responsabilité",
+    "disclaimerContent": "Cet outil est créé par des fans et n'est pas affilié à Nintendo. Les heures de mise en vente des billets sont basées sur des modèles historiques. Nous ne sommes pas responsables des erreurs ou des billets manqués."
+  }
+}

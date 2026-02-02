@@ -1,0 +1,38 @@
+{
+  "common": {
+    "title": "任天堂博物馆购票时间查询",
+    "language": "语言",
+    "timezone": "时区",
+    "about": "关于"
+  },
+  "home": {
+    "nextRelease": "下次放票时间",
+    "forMonth": "可购买 {{month}} 的门票",
+    "calculator": "购票时间计算器",
+    "visitDate": "计划参观日期",
+    "calculate": "计算",
+    "result": "查询结果",
+    "releaseDateIs": "购票时间为：",
+    "canBuy": "您可以在以下时间购买 {{month}} 的门票：",
+    "pleaseSelectDate": "请选择日期",
+    "addToCalendar": "添加到日历",
+    "downloadIcs": "下载 ICS 文件",
+    "googleCalendar": "Google 日历",
+    "calendarEventTitle": "购买任天堂博物馆门票（{{month}}入场）",
+    "calendarEventDesc": "{{month}}入场的门票开始发售。请准备好排队抢票！",
+    "days": "天",
+    "hours": "时",
+    "minutes": "分",
+    "seconds": "秒",
+    "timeLeft": "还有 {{time}}"
+  },
+  "about": {
+    "title": "关于",
+    "rules": "购票规则",
+    "rulesContent": "门票于每月第二个星期三的日本标准时间 14:00 (JST, UTC+9) 发售。发售的是 2 个月后的门票（例如：2月发售4月的门票）。",
+    "guide": "使用说明",
+    "guideContent": "在主页查看“下次放票时间”卡片了解最近的购票机会。使用下方的计算器规划您的具体行程。",
+    "disclaimerTitle": "免责声明",
+    "disclaimerContent": "本工具为粉丝制作，与任天堂无关。放票时间基于历史经验推算，若有偏差或导致未能购票，本工具概不负责。"
+  }
+}

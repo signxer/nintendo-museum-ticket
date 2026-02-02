@@ -1,0 +1,40 @@
+{
+  "common": {
+    "title": "Nintendo Museum Ticket Checker",
+    "language": "Taal",
+    "timezone": "Tijdzone",
+    "about": "Over",
+    "trademark": "Nintendo is een handelsmerk van Nintendo.",
+    "footerDisclaimer": "Dit is een door fans gemaakte tool en is niet gelieerd aan Nintendo."
+  },
+  "home": {
+    "nextRelease": "Volgende Ticketverkoop",
+    "forMonth": "Voor tickets in {{month}}",
+    "calculator": "Ticketcalculator",
+    "visitDate": "Geplande Bezoekdatum",
+    "calculate": "Berekenen",
+    "result": "Resultaat",
+    "releaseDateIs": "Verkoopdatum is:",
+    "canBuy": "Je kunt tickets voor {{month}} kopen op:",
+    "pleaseSelectDate": "Selecteer een datum",
+    "addToCalendar": "Toevoegen aan Agenda",
+    "downloadIcs": "ICS downloaden",
+    "googleCalendar": "Google Agenda",
+    "calendarEventTitle": "Koop Nintendo Museum Tickets (voor {{month}})",
+    "calendarEventDesc": "Ticketverkoop voor {{month}} start. Wees klaar voor de wachtrij!",
+    "days": "d",
+    "hours": "u",
+    "minutes": "m",
+    "seconds": "s",
+    "timeLeft": "Over {{time}}"
+  },
+  "about": {
+    "title": "Over",
+    "rules": "Ticketregels",
+    "rulesContent": "Tickets worden vrijgegeven op de 2e woensdag van elke maand om 14:00 JST (Japanse Standaardtijd, UTC+9). Tickets worden verkocht voor bezoeken 2 maanden later (bijv. in februari voor april).",
+    "guide": "Hoe te gebruiken",
+    "guideContent": "Bekijk de 'Volgende Ticketverkoop' kaart op de startpagina. Gebruik de calculator hieronder om je reis te plannen.",
+    "disclaimerTitle": "Disclaimer",
+    "disclaimerContent": "Deze tool is gemaakt door fans en is niet gelieerd aan Nintendo. De vrijgaves van tickets zijn gebaseerd op historische gegevens. Wij zijn niet verantwoordelijk voor fouten of gemiste tickets."
+  }
+}
