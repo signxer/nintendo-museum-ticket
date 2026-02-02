@@ -19,7 +19,7 @@ function Layout({ children }: { children: React.ReactNode }) {
           <div className="flex items-center gap-4">
             {/* Logo / Title */}
             <div className="bg-white p-2 border-2 border-nintendo-dark shadow-pixel-sm transform rotate-[-2deg]">
-              <span className="font-pixel text-nintendo-red text-2xl font-bold">M</span>
+              <Landmark className="text-nintendo-red w-6 h-6 md:w-8 md:h-8" />
             </div>
             <h1 className="text-white text-sm md:text-lg font-bold font-pixel tracking-wider drop-shadow-md">
               {t('common.title')}
