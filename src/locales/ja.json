@@ -27,7 +27,10 @@
     "hours": "時間",
     "minutes": "分",
     "seconds": "秒",
-    "timeLeft": "あと {{time}}"
+    "timeLeft": "あと {{time}}",
+    "missedReleaseTitle": "発売日を逃しましたか？",
+    "missedReleaseDesc": "ご安心ください！キャンセルされたチケットは毎時0分（9:00、10:00など）に再販されることが多いです。公式サイトのカレンダーをこまめにチェックしてみてください！",
+    "officialCalendar": "公式サイトのカレンダー"
   },
   "about": {
     "title": "について",

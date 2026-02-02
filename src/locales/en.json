@@ -28,7 +28,10 @@
     "hours": "h",
     "minutes": "m",
     "seconds": "s",
-    "timeLeft": "In {{time}}"
+    "timeLeft": "In {{time}}",
+    "missedReleaseTitle": "Missed the release date?",
+    "missedReleaseDesc": "Don't worry! Canceled tickets are often released at the top of every hour (e.g., 9:00, 10:00). Check the official calendar frequently for last-minute availability!",
+    "officialCalendar": "Official Calendar"
   },
   "about": {
     "title": "About",

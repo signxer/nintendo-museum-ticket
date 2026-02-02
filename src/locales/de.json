@@ -27,7 +27,10 @@
     "hours": "Std",
     "minutes": "Min",
     "seconds": "Sek",
-    "timeLeft": "In {{time}}"
+    "timeLeft": "In {{time}}",
+    "missedReleaseTitle": "Verkaufsstart verpasst?",
+    "missedReleaseDesc": "Keine Sorge! Stornierte Tickets werden oft zu jeder vollen Stunde (z.B. 9:00, 10:00) wieder freigegeben. Prüfen Sie die offizielle Ticket-Seite des Nintendo Museums regelmäßig!",
+    "officialCalendar": "Offizieller Kalender"
   },
   "about": {
     "title": "Über",

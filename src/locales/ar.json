@@ -28,7 +28,10 @@
     "hours": "ساعة",
     "minutes": "دقيقة",
     "seconds": "ثانية",
-    "timeLeft": "خلال {{time}}"
+    "timeLeft": "خلال {{time}}",
+    "missedReleaseTitle": "هل فاتك موعد الإصدار؟",
+    "missedReleaseDesc": "لا تقلق! غالبًا ما يتم طرح التذاكر الملغاة في بداية كل ساعة (مثل 9:00، 10:00). تحقق من التقويم الرسمي بشكل متكرر!",
+    "officialCalendar": "التقويم الرسمي"
   },
   "about": {
     "title": "حول",

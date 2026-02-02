@@ -28,7 +28,10 @@
     "hours": "t",
     "minutes": "m",
     "seconds": "s",
-    "timeLeft": "Om {{time}}"
+    "timeLeft": "Om {{time}}",
+    "missedReleaseTitle": "Missade du biljettsläppet?",
+    "missedReleaseDesc": "Oroa dig inte! Avbokade biljetter släpps ofta vid varje heltimme (t.ex. 9:00, 10:00). Kolla Nintendo Museums officiella biljettsida ofta!",
+    "officialCalendar": "Officiell Kalender"
   },
   "about": {
     "title": "Om",

@@ -28,7 +28,10 @@
     "hours": "시간",
     "minutes": "분",
     "seconds": "초",
-    "timeLeft": "{{time}} 후"
+    "timeLeft": "{{time}} 후",
+    "missedReleaseTitle": "발매일을 놓치셨나요?",
+    "missedReleaseDesc": "걱정하지 마세요! 취소된 티켓은 매 정각(예: 9:00, 10:00)에 다시 풀리는 경우가 많습니다. 공식 캘린더를 자주 확인하여 취소표를 노려보세요!",
+    "officialCalendar": "공식 캘린더"
   },
   "about": {
     "title": "정보",

@@ -55,6 +55,8 @@ export function TicketCalculator() {
 
   const calendarEvent = getCalendarEvent();
 
+  const isPast = result && result < new Date();
+
   return (
     <PixelCard title={t('home.calculator')} className="w-full">
       <div className="flex flex-col gap-4">
@@ -83,7 +85,7 @@ export function TicketCalculator() {
               {formatDate(result)}
             </p>
             
-            {calendarEvent && (
+            {calendarEvent && !isPast && (
               <div className="flex flex-wrap gap-2">
                 <a 
                   href={getGoogleCalendarUrl(calendarEvent)} 
@@ -105,6 +107,26 @@ export function TicketCalculator() {
                   <Download className="w-4 h-4" />
                   {t('home.downloadIcs')}
                 </PixelButton>
+              </div>
+            )}
+
+            {isPast && (
+              <div className="bg-white p-3 border-2 border-nintendo-grey text-sm">
+                <p className="font-bold text-nintendo-red mb-1">
+                  {t('home.missedReleaseTitle')}
+                </p>
+                <p className="mb-3 text-gray-600">
+                  {t('home.missedReleaseDesc')}
+                </p>
+                <a 
+                  href="https://museum-tickets.nintendo.com/en/calendar" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  <PixelButton size="sm" className="w-full justify-center">
+                    {t('home.officialCalendar')}
+                  </PixelButton>
+                </a>
               </div>
             )}
           </div>
