@@ -4,7 +4,7 @@ import { PixelCard } from './PixelCard';
 import { PixelButton } from './PixelButton';
 import { getTicketReleaseDateForVisit } from '../utils/ticketLogic';
 import { useTimezone } from '../hooks/useTimezone';
-import { Calendar, Calendar as CalendarIcon, Download } from 'lucide-react';
+import { Calendar, Calendar as CalendarIcon, Download, ExternalLink } from 'lucide-react';
 import { getGoogleCalendarUrl, downloadIcsFile } from '../utils/calendarUtils';
 
 export function TicketCalculator() {
@@ -123,7 +123,8 @@ export function TicketCalculator() {
                   target="_blank" 
                   rel="noopener noreferrer"
                 >
-                  <PixelButton size="sm" className="w-full justify-center">
+                  <PixelButton size="sm" className="w-full justify-center flex items-center gap-2">
+                    <ExternalLink className="w-4 h-4" />
                     {t('home.officialCalendar')}
                   </PixelButton>
                 </a>

@@ -8,6 +8,7 @@
     "language": "Sprache",
     "timezone": "Zeitzone",
     "about": "Über",
+    "trademark": "Nintendo ist eine Marke von Nintendo.",
     "footerDisclaimer": "Dies ist ein von Fans erstelltes Tool und steht in keiner Verbindung zu Nintendo.",
     "copyright": "© {{year}} Nintendo Museum Ticket-Tool",
     "viewOnGithub": "Auf GitHub ansehen"
@@ -34,7 +35,7 @@
     "timeLeft": "In {{time}}",
     "missedReleaseTitle": "Verkaufsstart verpasst?",
     "missedReleaseDesc": "Keine Sorge! Stornierte Tickets werden oft zu jeder vollen Stunde (z.B. 9:00, 10:00) wieder freigegeben. Prüfen Sie die offizielle Ticket-Seite des Nintendo Museums regelmäßig!",
-    "officialCalendar": "Offizieller Kalender"
+    "officialCalendar": "Offizielle Website"
   },
   "about": {
     "title": "Über",

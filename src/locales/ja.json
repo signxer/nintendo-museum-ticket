@@ -8,6 +8,7 @@
     "language": "言語",
     "timezone": "タイムゾーン",
     "about": "について",
+    "trademark": "Nintendoは任天堂の商標です。",
     "footerDisclaimer": "このツールはファンによって作成されたものであり、任天堂とは一切関係ありません。",
     "copyright": "© {{year}} ニンテンドーミュージアム チケットツール",
     "viewOnGithub": "GitHubで見る"
@@ -34,7 +35,7 @@
     "timeLeft": "あと {{time}}",
     "missedReleaseTitle": "発売日を逃しましたか？",
     "missedReleaseDesc": "ご安心ください！キャンセルされたチケットは毎時0分（9:00、10:00など）に再販されることが多いです。ニンテンドーミュージアム公式サイトのチケット購入ページをこまめにチェックしてみてください！",
-    "officialCalendar": "公式サイトのカレンダー"
+    "officialCalendar": "公式サイト"
   },
   "about": {
     "title": "について",

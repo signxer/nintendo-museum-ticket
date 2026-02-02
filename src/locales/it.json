@@ -8,6 +8,7 @@
     "language": "Lingua",
     "timezone": "Fuso orario",
     "about": "Info",
+    "trademark": "Nintendo è un marchio di Nintendo.",
     "footerDisclaimer": "Questo è uno strumento creato dai fan e non è affiliato con Nintendo.",
     "copyright": "© {{year}} Strumento Biglietti Nintendo Museum",
     "viewOnGithub": "Vedi su GitHub"
@@ -34,7 +35,7 @@
     "timeLeft": "Tra {{time}}",
     "missedReleaseTitle": "Hai perso la data di rilascio?",
     "missedReleaseDesc": "Non preoccuparti! I biglietti cancellati vengono spesso rilasciati allo scoccare di ogni ora (es. 9:00, 10:00). Controlla frequentemente la pagina ufficiale di biglietteria del Nintendo Museum!",
-    "officialCalendar": "Calendario Ufficiale"
+    "officialCalendar": "Sito ufficiale"
   },
   "about": {
     "title": "Info",

@@ -8,6 +8,7 @@
     "language": "语言",
     "timezone": "时区",
     "about": "关于",
+    "trademark": "Nintendo是任天堂的商标。",
     "footerDisclaimer": "本工具为粉丝制作，与任天堂无关。",
     "copyright": "© {{year}} 任天堂博物馆购票助手",
     "viewOnGithub": "在 GitHub 上查看"
@@ -34,7 +35,7 @@
     "timeLeft": "还有 {{time}}",
     "missedReleaseTitle": "错过了发售时间？",
     "missedReleaseDesc": "别担心！其他游客取消的门票通常会在每个整点（如 9:00、10:00）重新释放。请经常查看任天堂博物馆官网购票页面尝试捡漏！",
-    "officialCalendar": "官方日历"
+    "officialCalendar": "官方网站"
   },
   "about": {
     "title": "关于",
