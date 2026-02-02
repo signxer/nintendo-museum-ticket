@@ -22,7 +22,7 @@ function Layout({ children }: { children: React.ReactNode }) {
             <div className="bg-white p-2 border-2 border-nintendo-dark shadow-pixel-sm transform rotate-[-2deg]">
               <Landmark className="text-nintendo-red w-6 h-6 md:w-8 md:h-8" />
             </div>
-            <h1 className="text-white text-sm md:text-lg font-bold font-pixel tracking-wider drop-shadow-md">
+            <h1 className="text-white text-sm md:text-lg font-bold font-pixel tracking-wider drop-shadow-md truncate max-w-[200px] md:max-w-none">
               {t('common.title')}
             </h1>
           </div>

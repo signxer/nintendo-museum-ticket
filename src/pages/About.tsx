@@ -32,7 +32,7 @@ export default function About() {
       </PixelCard>
       
       <PixelCard title={t('about.disclaimerTitle')}>
-        <p className="leading-relaxed text-nintendo-grey">
+        <p className="leading-relaxed text-nintendo-red">
           {t('about.disclaimerContent')}
         </p>
       </PixelCard>
