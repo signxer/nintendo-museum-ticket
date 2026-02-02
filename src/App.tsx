@@ -54,7 +54,7 @@ function Layout({ children }: { children: React.ReactNode }) {
           <span>{t('common.viewOnGithub')}</span>
         </a>
 
-        <p className="text-xs text-gray-400 mb-1">{t('common.footerDisclaimer')}</p>
+        <p className="text-xs text-nintendo-red mb-1">{t('common.footerDisclaimer')}</p>
         <p className="text-[10px] text-gray-500">{t('common.trademark')}</p>
       </footer>
     </div>
