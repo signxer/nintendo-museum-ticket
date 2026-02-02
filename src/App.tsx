@@ -70,7 +70,7 @@ function Layout({ children }: { children: React.ReactNode }) {
 
       <footer className="bg-nintendo-dark text-white p-8 text-center mt-auto border-t-4 border-nintendo-grey">
         <p className="font-pixel text-xs opacity-70 mb-2">{t('common.copyright', { year: new Date().getFullYear() })}</p>
-        
+        <p className="font-pixel text-xs opacity-70 mb-2">Created by Livrestrela</p>
         <a 
           href="https://github.com/signxer/nintendo-museum-ticket" 
           target="_blank" 
@@ -83,6 +83,7 @@ function Layout({ children }: { children: React.ReactNode }) {
 
         <p className="text-xs text-nintendo-red mb-1">{t('common.footerDisclaimer')}</p>
         <p className="text-[10px] text-gray-500">{t('common.trademark')}</p>
+
       </footer>
     </div>
   );
