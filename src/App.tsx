@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Landmark, Github } from 'lucide-react';
 import Home from "./pages/Home";
 import About from "./pages/About";
 import { PixelClock } from "./components/PixelClock";
@@ -42,6 +43,17 @@ function Layout({ children }: { children: React.ReactNode }) {
 
       <footer className="bg-nintendo-dark text-white p-8 text-center mt-auto border-t-4 border-nintendo-grey">
         <p className="font-pixel text-xs opacity-70 mb-2">&copy; {new Date().getFullYear()} Nintendo Museum Ticket Tool</p>
+        
+        <a 
+          href="https://github.com/signxer/nintendo-museum-ticket" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 text-xs text-gray-400 hover:text-white transition-colors mb-4 border border-gray-600 rounded px-2 py-1 hover:border-white"
+        >
+          <Github className="w-3 h-3" />
+          <span>View on GitHub</span>
+        </a>
+
         <p className="text-xs text-gray-400 mb-1">{t('common.footerDisclaimer')}</p>
         <p className="text-[10px] text-gray-500">{t('common.trademark')}</p>
       </footer>
