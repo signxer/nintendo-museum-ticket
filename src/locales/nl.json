@@ -5,7 +5,9 @@
     "timezone": "Tijdzone",
     "about": "Over",
     "trademark": "Nintendo is een handelsmerk van Nintendo.",
-    "footerDisclaimer": "Dit is een door fans gemaakte tool en is niet gelieerd aan Nintendo."
+    "footerDisclaimer": "Dit is een door fans gemaakte tool en is niet gelieerd aan Nintendo.",
+    "copyright": "© {{year}} Nintendo Museum Ticket Tool",
+    "viewOnGithub": "Bekijk op GitHub"
   },
   "home": {
     "nextRelease": "Volgende Ticketverkoop",
@@ -18,7 +20,7 @@
     "canBuy": "Je kunt tickets voor {{month}} kopen op:",
     "pleaseSelectDate": "Selecteer een datum",
     "addToCalendar": "Toevoegen aan Agenda",
-    "downloadIcs": "ICS downloaden",
+    "downloadIcs": "Toevoegen aan systeemagenda",
     "googleCalendar": "Google Agenda",
     "calendarEventTitle": "Koop Nintendo Museum Tickets (voor {{month}})",
     "calendarEventDesc": "Ticketverkoop voor {{month}} start. Wees klaar voor de wachtrij!",

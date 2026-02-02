@@ -3,7 +3,10 @@
     "title": "Nintendo Museum Ticket-Checker",
     "language": "Sprache",
     "timezone": "Zeitzone",
-    "about": "Über"
+    "about": "Über",
+    "footerDisclaimer": "Dies ist ein von Fans erstelltes Tool und steht in keiner Verbindung zu Nintendo.",
+    "copyright": "© {{year}} Nintendo Museum Ticket-Tool",
+    "viewOnGithub": "Auf GitHub ansehen"
   },
   "home": {
     "nextRelease": "Nächster Ticketverkauf",
@@ -16,7 +19,7 @@
     "canBuy": "Sie können Tickets für {{month}} kaufen am:",
     "pleaseSelectDate": "Bitte wählen Sie ein Datum",
     "addToCalendar": "Zum Kalender hinzufügen",
-    "downloadIcs": "ICS herunterladen",
+    "downloadIcs": "Zum Systemkalender hinzufügen",
     "googleCalendar": "Google Kalender",
     "calendarEventTitle": "Nintendo Museum Tickets kaufen (für {{month}})",
     "calendarEventDesc": "Ticketverkauf für {{month}} startet. Machen Sie sich bereit für die Warteschlange!",

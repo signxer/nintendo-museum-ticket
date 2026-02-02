@@ -5,7 +5,9 @@
     "timezone": "Timezone",
     "about": "About",
     "trademark": "Nintendo is a trademark of Nintendo.",
-    "footerDisclaimer": "This is a fan-made tool and is not affiliated with Nintendo."
+    "footerDisclaimer": "This is a fan-made tool and is not affiliated with Nintendo.",
+    "copyright": "© {{year}} Nintendo Museum Ticket Tool",
+    "viewOnGithub": "View on GitHub"
   },
   "home": {
     "nextRelease": "Next Ticket Release",
@@ -18,7 +20,7 @@
     "canBuy": "You can buy tickets for {{month}} on:",
     "pleaseSelectDate": "Please select a date",
     "addToCalendar": "Add to Calendar",
-    "downloadIcs": "Download ICS",
+    "downloadIcs": "Add to System Calendar",
     "googleCalendar": "Google Calendar",
     "calendarEventTitle": "Buy Nintendo Museum Tickets (for {{month}})",
     "calendarEventDesc": "Ticket sales start for {{month}} visit. Be ready to queue!",

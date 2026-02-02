@@ -5,7 +5,9 @@
     "timezone": "時區",
     "about": "關於",
     "trademark": "Nintendo 是任天堂的商標。",
-    "footerDisclaimer": "本工具為粉絲製作，與任天堂無關。"
+    "footerDisclaimer": "本工具為粉絲製作，與任天堂無關。",
+    "copyright": "© {{year}} 任天堂博物館購票助手",
+    "viewOnGithub": "在 GitHub 上查看"
   },
   "home": {
     "nextRelease": "下次放票時間",
@@ -18,7 +20,7 @@
     "canBuy": "您可以在以下時間購買 {{month}} 的門票：",
     "pleaseSelectDate": "請選擇日期",
     "addToCalendar": "加入行事曆",
-    "downloadIcs": "下載 ICS 檔案",
+    "downloadIcs": "加入系統行事曆",
     "googleCalendar": "Google 行事曆",
     "calendarEventTitle": "購買任天堂博物館門票（{{month}}入場）",
     "calendarEventDesc": "{{month}}入場的門票開始發售。請準備好排隊搶票！",

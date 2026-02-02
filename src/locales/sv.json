@@ -5,7 +5,9 @@
     "timezone": "Tidszon",
     "about": "Om",
     "trademark": "Nintendo är ett varumärke som tillhör Nintendo.",
-    "footerDisclaimer": "Detta är ett verktyg skapat av fans och är inte anslutet till Nintendo."
+    "footerDisclaimer": "Detta är ett verktyg skapat av fans och är inte anslutet till Nintendo.",
+    "copyright": "© {{year}} Nintendo Museum Biljettverktyg",
+    "viewOnGithub": "Visa på GitHub"
   },
   "home": {
     "nextRelease": "Nästa Biljettsläpp",
@@ -18,7 +20,7 @@
     "canBuy": "Du kan köpa biljetter för {{month}} den:",
     "pleaseSelectDate": "Välj ett datum",
     "addToCalendar": "Lägg till i Kalender",
-    "downloadIcs": "Ladda ner ICS",
+    "downloadIcs": "Lägg till i systemkalender",
     "googleCalendar": "Google Kalender",
     "calendarEventTitle": "Köp Nintendo Museum Biljetter (för {{month}})",
     "calendarEventDesc": "Biljettsläpp för {{month}}. Var redo för kö!",

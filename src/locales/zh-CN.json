@@ -3,7 +3,10 @@
     "title": "任天堂博物馆购票时间查询",
     "language": "语言",
     "timezone": "时区",
-    "about": "关于"
+    "about": "关于",
+    "footerDisclaimer": "本工具为粉丝制作，与任天堂无关。",
+    "copyright": "© {{year}} 任天堂博物馆购票助手",
+    "viewOnGithub": "在 GitHub 上查看"
   },
   "home": {
     "nextRelease": "下次放票时间",
@@ -16,7 +19,7 @@
     "canBuy": "您可以在以下时间购买 {{month}} 的门票：",
     "pleaseSelectDate": "请选择日期",
     "addToCalendar": "添加到日历",
-    "downloadIcs": "下载 ICS 文件",
+    "downloadIcs": "添加到系统日历",
     "googleCalendar": "Google 日历",
     "calendarEventTitle": "购买任天堂博物馆门票（{{month}}入场）",
     "calendarEventDesc": "{{month}}入场的门票开始发售。请准备好排队抢票！",

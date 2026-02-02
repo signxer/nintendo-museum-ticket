@@ -3,7 +3,10 @@
     "title": "Verifica Biglietti Nintendo Museum",
     "language": "Lingua",
     "timezone": "Fuso orario",
-    "about": "Info"
+    "about": "Info",
+    "footerDisclaimer": "Questo è uno strumento creato dai fan e non è affiliato con Nintendo.",
+    "copyright": "© {{year}} Strumento Biglietti Nintendo Museum",
+    "viewOnGithub": "Vedi su GitHub"
   },
   "home": {
     "nextRelease": "Prossimo Rilascio Biglietti",
@@ -16,7 +19,7 @@
     "canBuy": "Puoi acquistare biglietti per {{month}} il:",
     "pleaseSelectDate": "Seleziona una data",
     "addToCalendar": "Aggiungi al Calendario",
-    "downloadIcs": "Scarica ICS",
+    "downloadIcs": "Aggiungi al calendario di sistema",
     "googleCalendar": "Google Calendar",
     "calendarEventTitle": "Acquista Biglietti Nintendo Museum (per {{month}})",
     "calendarEventDesc": "Inizia vendita biglietti per {{month}}. Preparati per la coda!",

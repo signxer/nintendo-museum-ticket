@@ -3,7 +3,10 @@
     "title": "ニンテンドーミュージアム チケット販売日時チェッカー",
     "language": "言語",
     "timezone": "タイムゾーン",
-    "about": "について"
+    "about": "について",
+    "footerDisclaimer": "このツールはファンによって作成されたものであり、任天堂とは一切関係ありません。",
+    "copyright": "© {{year}} ニンテンドーミュージアム チケットツール",
+    "viewOnGithub": "GitHubで見る"
   },
   "home": {
     "nextRelease": "次回のチケット販売",
@@ -16,7 +19,7 @@
     "canBuy": "{{month}} のチケットは以下の日時で購入可能です：",
     "pleaseSelectDate": "日付を選択してください",
     "addToCalendar": "カレンダーに追加",
-    "downloadIcs": "ICSファイルをダウンロード",
+    "downloadIcs": "システムカレンダーに追加",
     "googleCalendar": "Google カレンダー",
     "calendarEventTitle": "ニンテンドーミュージアム チケット購入（{{month}}分）",
     "calendarEventDesc": "{{month}}入館分のチケット販売開始です。待機列に並ぶ準備を！",

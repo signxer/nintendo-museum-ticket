@@ -5,7 +5,9 @@
     "timezone": "시간대",
     "about": "정보",
     "trademark": "Nintendo는 닌텐도의 상표입니다.",
-    "footerDisclaimer": "이 도구는 팬이 제작했으며 Nintendo와 관련이 없습니다."
+    "footerDisclaimer": "이 도구는 팬이 제작했으며 Nintendo와 관련이 없습니다.",
+    "copyright": "© {{year}} 닌텐도 박물관 티켓 도구",
+    "viewOnGithub": "GitHub에서 보기"
   },
   "home": {
     "nextRelease": "다음 티켓 오픈",
@@ -18,7 +20,7 @@
     "canBuy": "{{month}} 티켓은 다음 일시에 구매 가능합니다:",
     "pleaseSelectDate": "날짜를 선택해주세요",
     "addToCalendar": "캘린더에 추가",
-    "downloadIcs": "ICS 파일 다운로드",
+    "downloadIcs": "시스템 캘린더에 추가",
     "googleCalendar": "Google 캘린더",
     "calendarEventTitle": "닌텐도 박물관 티켓 구매 ({{month}} 입장)",
     "calendarEventDesc": "{{month}} 입장권 판매 시작. 대기열에 참여할 준비를 하세요!",

@@ -5,7 +5,9 @@
     "timezone": "المنطقة الزمنية",
     "about": "حول",
     "trademark": "Nintendo هي علامة تجارية لشركة Nintendo.",
-    "footerDisclaimer": "هذه أداة من صنع المعجبين وليست تابعة لشركة Nintendo."
+    "footerDisclaimer": "هذه أداة من صنع المعجبين وليست تابعة لشركة Nintendo.",
+    "copyright": "© {{year}} أداة تذاكر متحف نينتندو",
+    "viewOnGithub": "عرض على GitHub"
   },
   "home": {
     "nextRelease": "إصدار التذاكر القادم",
@@ -18,7 +20,7 @@
     "canBuy": "يمكنك شراء تذاكر لشهر {{month}} في:",
     "pleaseSelectDate": "يرجى اختيار تاريخ",
     "addToCalendar": "إضافة إلى التقويم",
-    "downloadIcs": "تنزيل ICS",
+    "downloadIcs": "إضافة إلى تقويم النظام",
     "googleCalendar": "تقويم جوجل",
     "calendarEventTitle": "شراء تذاكر متحف نينتندو (لشهر {{month}})",
     "calendarEventDesc": "بدء بيع التذاكر لشهر {{month}}. استعد للطابور!",

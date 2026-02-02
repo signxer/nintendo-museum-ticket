@@ -5,7 +5,9 @@
     "timezone": "Fuseau horaire",
     "about": "À propos",
     "trademark": "Nintendo est une marque déposée de Nintendo.",
-    "footerDisclaimer": "Cet outil est créé par des fans et n'est pas affilié à Nintendo."
+    "footerDisclaimer": "Cet outil est créé par des fans et n'est pas affilié à Nintendo.",
+    "copyright": "© {{year}} Outil Billets Musée Nintendo",
+    "viewOnGithub": "Voir sur GitHub"
   },
   "home": {
     "nextRelease": "Prochaine Vente de Billets",
@@ -18,7 +20,7 @@
     "canBuy": "Vous pouvez acheter des billets pour {{month}} le :",
     "pleaseSelectDate": "Veuillez sélectionner une date",
     "addToCalendar": "Ajouter au Calendrier",
-    "downloadIcs": "Télécharger ICS",
+    "downloadIcs": "Ajouter au calendrier système",
     "googleCalendar": "Google Agenda",
     "calendarEventTitle": "Acheter Billets Musée Nintendo (pour {{month}})",
     "calendarEventDesc": "Vente des billets pour {{month}}. Préparez-vous à faire la queue !",

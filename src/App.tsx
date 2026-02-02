@@ -42,7 +42,7 @@ function Layout({ children }: { children: React.ReactNode }) {
       </main>
 
       <footer className="bg-nintendo-dark text-white p-8 text-center mt-auto border-t-4 border-nintendo-grey">
-        <p className="font-pixel text-xs opacity-70 mb-2">&copy; {new Date().getFullYear()} Nintendo Museum Ticket Tool</p>
+        <p className="font-pixel text-xs opacity-70 mb-2">{t('common.copyright', { year: new Date().getFullYear() })}</p>
         
         <a 
           href="https://github.com/signxer/nintendo-museum-ticket" 
@@ -51,7 +51,7 @@ function Layout({ children }: { children: React.ReactNode }) {
           className="inline-flex items-center gap-2 text-xs text-gray-400 hover:text-white transition-colors mb-4 border border-gray-600 rounded px-2 py-1 hover:border-white"
         >
           <Github className="w-3 h-3" />
-          <span>View on GitHub</span>
+          <span>{t('common.viewOnGithub')}</span>
         </a>
 
         <p className="text-xs text-gray-400 mb-1">{t('common.footerDisclaimer')}</p>

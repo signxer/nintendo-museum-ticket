@@ -5,7 +5,9 @@
     "timezone": "Часовой пояс",
     "about": "О проекте",
     "trademark": "Nintendo является торговой маркой Nintendo.",
-    "footerDisclaimer": "Это фанатский инструмент, не связанный с Nintendo."
+    "footerDisclaimer": "Это фанатский инструмент, не связанный с Nintendo.",
+    "copyright": "© {{year}} Инструмент билетов музея Nintendo",
+    "viewOnGithub": "Посмотреть на GitHub"
   },
   "home": {
     "nextRelease": "Следующая продажа",
@@ -18,7 +20,7 @@
     "canBuy": "Вы можете купить билеты на {{month}}:",
     "pleaseSelectDate": "Выберите дату",
     "addToCalendar": "Добавить в календарь",
-    "downloadIcs": "Скачать ICS",
+    "downloadIcs": "Добавить в системный календарь",
     "googleCalendar": "Google Календарь",
     "calendarEventTitle": "Купить билеты в музей Nintendo (на {{month}})",
     "calendarEventDesc": "Старт продаж на {{month}}. Будьте готовы к очереди!",
