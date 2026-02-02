@@ -90,7 +90,7 @@ function Layout({ children }: { children: React.ReactNode }) {
 
 export default function App() {
   return (
-    <Router basename="/nintendo-museum-ticket">
+    <Router>
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
