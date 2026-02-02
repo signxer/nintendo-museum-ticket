@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Landmark, Github } from 'lucide-react';
 import Home from "./pages/Home";
@@ -12,6 +12,33 @@ import { useTranslation } from "react-i18next";
 function Layout({ children }: { children: React.ReactNode }) {
   const { timezone, setTimezone } = useTimezone();
   const { t } = useTranslation();
+
+  useEffect(() => {
+    document.title = t('common.title');
+    
+    // Update meta description
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+      metaDesc.setAttribute('content', t('seo.description'));
+    }
+
+    // Update meta keywords
+    const metaKeywords = document.querySelector('meta[name="keywords"]');
+    if (metaKeywords) {
+      metaKeywords.setAttribute('content', t('seo.keywords'));
+    }
+
+    // Update OG tags
+    const ogDesc = document.querySelector('meta[property="og:description"]');
+    if (ogDesc) {
+      ogDesc.setAttribute('content', t('seo.description'));
+    }
+
+    const twitterDesc = document.querySelector('meta[property="twitter:description"]');
+    if (twitterDesc) {
+      twitterDesc.setAttribute('content', t('seo.description'));
+    }
+  }, [t]);
 
   return (
     <div className="min-h-screen flex flex-col">
