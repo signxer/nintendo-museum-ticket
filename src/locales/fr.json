@@ -35,7 +35,13 @@
     "timeLeft": "Dans {{time}}",
     "missedReleaseTitle": "Vous avez manqué la date de vente ?",
     "missedReleaseDesc": "Ne vous inquiétez pas ! Les billets annulés sont souvent remis en vente à chaque heure pile (ex. 9:00, 10:00). Vérifiez fréquemment la page officielle de billetterie du Musée Nintendo !",
-    "officialCalendar": "Site officiel"
+    "officialCalendar": "Site officiel",
+    "purchasePath": "Comment acheter",
+    "lotteryEntry": "Début d'inscription au tirage au sort",
+    "lotteryResult": "Résultats du tirage au sort",
+    "firstCome": "Vente par ordre d'arrivée",
+    "past": "Terminé",
+    "upcoming": "À venir"
   },
   "about": {
     "title": "À propos",

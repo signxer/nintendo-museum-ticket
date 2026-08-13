@@ -35,7 +35,13 @@
     "timeLeft": "En {{time}}",
     "missedReleaseTitle": "¿Te perdiste la fecha de venta?",
     "missedReleaseDesc": "¡No te preocupes! Las entradas canceladas suelen liberarse a cada hora en punto (ej. 9:00, 10:00). ¡Revisa la página oficial de venta de entradas del Museo Nintendo frecuentemente!",
-    "officialCalendar": "Sitio web oficial"
+    "officialCalendar": "Sitio web oficial",
+    "purchasePath": "Cómo comprar",
+    "lotteryEntry": "Inicio de inscripción al sorteo",
+    "lotteryResult": "Resultado del sorteo",
+    "firstCome": "Venta por orden de llegada",
+    "past": "Finalizado",
+    "upcoming": "Próximo"
   },
   "about": {
     "title": "Acerca de",

@@ -35,7 +35,13 @@
     "timeLeft": "Tra {{time}}",
     "missedReleaseTitle": "Hai perso la data di rilascio?",
     "missedReleaseDesc": "Non preoccuparti! I biglietti cancellati vengono spesso rilasciati allo scoccare di ogni ora (es. 9:00, 10:00). Controlla frequentemente la pagina ufficiale di biglietteria del Nintendo Museum!",
-    "officialCalendar": "Sito ufficiale"
+    "officialCalendar": "Sito ufficiale",
+    "purchasePath": "Come acquistare",
+    "lotteryEntry": "Inizio iscrizione al sorteggio",
+    "lotteryResult": "Esito del sorteggio",
+    "firstCome": "Vendita in ordine di arrivo",
+    "past": "Concluso",
+    "upcoming": "In arrivo"
   },
   "about": {
     "title": "Info",

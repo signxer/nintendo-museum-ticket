@@ -35,7 +35,13 @@
     "timeLeft": "あと {{time}}",
     "missedReleaseTitle": "発売日を逃しましたか？",
     "missedReleaseDesc": "ご安心ください！キャンセルされたチケットは毎時0分（9:00、10:00など）に再販されることが多いです。ニンテンドーミュージアム公式サイトのチケット購入ページをこまめにチェックしてみてください！",
-    "officialCalendar": "公式サイト"
+    "officialCalendar": "公式サイト",
+    "purchasePath": "購入方法",
+    "lotteryEntry": "抽選申込開始",
+    "lotteryResult": "抽選結果発表",
+    "firstCome": "先着順販売開始",
+    "past": "終了",
+    "upcoming": "開催予定"
   },
   "about": {
     "title": "について",

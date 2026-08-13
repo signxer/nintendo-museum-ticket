@@ -50,4 +50,21 @@ i18n
     }
   });
 
+/** Locales that must render right-to-left. */
+const RTL_LOCALES = new Set(['ar']);
+
+/**
+ * Keep `<html lang>` and `dir` in sync with the active language, so screen
+ * readers announce correctly and RTL locales (e.g. Arabic) actually mirror.
+ */
+function syncDocumentLangDir(lng: string): void {
+  if (typeof document === 'undefined') return;
+  const primary = (lng || '').toLowerCase().split('-')[0];
+  document.documentElement.lang = lng || 'en';
+  document.documentElement.dir = RTL_LOCALES.has(primary) ? 'rtl' : 'ltr';
+}
+
+i18n.on('languageChanged', syncDocumentLangDir);
+syncDocumentLangDir(i18n.language);
+
 export default i18n;

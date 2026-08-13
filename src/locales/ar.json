@@ -35,7 +35,13 @@
     "timeLeft": "خلال {{time}}",
     "missedReleaseTitle": "هل فاتك موعد الإصدار؟",
     "missedReleaseDesc": "لا تقلق! غالبًا ما يتم طرح التذاكر الملغاة في بداية كل ساعة (مثل 9:00، 10:00). تحقق من صفحة التذاكر الرسمية لمتحف نينتندو بشكل متكرر!",
-    "officialCalendar": "الموقع الرسمي"
+    "officialCalendar": "الموقع الرسمي",
+    "purchasePath": "طريقة الشراء",
+    "lotteryEntry": "بدء التسجيل في القرعة",
+    "lotteryResult": "نتائج القرعة",
+    "firstCome": "بيع حسب أسبقية الوصول",
+    "past": "انتهى",
+    "upcoming": "قريبًا"
   },
   "about": {
     "title": "حول",

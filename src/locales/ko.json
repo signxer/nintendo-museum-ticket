@@ -35,7 +35,13 @@
     "timeLeft": "{{time}} 후",
     "missedReleaseTitle": "발매일을 놓치셨나요?",
     "missedReleaseDesc": "걱정하지 마세요! 취소된 티켓은 매 정각(예: 9:00, 10:00)에 다시 풀리는 경우가 많습니다. 닌텐도 박물관 공식 예매 페이지를 자주 확인하여 취소표를 노려보세요!",
-    "officialCalendar": "공식 웹사이트"
+    "officialCalendar": "공식 웹사이트",
+    "purchasePath": "구매 방법",
+    "lotteryEntry": "추첨 신청 시작",
+    "lotteryResult": "추첨 결과 발표",
+    "firstCome": "선착순 판매 시작",
+    "past": "종료",
+    "upcoming": "예정"
   },
   "about": {
     "title": "정보",

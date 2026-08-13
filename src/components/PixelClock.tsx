@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTimezone } from '../hooks/useTimezone';
+import { useNow } from '../hooks/useNow';
 import { cn } from '../lib/utils';
 
 interface PixelClockProps {
@@ -7,7 +8,8 @@ interface PixelClockProps {
 }
 
 export function PixelClock({ className }: PixelClockProps) {
-  const { currentTime, timezone } = useTimezone();
+  const { timezone } = useTimezone();
+  const currentTime = useNow();
 
   const timeString = currentTime.toLocaleTimeString('en-US', {
     hour12: false,

@@ -35,7 +35,13 @@
     "timeLeft": "Over {{time}}",
     "missedReleaseTitle": "Verkoopdatum gemist?",
     "missedReleaseDesc": "Geen zorgen! Geannuleerde tickets komen vaak elk heel uur vrij (bijv. 9:00, 10:00). Controleer regelmatig de officiële ticketpagina van het Nintendo Museum!",
-    "officialCalendar": "Officiële website"
+    "officialCalendar": "Officiële website",
+    "purchasePath": "Hoe kopen",
+    "lotteryEntry": "Start loterij-inschrijving",
+    "lotteryResult": "Loterijresultaat",
+    "firstCome": "Verkoop op volgorde van binnenkomst",
+    "past": "Voorbij",
+    "upcoming": "Aankomend"
   },
   "about": {
     "title": "Over",

@@ -35,7 +35,13 @@
     "timeLeft": "In {{time}}",
     "missedReleaseTitle": "Missed the release date?",
     "missedReleaseDesc": "Don't worry! Canceled tickets are often released at the top of every hour (e.g., 9:00, 10:00). Check the Nintendo Museum official ticketing page frequently for last-minute availability!",
-    "officialCalendar": "Official Website"
+    "officialCalendar": "Official Website",
+    "purchasePath": "How to buy",
+    "lotteryEntry": "Lottery entry opens",
+    "lotteryResult": "Lottery results",
+    "firstCome": "First-come sale",
+    "past": "Past",
+    "upcoming": "Upcoming"
   },
   "about": {
     "title": "About",

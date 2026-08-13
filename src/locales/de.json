@@ -35,7 +35,13 @@
     "timeLeft": "In {{time}}",
     "missedReleaseTitle": "Verkaufsstart verpasst?",
     "missedReleaseDesc": "Keine Sorge! Stornierte Tickets werden oft zu jeder vollen Stunde (z.B. 9:00, 10:00) wieder freigegeben. Prüfen Sie die offizielle Ticket-Seite des Nintendo Museums regelmäßig!",
-    "officialCalendar": "Offizielle Website"
+    "officialCalendar": "Offizielle Website",
+    "purchasePath": "Kaufoptionen",
+    "lotteryEntry": "Beginn der Losregistrierung",
+    "lotteryResult": "Ziehungsergebnis",
+    "firstCome": "Verkauf in der Reihenfolge des Eingangs",
+    "past": "Vorbei",
+    "upcoming": "Bevorstehend"
   },
   "about": {
     "title": "Über",
