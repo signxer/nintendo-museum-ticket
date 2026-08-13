@@ -44,7 +44,8 @@
     "upcoming": "예정",
     "currentStatus": "현재 상태",
     "lotteryRegistering": "추첨 신청 접수 중",
-    "firstComeAvailable": "선착순 구매 가능"
+    "firstComeAvailable": "선착순 구매 가능",
+    "goToPurchase": "추첨/구매하기"
   },
   "about": {
     "title": "정보",

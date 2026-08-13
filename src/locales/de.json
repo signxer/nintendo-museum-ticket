@@ -44,7 +44,8 @@
     "upcoming": "Bevorstehend",
     "currentStatus": "Aktueller Stand",
     "lotteryRegistering": "Losregistrierung offen",
-    "firstComeAvailable": "Verkauf in der Reihenfolge des Eingangs"
+    "firstComeAvailable": "Verkauf in der Reihenfolge des Eingangs",
+    "goToPurchase": "Zur Lotterie / Kaufen"
   },
   "about": {
     "title": "Über",

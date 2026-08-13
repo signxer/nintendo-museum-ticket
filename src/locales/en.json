@@ -44,7 +44,8 @@
     "upcoming": "Upcoming",
     "currentStatus": "Current status",
     "lotteryRegistering": "Lottery entry open",
-    "firstComeAvailable": "First-come on sale"
+    "firstComeAvailable": "First-come on sale",
+    "goToPurchase": "Enter lottery / Buy tickets"
   },
   "about": {
     "title": "About",

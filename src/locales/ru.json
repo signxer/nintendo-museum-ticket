@@ -44,7 +44,8 @@
     "upcoming": "Предстоит",
     "currentStatus": "Текущий статус",
     "lotteryRegistering": "Приём заявок на розыгрыш открыт",
-    "firstComeAvailable": "В продаже в порядке очереди"
+    "firstComeAvailable": "В продаже в порядке очереди",
+    "goToPurchase": "К розыгрышу / Купить"
   },
   "about": {
     "title": "О проекте",

@@ -44,7 +44,8 @@
     "upcoming": "เร็วๆ นี้",
     "currentStatus": "สถานะปัจจุบัน",
     "lotteryRegistering": "เปิดรับสมัครจับฉลาก",
-    "firstComeAvailable": "จำหน่ายตามลำดับ"
+    "firstComeAvailable": "จำหน่ายตามลำดับ",
+    "goToPurchase": "ไปจับฉลาก / ซื้อตั๋ว"
   },
   "about": {
     "title": "เกี่ยวกับ",

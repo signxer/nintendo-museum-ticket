@@ -1,6 +1,8 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { PixelCard } from './PixelCard';
+import { PixelButton } from './PixelButton';
+import { ExternalLink } from 'lucide-react';
 import { getOpenLotteryEntryMonth } from '../utils/lotteryLogic';
 import { getFirstComeOnSaleMonths } from '../utils/ticketLogic';
 import { useTimezone } from '../hooks/useTimezone';
@@ -41,6 +43,19 @@ export function CurrentStatusCard() {
             {onSaleText}
           </p>
         </div>
+      </div>
+
+      <div className="mt-5">
+        <a
+          href="https://museum-tickets.nintendo.com/en/calendar"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <PixelButton className="w-full justify-center flex items-center gap-2">
+            <ExternalLink className="w-4 h-4" />
+            {t('home.goToPurchase')}
+          </PixelButton>
+        </a>
       </div>
     </PixelCard>
   );

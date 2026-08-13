@@ -44,7 +44,8 @@
     "upcoming": "In arrivo",
     "currentStatus": "Stato attuale",
     "lotteryRegistering": "Iscrizione al sorteggio aperta",
-    "firstComeAvailable": "In vendita in ordine di arrivo"
+    "firstComeAvailable": "In vendita in ordine di arrivo",
+    "goToPurchase": "Vai al sorteggio / Acquista"
   },
   "about": {
     "title": "Info",

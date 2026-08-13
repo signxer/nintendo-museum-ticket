@@ -44,7 +44,8 @@
     "upcoming": "待開始",
     "currentStatus": "目前狀態",
     "lotteryRegistering": "抽選登記中",
-    "firstComeAvailable": "現可購買(先到先得)"
+    "firstComeAvailable": "現可購買(先到先得)",
+    "goToPurchase": "去抽選/購買"
   },
   "about": {
     "title": "關於",
