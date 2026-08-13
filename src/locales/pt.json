@@ -45,7 +45,8 @@
     "currentStatus": "Estado atual",
     "lotteryRegistering": "Inscrição no sorteio aberta",
     "firstComeAvailable": "À venda por ordem de chegada",
-    "goToPurchase": "Ir ao sorteio / Comprar"
+    "goToPurchase": "Ir ao sorteio / Comprar",
+    "visitDatePlaceholder": "YYYY-MM"
   },
   "about": {
     "title": "Sobre",

@@ -45,7 +45,8 @@
     "currentStatus": "Current status",
     "lotteryRegistering": "Lottery entry open",
     "firstComeAvailable": "First-come on sale",
-    "goToPurchase": "Enter lottery / Buy tickets"
+    "goToPurchase": "Enter lottery / Buy tickets",
+    "visitDatePlaceholder": "YYYY-MM"
   },
   "about": {
     "title": "About",

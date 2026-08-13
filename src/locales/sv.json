@@ -45,7 +45,8 @@
     "currentStatus": "Nuvarande status",
     "lotteryRegistering": "Lottningsanmälan öppen",
     "firstComeAvailable": "Till salu i turordning",
-    "goToPurchase": "Till lotteriet / Köp"
+    "goToPurchase": "Till lotteriet / Köp",
+    "visitDatePlaceholder": "YYYY-MM"
   },
   "about": {
     "title": "Om",

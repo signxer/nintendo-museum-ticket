@@ -45,7 +45,8 @@
     "currentStatus": "現在の状況",
     "lotteryRegistering": "抽選申込受付中",
     "firstComeAvailable": "先着順で購入可",
-    "goToPurchase": "抽選・購入へ"
+    "goToPurchase": "抽選・購入へ",
+    "visitDatePlaceholder": "----年----月"
   },
   "about": {
     "title": "について",

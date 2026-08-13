@@ -45,7 +45,8 @@
     "currentStatus": "สถานะปัจจุบัน",
     "lotteryRegistering": "เปิดรับสมัครจับฉลาก",
     "firstComeAvailable": "จำหน่ายตามลำดับ",
-    "goToPurchase": "ไปจับฉลาก / ซื้อตั๋ว"
+    "goToPurchase": "ไปจับฉลาก / ซื้อตั๋ว",
+    "visitDatePlaceholder": "YYYY-MM"
   },
   "about": {
     "title": "เกี่ยวกับ",

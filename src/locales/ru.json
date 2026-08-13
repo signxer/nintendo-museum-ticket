@@ -45,7 +45,8 @@
     "currentStatus": "Текущий статус",
     "lotteryRegistering": "Приём заявок на розыгрыш открыт",
     "firstComeAvailable": "В продаже в порядке очереди",
-    "goToPurchase": "К розыгрышу / Купить"
+    "goToPurchase": "К розыгрышу / Купить",
+    "visitDatePlaceholder": "YYYY-MM"
   },
   "about": {
     "title": "О проекте",

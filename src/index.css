@@ -137,3 +137,13 @@
     background-color: #ffffff;
   }
 }
+
+/* Month inputs: hide the native text (value/hint) so a localized overlay can
+   render the placeholder — iOS Safari otherwise shows nothing when empty,
+   while desktop Chrome shows a generic "YYYY-MM". */
+input[type="month"] {
+  color: transparent;
+}
+input[type="month"]::-webkit-datetime-edit {
+  color: transparent;
+}

@@ -45,7 +45,8 @@
     "currentStatus": "Huidige status",
     "lotteryRegistering": "Loterij-inschrijving open",
     "firstComeAvailable": "Te koop op volgorde van binnenkomst",
-    "goToPurchase": "Naar de loterij / Kopen"
+    "goToPurchase": "Naar de loterij / Kopen",
+    "visitDatePlaceholder": "YYYY-MM"
   },
   "about": {
     "title": "Over",

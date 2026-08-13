@@ -45,7 +45,8 @@
     "currentStatus": "الحالة الحالية",
     "lotteryRegistering": "التسجيل في القرعة مفتوح",
     "firstComeAvailable": "متاح للشراء حسب الأسبقية",
-    "goToPurchase": "إلى القرعة / شراء"
+    "goToPurchase": "إلى القرعة / شراء",
+    "visitDatePlaceholder": "YYYY-MM"
   },
   "about": {
     "title": "حول",

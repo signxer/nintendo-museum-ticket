@@ -101,13 +101,24 @@ export function TicketCalculator() {
         </label>
 
         <div className="flex gap-2">
-          <input
-            type="month"
-            value={visitMonth}
-            onChange={(e) => setVisitMonth(e.target.value)}
-            className="pixel-input flex-1"
-            min={new Date().toISOString().slice(0, 7)}
-          />
+          <div className="relative flex-1">
+            <input
+              type="month"
+              value={visitMonth}
+              onChange={(e) => setVisitMonth(e.target.value)}
+              className="pixel-input w-full"
+              min={new Date().toISOString().slice(0, 7)}
+            />
+            {/* Native month-input text is hidden; this overlay renders the
+                localized placeholder (empty) or the chosen value. */}
+            <span
+              className={`pointer-events-none absolute inset-0 flex items-center px-4 font-pixel text-sm ${
+                visitMonth ? 'text-nintendo-dark' : 'text-nintendo-grey'
+              }`}
+            >
+              {visitMonth || t('home.visitDatePlaceholder')}
+            </span>
+          </div>
           <PixelButton onClick={handleCalculate}>
             {t('home.calculate')}
           </PixelButton>

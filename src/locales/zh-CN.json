@@ -45,7 +45,8 @@
     "currentStatus": "当前状态",
     "lotteryRegistering": "抽选登记中",
     "firstComeAvailable": "现可购买(先到先得)",
-    "goToPurchase": "去抽选/购买"
+    "goToPurchase": "去抽选/购买",
+    "visitDatePlaceholder": "----年----月"
   },
   "about": {
     "title": "关于",
