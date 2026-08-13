@@ -14,7 +14,7 @@ export function getUserTimezone(): string {
  * Convert a Date object which represents Japan Standard Time to the same instant in Local Time.
  * Note: JavaScript Date objects are fundamentally timestamps (UTC). 
  * 
- * 1. Create a date string with timezone: "2026-02-11T14:00:00+09:00"
+ * 1. Create a date string with timezone: "2026-02-11T16:00:00+09:00"
  * 2. Parse it into a Date object (browser handles conversion).
  */
 export function getJSTDate(year: number, month: number, day: number, hour: number, minute: number): Date {

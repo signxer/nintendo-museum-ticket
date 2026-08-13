@@ -28,8 +28,8 @@ A fan-made utility designed to help visitors plan their trip to the **Nintendo M
   - 自动根据计划参观月份计算门票发售日期（每月第二个周三）。
 
 - **🌍 Auto Timezone Conversion / 自动时区转换**:
-  - Converts the 14:00 JST release time to your local device time, so you know exactly when to wake up or be ready.
-  - 将日本时间 14:00 自动转换为您本地时间，再也不用担心算错时差。
+  - Converts the 16:00 JST release time (= 15:00 Beijing Time) to your local device time, so you know exactly when to wake up or be ready.
+  - 将日本时间 16:00（即北京时间 15:00）自动转换为您本地时间，再也不用担心算错时差。
 
 - **📅 Calendar Integration / 日历集成**:
   - One-click add to **Google Calendar** or download **.ics** file for system calendars (Apple/Outlook).

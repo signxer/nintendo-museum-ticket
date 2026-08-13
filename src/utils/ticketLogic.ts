@@ -17,13 +17,13 @@ export function getNextTicketReleaseTime(): ReleaseInfo {
   const currentYear = now.getFullYear();
   const currentMonth = now.getMonth();
   
-  // 2nd Wednesday of current month at 14:00 JST (Japan Standard Time)
+  // 2nd Wednesday of current month at 16:00 JST (= 15:00 Beijing Time)
   const currentMonthReleaseDay = calcSecondWednesday(currentYear, currentMonth);
   const currentMonthReleaseTime = getJSTDate(
     currentYear, 
     currentMonth, 
     currentMonthReleaseDay.getDate(), 
-    14, // 14:00 JST
+    16, // 16:00 JST (= 15:00 Beijing Time)
     0
   );
   
@@ -45,7 +45,7 @@ export function getNextTicketReleaseTime(): ReleaseInfo {
     nextYear,
     nextMonth,
     nextMonthReleaseDay.getDate(),
-    14, // 14:00 JST
+    16, // 16:00 JST (= 15:00 Beijing Time)
     0
   );
   
@@ -71,7 +71,7 @@ export function getTicketReleaseDateForVisit(visitDate: Date): Date {
     year,
     month,
     releaseDay.getDate(),
-    14, // 14:00 JST
+    16, // 16:00 JST (= 15:00 Beijing Time)
     0
   );
 }
