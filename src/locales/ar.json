@@ -41,7 +41,10 @@
     "lotteryResult": "نتائج القرعة",
     "firstCome": "بيع حسب أسبقية الوصول",
     "past": "انتهى",
-    "upcoming": "قريبًا"
+    "upcoming": "قريبًا",
+    "currentStatus": "الحالة الحالية",
+    "lotteryRegistering": "التسجيل في القرعة مفتوح · {{month}}",
+    "firstComeAvailable": "متاح للشراء حسب الأسبقية · {{months}}"
   },
   "about": {
     "title": "حول",

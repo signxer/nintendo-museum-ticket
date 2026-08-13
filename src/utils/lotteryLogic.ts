@@ -26,3 +26,12 @@ export function getLotteryScheduleForVisit(year: number, month: number): Lottery
 
   return { entryOpen, result };
 }
+
+/**
+ * The visit month whose lottery (抽選) entry window is currently open.
+ * Entries open on the 1st of month M for the visit month M + 3, and stay open
+ * through month M until results are announced on the 1st of M + 1.
+ */
+export function getOpenLotteryEntryMonth(now: Date): Date {
+  return startOfMonth(addMonths(now, 3));
+}

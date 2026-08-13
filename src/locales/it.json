@@ -41,7 +41,10 @@
     "lotteryResult": "Esito del sorteggio",
     "firstCome": "Vendita in ordine di arrivo",
     "past": "Concluso",
-    "upcoming": "In arrivo"
+    "upcoming": "In arrivo",
+    "currentStatus": "Stato attuale",
+    "lotteryRegistering": "Iscrizione al sorteggio aperta · {{month}}",
+    "firstComeAvailable": "In vendita in ordine di arrivo · {{months}}"
   },
   "about": {
     "title": "Info",

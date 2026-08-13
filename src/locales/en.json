@@ -41,7 +41,10 @@
     "lotteryResult": "Lottery results",
     "firstCome": "First-come sale",
     "past": "Past",
-    "upcoming": "Upcoming"
+    "upcoming": "Upcoming",
+    "currentStatus": "Current status",
+    "lotteryRegistering": "Lottery entry open · {{month}}",
+    "firstComeAvailable": "First-come on sale · {{months}}"
   },
   "about": {
     "title": "About",

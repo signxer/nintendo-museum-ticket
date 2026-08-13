@@ -89,3 +89,20 @@ export function getNextTicketReleaseTime(): ReleaseInfo {
 export function getTicketReleaseDateForVisit(visitDate: Date): Date {
   return getReleaseDateTimeForVisitMonth(visitDate.getFullYear(), visitDate.getMonth());
 }
+
+/**
+ * The visit months whose first-come (先着順) sale is currently open.
+ * A month is on sale once its verified (or heuristic) release time has passed:
+ * the current month and next are always open, and the month after that opens
+ * when its release date arrives (roughly the 8th–14th of the current month).
+ */
+export function getFirstComeOnSaleMonths(now: Date): Date[] {
+  const base = startOfMonth(now);
+  const onSale: Date[] = [base, addMonths(base, 1)];
+
+  const next = addMonths(base, 2);
+  const release = getReleaseDateTimeForVisitMonth(next.getFullYear(), next.getMonth());
+  if (release <= now) onSale.push(next);
+
+  return onSale;
+}

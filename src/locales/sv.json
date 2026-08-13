@@ -41,7 +41,10 @@
     "lotteryResult": "Lottningsresultat",
     "firstCome": "Försäljning i turordning",
     "past": "Slut",
-    "upcoming": "Kommande"
+    "upcoming": "Kommande",
+    "currentStatus": "Nuvarande status",
+    "lotteryRegistering": "Lottningsanmälan öppen · {{month}}",
+    "firstComeAvailable": "Till salu i turordning · {{months}}"
   },
   "about": {
     "title": "Om",

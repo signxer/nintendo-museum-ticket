@@ -41,7 +41,10 @@
     "lotteryResult": "抽选结果公布",
     "firstCome": "先到先得开售",
     "past": "已结束",
-    "upcoming": "待开始"
+    "upcoming": "待开始",
+    "currentStatus": "当前状态",
+    "lotteryRegistering": "抽选登记中 · {{month}}",
+    "firstComeAvailable": "现可购买(先到先得) · {{months}}"
   },
   "about": {
     "title": "关于",

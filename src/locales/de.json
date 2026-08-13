@@ -41,7 +41,10 @@
     "lotteryResult": "Ziehungsergebnis",
     "firstCome": "Verkauf in der Reihenfolge des Eingangs",
     "past": "Vorbei",
-    "upcoming": "Bevorstehend"
+    "upcoming": "Bevorstehend",
+    "currentStatus": "Aktueller Stand",
+    "lotteryRegistering": "Losregistrierung offen · {{month}}",
+    "firstComeAvailable": "Verkauf in der Reihenfolge des Eingangs · {{months}}"
   },
   "about": {
     "title": "Über",

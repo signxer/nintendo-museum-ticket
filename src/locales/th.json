@@ -41,7 +41,10 @@
     "lotteryResult": "ผลการจับฉลาก",
     "firstCome": "จำหน่ายแบบตามลำดับ",
     "past": "สิ้นสุดแล้ว",
-    "upcoming": "เร็วๆ นี้"
+    "upcoming": "เร็วๆ นี้",
+    "currentStatus": "สถานะปัจจุบัน",
+    "lotteryRegistering": "เปิดรับสมัครจับฉลาก · {{month}}",
+    "firstComeAvailable": "จำหน่ายตามลำดับ · {{months}}"
   },
   "about": {
     "title": "เกี่ยวกับ",

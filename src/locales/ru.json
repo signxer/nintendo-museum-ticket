@@ -41,7 +41,10 @@
     "lotteryResult": "Результаты розыгрыша",
     "firstCome": "Продажа в порядке очереди",
     "past": "Завершено",
-    "upcoming": "Предстоит"
+    "upcoming": "Предстоит",
+    "currentStatus": "Текущий статус",
+    "lotteryRegistering": "Приём заявок на розыгрыш открыт · {{month}}",
+    "firstComeAvailable": "В продаже в порядке очереди · {{months}}"
   },
   "about": {
     "title": "О проекте",

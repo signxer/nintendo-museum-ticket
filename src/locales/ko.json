@@ -41,7 +41,10 @@
     "lotteryResult": "추첨 결과 발표",
     "firstCome": "선착순 판매 시작",
     "past": "종료",
-    "upcoming": "예정"
+    "upcoming": "예정",
+    "currentStatus": "현재 상태",
+    "lotteryRegistering": "추첨 신청 접수 중 · {{month}}",
+    "firstComeAvailable": "선착순 구매 가능 · {{months}}"
   },
   "about": {
     "title": "정보",

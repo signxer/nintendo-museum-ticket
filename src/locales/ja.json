@@ -41,7 +41,10 @@
     "lotteryResult": "抽選結果発表",
     "firstCome": "先着順販売開始",
     "past": "終了",
-    "upcoming": "開催予定"
+    "upcoming": "開催予定",
+    "currentStatus": "現在の状況",
+    "lotteryRegistering": "抽選申込受付中 · {{month}}",
+    "firstComeAvailable": "先着順で購入可 · {{months}}"
   },
   "about": {
     "title": "について",

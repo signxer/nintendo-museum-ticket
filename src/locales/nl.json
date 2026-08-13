@@ -41,7 +41,10 @@
     "lotteryResult": "Loterijresultaat",
     "firstCome": "Verkoop op volgorde van binnenkomst",
     "past": "Voorbij",
-    "upcoming": "Aankomend"
+    "upcoming": "Aankomend",
+    "currentStatus": "Huidige status",
+    "lotteryRegistering": "Loterij-inschrijving open · {{month}}",
+    "firstComeAvailable": "Te koop op volgorde van binnenkomst · {{months}}"
   },
   "about": {
     "title": "Over",
