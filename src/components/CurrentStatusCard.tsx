@@ -26,20 +26,20 @@ export function CurrentStatusCard() {
   const onSaleText = onSaleMonths.map(formatShortMonth).join(' · ');
 
   return (
-    <PixelCard className="w-full">
-      <h2 className="text-lg md:text-xl mb-5 text-nintendo-red">{t('home.currentStatus')}</h2>
+    <PixelCard className="w-full text-center">
+      <h2 className="text-lg mb-4 text-nintendo-red">{t('home.currentStatus')}</h2>
 
       <div className="space-y-5">
         <div>
           <p className="text-sm text-nintendo-grey mb-1">{t('home.lotteryRegistering')}</p>
-          <p className="text-2xl md:text-3xl font-pixel text-nintendo-dark leading-snug break-words">
+          <p className="text-lg md:text-xl font-pixel text-nintendo-dark leading-snug break-words">
             {formatMonth(openLotteryMonth)}
           </p>
         </div>
 
         <div className="border-t-2 border-dashed border-nintendo-grey pt-4">
           <p className="text-sm text-nintendo-grey mb-1">{t('home.firstComeAvailable')}</p>
-          <p className="text-2xl md:text-3xl font-pixel text-nintendo-dark leading-snug break-words">
+          <p className="text-lg md:text-xl font-pixel text-nintendo-dark leading-snug break-words">
             {onSaleText}
           </p>
         </div>
