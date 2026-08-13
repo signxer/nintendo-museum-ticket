@@ -1,5 +1,6 @@
 import React from 'react';
 import { NextReleaseCard } from '../components/NextReleaseCard';
+import { CurrentStatusCard } from '../components/CurrentStatusCard';
 import { TicketCalculator } from '../components/TicketCalculator';
 import { PixelButton } from '../components/PixelButton';
 import { useNavigate } from 'react-router-dom';
@@ -21,9 +22,13 @@ export default function Home() {
 
       <div className="flex flex-col items-center justify-center gap-8">
         <div className="w-full max-w-lg">
+          <CurrentStatusCard />
+        </div>
+
+        <div className="w-full max-w-lg">
           <NextReleaseCard />
         </div>
-        
+
         <div className="w-full max-w-lg">
           <TicketCalculator />
         </div>

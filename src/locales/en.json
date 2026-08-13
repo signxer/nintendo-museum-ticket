@@ -43,8 +43,8 @@
     "past": "Past",
     "upcoming": "Upcoming",
     "currentStatus": "Current status",
-    "lotteryRegistering": "Lottery entry open · {{month}}",
-    "firstComeAvailable": "First-come on sale · {{months}}"
+    "lotteryRegistering": "Lottery entry open",
+    "firstComeAvailable": "First-come on sale"
   },
   "about": {
     "title": "About",

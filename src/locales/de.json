@@ -43,8 +43,8 @@
     "past": "Vorbei",
     "upcoming": "Bevorstehend",
     "currentStatus": "Aktueller Stand",
-    "lotteryRegistering": "Losregistrierung offen · {{month}}",
-    "firstComeAvailable": "Verkauf in der Reihenfolge des Eingangs · {{months}}"
+    "lotteryRegistering": "Losregistrierung offen",
+    "firstComeAvailable": "Verkauf in der Reihenfolge des Eingangs"
   },
   "about": {
     "title": "Über",

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { getNextTicketReleaseTime, getFirstComeOnSaleMonths } from '../utils/ticketLogic';
-import { getOpenLotteryEntryMonth } from '../utils/lotteryLogic';
+import { getNextTicketReleaseTime } from '../utils/ticketLogic';
 import { PixelCard } from './PixelCard';
 import { PixelButton } from './PixelButton';
 import { useTimezone } from '../hooks/useTimezone';
@@ -15,11 +14,6 @@ export function NextReleaseCard() {
   const [timeLeft, setTimeLeft] = useState<string>('');
   
   const releaseInfo = getNextTicketReleaseTime();
-
-  // Current-state summary: which lottery entry is open and which months are
-  // on sale right now via first-come.
-  const openLotteryMonth = getOpenLotteryEntryMonth(new Date());
-  const onSaleMonths = getFirstComeOnSaleMonths(new Date());
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -65,16 +59,6 @@ export function NextReleaseCard() {
       timeZone: timezone
     }).format(date);
   };
-
-  const formatShortMonth = (date: Date) => {
-    return new Intl.DateTimeFormat(i18n.language, {
-      year: 'numeric',
-      month: 'short',
-      timeZone: timezone
-    }).format(date);
-  };
-
-  const onSaleText = onSaleMonths.map((m) => formatShortMonth(m)).join(' · ');
 
   const handleConfetti = () => {
     // Respect reduced-motion: no confetti burst for users who opt out of motion.
@@ -147,16 +131,6 @@ export function NextReleaseCard() {
           <Download className="w-4 h-4" />
           {t('home.downloadIcs')}
         </PixelButton>
-      </div>
-
-      <div className="border-t-2 border-dashed border-nintendo-grey mt-4 pt-3 text-left space-y-2">
-        <p className="text-xs font-bold text-nintendo-dark">{t('home.currentStatus')}</p>
-        <p className="text-xs text-nintendo-grey leading-relaxed">
-          {t('home.lotteryRegistering', { month: formatMonth(openLotteryMonth) })}
-        </p>
-        <p className="text-xs text-nintendo-grey leading-relaxed">
-          {t('home.firstComeAvailable', { months: onSaleText })}
-        </p>
       </div>
     </PixelCard>
   );

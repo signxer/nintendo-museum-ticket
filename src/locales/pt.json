@@ -43,8 +43,8 @@
     "past": "Encerrado",
     "upcoming": "Em breve",
     "currentStatus": "Estado atual",
-    "lotteryRegistering": "Inscrição no sorteio aberta · {{month}}",
-    "firstComeAvailable": "À venda por ordem de chegada · {{months}}"
+    "lotteryRegistering": "Inscrição no sorteio aberta",
+    "firstComeAvailable": "À venda por ordem de chegada"
   },
   "about": {
     "title": "Sobre",

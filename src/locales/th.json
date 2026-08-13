@@ -43,8 +43,8 @@
     "past": "สิ้นสุดแล้ว",
     "upcoming": "เร็วๆ นี้",
     "currentStatus": "สถานะปัจจุบัน",
-    "lotteryRegistering": "เปิดรับสมัครจับฉลาก · {{month}}",
-    "firstComeAvailable": "จำหน่ายตามลำดับ · {{months}}"
+    "lotteryRegistering": "เปิดรับสมัครจับฉลาก",
+    "firstComeAvailable": "จำหน่ายตามลำดับ"
   },
   "about": {
     "title": "เกี่ยวกับ",

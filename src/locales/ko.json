@@ -43,8 +43,8 @@
     "past": "종료",
     "upcoming": "예정",
     "currentStatus": "현재 상태",
-    "lotteryRegistering": "추첨 신청 접수 중 · {{month}}",
-    "firstComeAvailable": "선착순 구매 가능 · {{months}}"
+    "lotteryRegistering": "추첨 신청 접수 중",
+    "firstComeAvailable": "선착순 구매 가능"
   },
   "about": {
     "title": "정보",

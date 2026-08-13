@@ -43,8 +43,8 @@
     "past": "Завершено",
     "upcoming": "Предстоит",
     "currentStatus": "Текущий статус",
-    "lotteryRegistering": "Приём заявок на розыгрыш открыт · {{month}}",
-    "firstComeAvailable": "В продаже в порядке очереди · {{months}}"
+    "lotteryRegistering": "Приём заявок на розыгрыш открыт",
+    "firstComeAvailable": "В продаже в порядке очереди"
   },
   "about": {
     "title": "О проекте",

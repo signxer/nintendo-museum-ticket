@@ -43,8 +43,8 @@
     "past": "انتهى",
     "upcoming": "قريبًا",
     "currentStatus": "الحالة الحالية",
-    "lotteryRegistering": "التسجيل في القرعة مفتوح · {{month}}",
-    "firstComeAvailable": "متاح للشراء حسب الأسبقية · {{months}}"
+    "lotteryRegistering": "التسجيل في القرعة مفتوح",
+    "firstComeAvailable": "متاح للشراء حسب الأسبقية"
   },
   "about": {
     "title": "حول",

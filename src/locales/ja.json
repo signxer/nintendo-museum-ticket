@@ -43,8 +43,8 @@
     "past": "終了",
     "upcoming": "開催予定",
     "currentStatus": "現在の状況",
-    "lotteryRegistering": "抽選申込受付中 · {{month}}",
-    "firstComeAvailable": "先着順で購入可 · {{months}}"
+    "lotteryRegistering": "抽選申込受付中",
+    "firstComeAvailable": "先着順で購入可"
   },
   "about": {
     "title": "について",

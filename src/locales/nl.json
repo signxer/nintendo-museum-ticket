@@ -43,8 +43,8 @@
     "past": "Voorbij",
     "upcoming": "Aankomend",
     "currentStatus": "Huidige status",
-    "lotteryRegistering": "Loterij-inschrijving open · {{month}}",
-    "firstComeAvailable": "Te koop op volgorde van binnenkomst · {{months}}"
+    "lotteryRegistering": "Loterij-inschrijving open",
+    "firstComeAvailable": "Te koop op volgorde van binnenkomst"
   },
   "about": {
     "title": "Over",

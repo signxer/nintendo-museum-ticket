@@ -43,8 +43,8 @@
     "past": "已结束",
     "upcoming": "待开始",
     "currentStatus": "当前状态",
-    "lotteryRegistering": "抽选登记中 · {{month}}",
-    "firstComeAvailable": "现可购买(先到先得) · {{months}}"
+    "lotteryRegistering": "抽选登记中",
+    "firstComeAvailable": "现可购买(先到先得)"
   },
   "about": {
     "title": "关于",
