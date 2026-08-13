@@ -39,6 +39,22 @@ export interface TimezoneOption {
  * @param locale The display locale (e.g. "zh-CN") — zone names are localized
  *               via Intl so the dropdown reads naturally in any language.
  */
+/**
+ * Canonical zones to prefer when several IANA zones collapse to the same
+ * localized label (e.g. all China zones → "中国标准时间"), so the option that
+ * survives carries a clean, well-known timezone value.
+ */
+const PREFERRED_ZONES = new Set([
+  'Asia/Shanghai', 'Asia/Tokyo', 'Asia/Hong_Kong', 'Asia/Taipei', 'Asia/Seoul',
+  'Asia/Singapore', 'Asia/Kolkata', 'Asia/Dubai', 'Asia/Bangkok', 'Asia/Jakarta',
+  'Europe/London', 'Europe/Paris', 'Europe/Berlin', 'Europe/Madrid', 'Europe/Rome',
+  'Europe/Amsterdam', 'Europe/Istanbul', 'Europe/Moscow',
+  'America/New_York', 'America/Chicago', 'America/Denver', 'America/Los_Angeles',
+  'America/Toronto', 'America/Vancouver', 'America/Sao_Paulo', 'America/Mexico_City',
+  'Australia/Sydney', 'Australia/Melbourne', 'Australia/Perth', 'Pacific/Auckland',
+  'Africa/Cairo', 'Africa/Johannesburg', 'Africa/Lagos',
+]);
+
 export function getAllTimezones(locale: string = 'en'): TimezoneOption[] {
   // Fallback if supportedValuesOf is not available
   if (typeof Intl === 'undefined' || !('supportedValuesOf' in Intl)) {
@@ -95,8 +111,20 @@ export function getAllTimezones(locale: string = 'en'): TimezoneOption[] {
     }
   }).filter((item): item is TimezoneOption => item !== null);
 
+  // Collapse exact duplicates: many zones share the same localized name + offset
+  // (e.g. every China zone → "中国标准时间 (UTC+8)"). Prefer a canonical zone
+  // (like Asia/Shanghai) whenever one of the colliding values is preferred.
+  const seen = new Map<string, TimezoneOption>();
+  for (const opt of options) {
+    const existing = seen.get(opt.label);
+    if (!existing || (PREFERRED_ZONES.has(opt.value) && !PREFERRED_ZONES.has(existing.value))) {
+      seen.set(opt.label, opt);
+    }
+  }
+  const unique = [...seen.values()];
+
   // Sort by offset first, then by localized name
-  return options.sort((a, b) => {
+  return unique.sort((a, b) => {
     if (a.offset !== b.offset) return a.offset - b.offset;
     return a.label.localeCompare(b.label, locale);
   });
