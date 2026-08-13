@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import { Landmark, Github } from 'lucide-react';
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -13,10 +13,14 @@ import { useTranslation } from "react-i18next";
 function Layout({ children }: { children: React.ReactNode }) {
   const { timezone, setTimezone } = useTimezone();
   const { t } = useTranslation();
+  const location = useLocation();
 
   useEffect(() => {
-    document.title = t('common.title');
-    
+    // Route-aware, localized document title.
+    document.title = location.pathname === '/about'
+      ? `${t('about.title')} · ${t('common.title')}`
+      : t('common.title');
+
     // Update meta description
     const metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) {
@@ -39,7 +43,7 @@ function Layout({ children }: { children: React.ReactNode }) {
     if (twitterDesc) {
       twitterDesc.setAttribute('content', t('seo.description'));
     }
-  }, [t]);
+  }, [t, location.pathname]);
 
   return (
     <div className="min-h-screen flex flex-col">
