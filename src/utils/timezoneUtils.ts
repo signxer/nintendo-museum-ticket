@@ -35,9 +35,11 @@ export interface TimezoneOption {
 }
 
 /**
- * Get a list of all supported timezones with formatted labels
+ * Get a list of all supported timezones with localized labels.
+ * @param locale The display locale (e.g. "zh-CN") — zone names are localized
+ *               via Intl so the dropdown reads naturally in any language.
  */
-export function getAllTimezones(): TimezoneOption[] {
+export function getAllTimezones(locale: string = 'en'): TimezoneOption[] {
   // Fallback if supportedValuesOf is not available
   if (typeof Intl === 'undefined' || !('supportedValuesOf' in Intl)) {
     return [
@@ -50,23 +52,29 @@ export function getAllTimezones(): TimezoneOption[] {
 
   const timezones = Intl.supportedValuesOf('timeZone');
   const now = new Date();
-  
+
   const options = timezones.map(tz => {
     try {
-      // Get the offset string like "GMT+9" or "GMT-5"
-      const formatter = new Intl.DateTimeFormat('en-US', {
+      // Localized long zone name, e.g. "中国标准时间" / "China Standard Time".
+      const nameFormatter = new Intl.DateTimeFormat(locale, {
+        timeZone: tz,
+        timeZoneName: 'long'
+      });
+      const name = nameFormatter.formatToParts(now).find(p => p.type === 'timeZoneName')?.value
+        || tz.split('/').pop()?.replace(/_/g, ' ')
+        || tz;
+
+      // Offset string like "GMT+9" or "GMT-5"
+      const offsetFormatter = new Intl.DateTimeFormat(locale, {
         timeZone: tz,
         timeZoneName: 'shortOffset'
       });
-      
-      const parts = formatter.formatToParts(now);
-      const offsetPart = parts.find(p => p.type === 'timeZoneName');
-      let offsetString = offsetPart?.value || ''; 
-      
+      let offsetString = offsetFormatter.formatToParts(now).find(p => p.type === 'timeZoneName')?.value || '';
+
       // Standardize to UTC
       offsetString = offsetString.replace('GMT', 'UTC');
       if (offsetString === 'UTC') offsetString = 'UTC+0';
-      
+
       // Calculate numeric offset for sorting (approximate)
       let offset = 0;
       if (offsetString.includes('+')) {
@@ -76,13 +84,10 @@ export function getAllTimezones(): TimezoneOption[] {
         const [, num] = offsetString.split('-');
         offset = -(parseInt(num) || 0);
       }
-      
-      // Extract city/region name
-      const city = tz.split('/').pop()?.replace(/_/g, ' ') || tz;
-      
+
       return {
         value: tz,
-        label: `${city} (${offsetString})`,
+        label: `${name} (${offsetString})`,
         offset
       };
     } catch {
@@ -90,9 +95,9 @@ export function getAllTimezones(): TimezoneOption[] {
     }
   }).filter((item): item is TimezoneOption => item !== null);
 
-  // Sort by offset first, then by name
+  // Sort by offset first, then by localized name
   return options.sort((a, b) => {
     if (a.offset !== b.offset) return a.offset - b.offset;
-    return a.label.localeCompare(b.label);
+    return a.label.localeCompare(b.label, locale);
   });
 }

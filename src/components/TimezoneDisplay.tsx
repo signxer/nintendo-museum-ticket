@@ -1,4 +1,5 @@
 import React, { useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Globe } from 'lucide-react';
 import { cn } from '../lib/utils';
 import { getAllTimezones } from '../utils/timezoneUtils';
@@ -10,8 +11,10 @@ interface TimezoneDisplayProps {
 }
 
 export function TimezoneDisplay({ timezone, onTimezoneChange, className }: TimezoneDisplayProps) {
-  // Memoize the timezone list calculation
-  const timezoneOptions = useMemo(() => getAllTimezones(), []);
+  const { i18n } = useTranslation();
+
+  // Memoize the timezone list, re-localized when the UI language changes.
+  const timezoneOptions = useMemo(() => getAllTimezones(i18n.language), [i18n.language]);
 
   return (
     <div className={cn("flex items-center gap-2 text-sm", className)}>
