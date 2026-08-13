@@ -26,9 +26,7 @@ export function CurrentStatusCard() {
   const onSaleText = onSaleMonths.map(formatShortMonth).join(' · ');
 
   return (
-    <PixelCard className="w-full text-center">
-      <h2 className="text-lg mb-4 text-nintendo-red">{t('home.currentStatus')}</h2>
-
+    <PixelCard title={t('home.currentStatus')} className="w-full text-center">
       <div className="space-y-5">
         <div>
           <p className="text-sm text-nintendo-grey mb-1">{t('home.lotteryRegistering')}</p>

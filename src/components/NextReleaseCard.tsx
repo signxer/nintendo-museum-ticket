@@ -80,9 +80,7 @@ export function NextReleaseCard() {
   };
 
   return (
-    <PixelCard className="text-center transform hover:-translate-y-1 active:translate-y-0 active:shadow-none transition-all duration-150 active:transition-none cursor-pointer" onClick={handleConfetti}>
-      <h2 className="text-lg mb-4 text-nintendo-red">{t('home.nextRelease')}</h2>
-      
+    <PixelCard title={t('home.nextRelease')} className="text-center transform hover:-translate-y-1 active:translate-y-0 active:shadow-none transition-all duration-150 active:transition-none cursor-pointer" onClick={handleConfetti}>
       <div className="text-xl md:text-3xl font-bold mb-2 font-pixel leading-relaxed break-words">
         {formatDate(releaseInfo.releaseDate)}
       </div>
