@@ -65,16 +65,75 @@
   .pixel-border {
     @apply border-4 border-nintendo-dark;
   }
-  
+
   .pixel-card {
     @apply bg-white pixel-border shadow-pixel p-6;
   }
-  
+
   .pixel-input {
     @apply w-full bg-white border-4 border-nintendo-dark px-4 py-2 font-pixel text-sm focus:outline-none focus:shadow-pixel transition-all;
   }
-  
+
   .container-pixel {
     @apply max-w-4xl mx-auto px-4;
+  }
+
+  /* ---- Apple-inspired motion & accessibility (pixel-flavored) ---- */
+
+  /* One-shot "land" entrance for computed results — a single settle with a
+     slight overshoot, then it rests. No looping oscillation. */
+  @keyframes pixel-land {
+    0%   { transform: translateY(8px) scale(0.98); opacity: 0; animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1); }
+    60%  { transform: translateY(-2px) scale(1.005); opacity: 1; animation-timing-function: ease-in-out; }
+    100% { transform: translateY(0) scale(1); opacity: 1; }
+  }
+  .animate-pixel-land {
+    animation: pixel-land 260ms both;
+  }
+
+  /* Directional page transitions — forward slides in from the right, back
+     from the left, so returning retraces the path you came in on. */
+  @keyframes page-push {
+    from { transform: translateX(28px); opacity: 0; }
+    to   { transform: translateX(0); opacity: 1; }
+  }
+  @keyframes page-pop {
+    from { transform: translateX(-28px); opacity: 0; }
+    to   { transform: translateX(0); opacity: 1; }
+  }
+  .page-enter {
+    animation: page-push 200ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+  .page-enter-back {
+    animation: page-pop 200ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  /* Keyboard focus ring in the pixel palette — visible for keyboard users,
+     silent for mouse/touch users. */
+  .pixel-focus:focus-visible {
+    outline: 3px solid #E60012;
+    outline-offset: 3px;
+  }
+
+  /* Translucent control panel (header) — solid under reduced transparency. */
+  .glass-pixel {
+    background-color: rgba(255, 255, 255, 0.95);
+  }
+}
+
+/* Honor system reduced-motion: collapse all animation/transition to ~0 so
+   content simply appears; no slides, springs, or bouncing. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Honor system reduced-transparency: frostier/solid surfaces. */
+@media (prefers-reduced-transparency: reduce) {
+  .glass-pixel {
+    background-color: #ffffff;
   }
 }

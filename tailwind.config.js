@@ -25,15 +25,6 @@ export default {
         'pixel-sm': '2px 2px 0 0 #2D2D2D',
         'pixel-lg': '6px 6px 0 0 #2D2D2D',
         'pixel-inset': 'inset 4px 4px 0 0 #202020',
-      },
-      animation: {
-        'bounce-pixel': 'bounce-pixel 0.5s infinite',
-      },
-      keyframes: {
-        'bounce-pixel': {
-          '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-4px)' },
-        }
       }
     },
   },

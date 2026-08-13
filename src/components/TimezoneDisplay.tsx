@@ -20,7 +20,7 @@ export function TimezoneDisplay({ timezone, onTimezoneChange, className }: Timez
         <select 
           value={timezone}
           onChange={(e) => onTimezoneChange(e.target.value)}
-          className="appearance-none bg-transparent font-pixel text-xs sm:text-sm text-nintendo-dark focus:outline-none cursor-pointer border-b border-dashed border-nintendo-grey hover:border-nintendo-red transition-colors pr-6 max-w-[200px] truncate"
+          className="appearance-none bg-transparent font-pixel text-xs sm:text-sm text-nintendo-dark focus:outline-none cursor-pointer border-b border-dashed border-nintendo-grey hover:border-nintendo-red transition-colors pr-6 max-w-[200px] truncate pixel-focus"
         >
           {timezoneOptions.map(option => (
             <option key={option.value} value={option.value}>

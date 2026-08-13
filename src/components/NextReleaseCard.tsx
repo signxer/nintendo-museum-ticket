@@ -61,6 +61,8 @@ export function NextReleaseCard() {
   };
 
   const handleConfetti = () => {
+    // Respect reduced-motion: no confetti burst for users who opt out of motion.
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     confetti({
       particleCount: 100,
       spread: 70,
@@ -78,7 +80,7 @@ export function NextReleaseCard() {
   };
 
   return (
-    <PixelCard className="text-center transform hover:-translate-y-1 transition-transform cursor-pointer" onClick={handleConfetti}>
+    <PixelCard className="text-center transform hover:-translate-y-1 active:translate-y-0 active:shadow-none transition-all duration-150 active:transition-none cursor-pointer" onClick={handleConfetti}>
       <h2 className="text-lg mb-4 text-nintendo-red">{t('home.nextRelease')}</h2>
       
       <div className="text-xl md:text-3xl font-bold mb-2 font-pixel leading-relaxed break-words">
@@ -93,7 +95,7 @@ export function NextReleaseCard() {
         href="https://museum-tickets.nintendo.com/en/calendar" 
         target="_blank" 
         rel="noopener noreferrer"
-        className="inline-block mb-6 group"
+        className="inline-block mb-6 group pixel-focus"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="bg-nintendo-light p-4 border-2 border-nintendo-grey rounded-sm group-hover:border-nintendo-red group-hover:bg-white transition-colors">

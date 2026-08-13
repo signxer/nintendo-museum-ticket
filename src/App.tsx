@@ -6,6 +6,7 @@ import About from "./pages/About";
 import { PixelClock } from "./components/PixelClock";
 import { LanguageSwitcher } from "./components/LanguageSwitcher";
 import { TimezoneDisplay } from "./components/TimezoneDisplay";
+import { PageTransition } from "./components/PageTransition";
 import { useTimezone } from "./hooks/useTimezone";
 import { useTranslation } from "react-i18next";
 
@@ -56,7 +57,7 @@ function Layout({ children }: { children: React.ReactNode }) {
           
           <div className="flex flex-col items-center md:items-end gap-2">
             <PixelClock className="text-white drop-shadow-md" />
-            <div className="flex flex-wrap justify-center gap-4 bg-white/95 p-2 rounded border-2 border-nintendo-dark shadow-pixel-sm">
+            <div className="flex flex-wrap justify-center gap-4 glass-pixel p-2 rounded border-2 border-nintendo-dark shadow-pixel-sm">
               <LanguageSwitcher />
               <TimezoneDisplay timezone={timezone} onTimezoneChange={setTimezone} />
             </div>
@@ -65,7 +66,7 @@ function Layout({ children }: { children: React.ReactNode }) {
       </header>
 
       <main className="flex-grow">
-        {children}
+        <PageTransition>{children}</PageTransition>
       </main>
 
       <footer className="bg-nintendo-dark text-white p-8 text-center mt-auto border-t-4 border-nintendo-grey">

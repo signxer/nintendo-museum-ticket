@@ -41,7 +41,7 @@ export function LanguageSwitcher({ className }: LanguageSwitcherProps) {
       <select
         value={currentLang}
         onChange={(e) => changeLanguage(e.target.value)}
-        className="bg-transparent font-sans text-nintendo-dark focus:outline-none cursor-pointer border-b border-dashed border-nintendo-grey hover:border-nintendo-red transition-colors max-w-[120px]"
+        className="bg-transparent font-sans text-nintendo-dark focus:outline-none cursor-pointer border-b border-dashed border-nintendo-grey hover:border-nintendo-red transition-colors max-w-[120px] pixel-focus"
       >
         {languages.map(lang => (
           <option key={lang.code} value={lang.code}>

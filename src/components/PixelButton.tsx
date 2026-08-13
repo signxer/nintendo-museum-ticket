@@ -28,7 +28,7 @@ export function PixelButton({
   return (
     <button
       className={cn(
-        "font-pixel border-4 border-nintendo-dark shadow-pixel transition-all duration-100",
+        "font-pixel border-4 border-nintendo-dark shadow-pixel transition-all duration-100 active:transition-none pixel-focus",
         variants[variant],
         sizes[size],
         className

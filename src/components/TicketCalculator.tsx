@@ -6,6 +6,7 @@ import { getTicketReleaseDateForVisit } from '../utils/ticketLogic';
 import { useTimezone } from '../hooks/useTimezone';
 import { Calendar, Calendar as CalendarIcon, Download, ExternalLink } from 'lucide-react';
 import { getGoogleCalendarUrl, downloadIcsFile } from '../utils/calendarUtils';
+import { vibrate } from '../utils/haptics';
 
 export function TicketCalculator() {
   const { t, i18n } = useTranslation();
@@ -22,6 +23,7 @@ export function TicketCalculator() {
     
     const releaseDate = getTicketReleaseDateForVisit(date);
     setResult(releaseDate);
+    vibrate([12]); // confirm the computation landed
   };
 
   const formatDate = (date: Date) => {
@@ -79,7 +81,7 @@ export function TicketCalculator() {
         </div>
 
         {result && (
-          <div className="mt-4 p-4 bg-nintendo-light border-4 border-nintendo-grey animate-bounce-pixel">
+          <div className="mt-4 p-4 bg-nintendo-light border-4 border-nintendo-grey animate-pixel-land">
             <p className="text-sm text-nintendo-grey mb-1">{t('home.canBuy', { month: formatMonth(visitMonth) })}</p>
             <p className="text-lg font-pixel text-nintendo-red mb-4">
               {formatDate(result)}
@@ -87,10 +89,11 @@ export function TicketCalculator() {
             
             {calendarEvent && !isPast && (
               <div className="flex flex-wrap gap-2">
-                <a 
-                  href={getGoogleCalendarUrl(calendarEvent)} 
-                  target="_blank" 
+                <a
+                  href={getGoogleCalendarUrl(calendarEvent)}
+                  target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => vibrate()}
                 >
                   <PixelButton variant="outline" size="sm" className="flex items-center gap-2">
                     <CalendarIcon className="w-4 h-4" />
@@ -102,7 +105,10 @@ export function TicketCalculator() {
                   variant="outline" 
                   size="sm" 
                   className="flex items-center gap-2"
-                  onClick={() => downloadIcsFile(calendarEvent)}
+                  onClick={() => {
+                    vibrate();
+                    downloadIcsFile(calendarEvent);
+                  }}
                 >
                   <Download className="w-4 h-4" />
                   {t('home.downloadIcs')}
