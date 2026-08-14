@@ -70,7 +70,7 @@ export function MonthPicker({ value, onChange, min }: MonthPickerProps) {
           <div
             role="dialog"
             aria-label={t('home.visitDate')}
-            className="absolute left-0 right-0 z-20 mt-2 bg-white border-4 border-nintendo-dark shadow-pixel p-4"
+            className="absolute left-0 right-0 z-20 bottom-full mb-2 bg-white border-4 border-nintendo-dark shadow-pixel p-4"
           >
             {/* Year navigation */}
             <div className="flex items-center justify-between mb-3">

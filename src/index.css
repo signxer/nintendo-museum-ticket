@@ -247,10 +247,14 @@ html.theme-official:not([lang^="zh"]):not([lang="ja"]):not([lang="ko"]) {
     to   { transform: translateX(0); opacity: 1; }
   }
   .page-enter {
-    animation: page-push 200ms cubic-bezier(0.16, 1, 0.3, 1) both;
+    /* fill-mode: backwards — don't retain the end transform after the
+       animation, or the leftover `transform` creates a stacking context that
+       traps z-index of absolutely-positioned children (e.g. the month picker
+       popup) below later DOM siblings like the footer. */
+    animation: page-push 200ms cubic-bezier(0.16, 1, 0.3, 1) backwards;
   }
   .page-enter-back {
-    animation: page-pop 200ms cubic-bezier(0.16, 1, 0.3, 1) both;
+    animation: page-pop 200ms cubic-bezier(0.16, 1, 0.3, 1) backwards;
   }
 
   /* Keyboard focus ring in the pixel palette — visible for keyboard users,
