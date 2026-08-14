@@ -9,6 +9,9 @@
   <br/>
   A fan-made helper that converts the official JST sale times into your local time, with countdowns, calendar export, and a visit planner.
 </p>
+<p align="center">
+  👉 <b><a href="https://n.675277.xyz/">Try the live demo now →</a></b>
+</p>
 
 <p align="center">
   <a href="https://n.675277.xyz/"><img src="https://img.shields.io/badge/Live%20Demo-n.675277.xyz-%23E60012?style=flat-square" alt="Live demo" /></a>
@@ -32,17 +35,15 @@
 
 ## ✨ Features
 
-| | |
-|---|---|
-| 🗓️ **Next release card** | The exact on-sale date & time with a live countdown, plus one-click **Google Calendar** / **.ics** export |
-| 📊 **Current status** | Which months are accepting **lottery entries** and which are **on sale** right now |
-| 🧮 **Visit calculator** | Pick your visit month → see the full timeline: lottery entry → results → first-come sale, then add to calendar or share |
-| 📅 **Release schedule** | The next 6 months of lottery and sale dates at a glance |
-| 🌍 **Timezone conversion** | All times shown in your timezone automatically — no math needed |
-| 🎨 **Two themes** | A retro **Pixel** theme and a clean **Museum** theme that mirrors the official site's design language |
-| 🌐 **15 languages** | UI fully localized, per-language fonts included |
-| 🔗 **Share links** | `?visit=2026-11` deep links that pre-fill the calculator |
-| 📱 **Mobile-first** | Responsive layout, custom month picker, installable PWA |
+- 🗓️ **Next release card** — The exact on-sale date & time with a live countdown, plus one-click **Google Calendar** / **.ics** export
+- 📊 **Current status** — Which months are accepting **lottery entries** and which are **on sale** right now
+- 🧮 **Visit calculator** — Pick your visit month → see the full timeline: lottery entry → results → first-come sale, then add to calendar or share
+- 📅 **Release schedule** — The next 6 months of lottery and sale dates at a glance
+- 🌍 **Timezone conversion** — All times shown in your timezone automatically — no math needed
+- 🎨 **Two themes** — A retro **Pixel** theme and a clean **Museum** theme that mirrors the official site's design language
+- 🌐 **15 languages** — UI fully localized, per-language fonts included
+- 🔗 **Share links** — `?visit=2026-11` deep links that pre-fill the calculator
+- 📱 **Mobile-first** — Responsive layout, custom month picker, installable PWA
 
 ## 🗺️ How ticket sales work
 

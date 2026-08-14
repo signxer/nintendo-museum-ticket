@@ -9,6 +9,9 @@
   <br/>
   Una herramienta hecha por fans que convierte los horarios oficiales de venta (JST) a su hora local, con cuenta atrás, exportación a calendario y planificador de visitas.
 </p>
+<p align="center">
+  👉 <b><a href="https://n.675277.xyz/">Prueba la versión online ahora →</a></b>
+</p>
 
 <p align="center">
   <a href="https://n.675277.xyz/"><img src="https://img.shields.io/badge/Experiencia%20online-n.675277.xyz-%23E60012?style=flat-square" alt="Experiencia online" /></a>
@@ -32,17 +35,15 @@
 
 ## ✨ Funciones
 
-| | |
-|---|---|
-| 🗓️ **Próxima venta** | Fecha y hora exactas con cuenta atrás en vivo, más exportación a **Google Calendar** / **.ics** con un clic |
-| 📊 **Estado actual** | Qué meses están aceptando **inscripciones al sorteo** y cuáles están **a la venta** ahora |
-| 🧮 **Calculadora de entradas** | Elija su mes de visita → línea temporal completa: sorteo → resultados → venta directa, añadir al calendario o compartir |
-| 📅 **Calendario de ventas** | Los próximos 6 meses de sorteos y ventas de un vistazo |
-| 🌍 **Conversión de zona horaria** | Todas las horas se muestran en su zona horaria automáticamente |
-| 🎨 **Dos temas** | Un tema retro **Píxel** y un tema **Museo** que reproduce el diseño del sitio oficial |
-| 🌐 **15 idiomas** | Interfaz totalmente localizada, con fuentes por idioma |
-| 🔗 **Enlaces para compartir** | Enlaces profundos `?visit=2026-11` que rellenan la calculadora |
-| 📱 **Móvil primero** | Diseño adaptable, selector de mes personalizado y PWA instalable |
+- 🗓️ **Próxima venta** — Fecha y hora exactas con cuenta atrás en vivo, más exportación a **Google Calendar** / **.ics** con un clic
+- 📊 **Estado actual** — Qué meses están aceptando **inscripciones al sorteo** y cuáles están **a la venta** ahora
+- 🧮 **Calculadora de entradas** — Elija su mes de visita → línea temporal completa: sorteo → resultados → venta directa, añadir al calendario o compartir
+- 📅 **Calendario de ventas** — Los próximos 6 meses de sorteos y ventas de un vistazo
+- 🌍 **Conversión de zona horaria** — Todas las horas se muestran en su zona horaria automáticamente
+- 🎨 **Dos temas** — Un tema retro **Píxel** y un tema **Museo** que reproduce el diseño del sitio oficial
+- 🌐 **15 idiomas** — Interfaz totalmente localizada, con fuentes por idioma
+- 🔗 **Enlaces para compartir** — Enlaces profundos `?visit=2026-11` que rellenan la calculadora
+- 📱 **Móvil primero** — Diseño adaptable, selector de mes personalizado y PWA instalable
 
 ## 🗺️ Cómo funcionan las ventas
 
