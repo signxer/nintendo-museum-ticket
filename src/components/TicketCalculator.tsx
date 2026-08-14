@@ -12,6 +12,7 @@ import { getOfficialCalendarUrl } from '../utils/officialLinks';
 import { vibrate } from '../utils/haptics';
 import { getLocalYearMonth } from '../utils/dateHelper';
 import { shareText } from '../utils/share';
+import { cn } from '../lib/utils';
 
 /** Matches "YYYY-MM" so shared ?visit= links are validated before use. */
 const VISIT_PARAM_RE = /^\d{4}-(0[1-9]|1[0-2])$/;
@@ -117,11 +118,19 @@ export function TicketCalculator() {
     }
   };
 
-  const renderTimelineRow = (label: string, date: Date) => {
+  const renderTimelineRow = (label: string, date: Date, tone?: 'lottery' | 'sale') => {
     const isDone = date <= now;
     return (
       <div className="flex items-center justify-between gap-3">
-        <span className="text-xs text-nintendo-grey shrink-0">{label}</span>
+        <span
+          className={cn(
+            'text-xs text-nintendo-grey shrink-0',
+            tone === 'lottery' && 'nm-lottery',
+            tone === 'sale' && 'nm-sale'
+          )}
+        >
+          {label}
+        </span>
         <span className="text-sm font-pixel text-nintendo-dark text-right flex-1">{formatDateTime(date)}</span>
         <span
           className={`text-[10px] px-1.5 py-0.5 shrink-0 ${
@@ -187,11 +196,11 @@ export function TicketCalculator() {
               <p className="text-xs font-bold text-nintendo-dark mb-1">{t('home.purchasePath')}</p>
               {lottery && (
                 <>
-                  {renderTimelineRow(t('home.lotteryEntry'), lottery.entryOpen)}
-                  {renderTimelineRow(t('home.lotteryResult'), lottery.result)}
+                  {renderTimelineRow(t('home.lotteryEntry'), lottery.entryOpen, 'lottery')}
+                  {renderTimelineRow(t('home.lotteryResult'), lottery.result, 'lottery')}
                 </>
               )}
-              {renderTimelineRow(t('home.firstCome'), result)}
+              {renderTimelineRow(t('home.firstCome'), result, 'sale')}
             </div>
 
             {calendarEvent && !isPast && (

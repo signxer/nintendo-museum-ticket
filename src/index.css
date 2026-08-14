@@ -92,7 +92,7 @@
   --nm-red: 230 0 18;          /* #E60012 — same brand red */
   --nm-grey: 118 115 138;      /* #76738A — official slate accent */
   --nm-dark: 60 60 60;         /* #3C3C3C — official body text */
-  --nm-light: 244 244 244;     /* #F4F4F4 */
+  --nm-light: 242 242 242;     /* #F2F2F2 — official label/header grey */
   --nm-white: 255 255 255;
   --nm-bg: 245 245 245;        /* #F5F5F5 */
 
@@ -207,7 +207,11 @@ input[type="month"]::-webkit-datetime-edit {
   background-color: #ffffff;
 }
 
-/* Cards / surfaces: thin light borders, soft shadows, rounded corners. */
+/* Cards / surfaces: thin light borders, soft shadows, right angles —
+   the official site is strictly squared-off (0px radius everywhere). */
+.theme-official * {
+  border-radius: 0;
+}
 .theme-official .border-4 {
   border-width: 1px;
 }
@@ -222,39 +226,61 @@ input[type="month"]::-webkit-datetime-edit {
   border-color: #e5e5e5;
 }
 .theme-official .shadow-pixel {
-  border-radius: 12px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
 }
 .theme-official .shadow-pixel-sm {
-  border-radius: 8px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 .theme-official .shadow-pixel-lg {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
-/* Buttons: flat pills with a soft shadow, no chunky border. */
+/* Buttons: flat squared blocks with a soft shadow, no chunky border. */
 .theme-official button.border-4,
 .theme-official a.border-4 {
   border-width: 0;
-  border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
 }
 
 /* Inputs. */
 .theme-official .pixel-input {
   border-width: 1px;
-  border-radius: 8px;
   box-shadow: none;
 }
 
-/* Card title badge: from a centered floating banner to a static red pill. */
+/* Card title badge: from a centered floating red banner to a full-width
+   #F2F2F2 section header bar (like the official table headers). */
 .theme-official .pixel-card-title {
   position: static;
   transform: none;
   border: none;
-  border-radius: 6px;
-  margin: 0 0 14px;
+  display: block;
+  background-color: #f2f2f2;
+  color: #3c3c3c;
+  white-space: normal;
+  font-weight: 700;
+  margin: -24px -24px 16px;
+  padding: 10px 16px;
+}
+
+/* Tabs: active = slate (#76738A, official "selected" color), inactive =
+   light grey surface like the official labels. */
+.theme-official [role="tab"][aria-selected="true"] {
+  background-color: #76738a;
+  color: #ffffff;
+}
+.theme-official [role="tab"]:not([aria-selected="true"]) {
+  background-color: #f2f2f2;
+  color: #3c3c3c;
+}
+
+/* Auxiliary status colors from the official calendar:
+   orange #F67E1A = lottery/drawing, blue #3A9CE2 = on-sale/first-come. */
+.theme-official .nm-lottery {
+  color: #f67e1a;
+}
+.theme-official .nm-sale {
+  color: #3a9ce2;
 }
 
 /* Header: white bar with a hairline bottom border, dark title, flat logo. */
@@ -280,7 +306,6 @@ input[type="month"]::-webkit-datetime-edit {
   background-color: rgba(255, 255, 255, 0.92);
   border-color: #e5e5e5;
   box-shadow: none;
-  border-radius: 8px;
 }
 
 /* Divider / timeline rows: hairline solid separators. */
