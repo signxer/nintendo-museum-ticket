@@ -328,6 +328,23 @@ html.theme-official:not([lang^="zh"]):not([lang="ja"]):not([lang="ko"]) {
   header.header-shrunk h1 {
     font-size: 0.75rem;
   }
+  /* The theme/language/timezone controls also collapse away while scrolled,
+     revealing again smoothly at the top of the page. */
+  header .header-controls {
+    overflow: hidden;
+    max-height: 84px;
+    opacity: 1;
+    transform: translateY(0);
+    transition:
+      max-height 220ms ease,
+      opacity 220ms ease,
+      transform 220ms ease;
+  }
+  header.header-shrunk .header-controls {
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-6px);
+  }
 }
 
 /* ---- Official theme: strip the pixel look --------------------------------

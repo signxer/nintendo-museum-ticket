@@ -112,7 +112,7 @@ function Layout({ children }: { children: React.ReactNode }) {
             </h1>
           </div>
           
-          <div className="flex flex-wrap items-center justify-center md:justify-end gap-2 sm:gap-3 shrink-0">
+          <div className="header-controls flex flex-wrap items-center justify-center md:justify-end gap-2 sm:gap-3 shrink-0">
             {/* Theme toggle sits outside the language/timezone panel. */}
             <ThemeSwitcher theme={theme} onToggle={toggleTheme} />
             <div className="flex flex-wrap justify-center gap-2 sm:gap-3 glass-pixel p-1.5 sm:p-2 rounded border-2 border-nintendo-dark shadow-pixel-sm">
