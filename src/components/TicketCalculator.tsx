@@ -152,11 +152,11 @@ export function TicketCalculator() {
           {t('home.visitDate')}
         </label>
 
-        <div className="flex gap-2">
-          {/* min-w-0 lets the input shrink below the native month control's
-              intrinsic width on mobile; the button never shrinks — this keeps
-              input and button side by side without overlapping. */}
-          <div className="relative flex-1 min-w-0">
+        {/* Grid (not flex) — minmax(0,1fr) lets the input column shrink all
+            the way down on mobile browsers, and the auto button column can
+            never be covered. */}
+        <div className="grid grid-cols-[minmax(0,1fr)_auto] gap-2">
+          <div className="relative min-w-0">
             <input
               type="month"
               value={visitMonth}
@@ -178,7 +178,7 @@ export function TicketCalculator() {
               {visitMonth || t('home.visitDatePlaceholder')}
             </span>
           </div>
-          <PixelButton onClick={handleCalculate} className="shrink-0 flex items-center">
+          <PixelButton onClick={handleCalculate} className="flex items-center">
             <CalcIcon className="w-4 h-4 mr-1.5 shrink-0" />
             {t('home.calculate')}
           </PixelButton>

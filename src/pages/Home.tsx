@@ -50,7 +50,7 @@ export default function Home() {
           <PixelClock className="text-sm text-nintendo-dark" />
         </div>
         <div className="flex items-center gap-2">
-          <PixelButton variant="outline" size="sm" className="h-9 flex items-center" onClick={handleShare}>
+          <PixelButton variant="outline" size="sm" className="h-9 flex items-center bg-white border-2 border-nintendo-dark shadow-pixel-sm" onClick={handleShare}>
             <Share2 className="w-4 h-4 mr-2 inline-block" />
             {shareState === 'copied' ? t('home.shareCopied') : t('home.share')}
           </PixelButton>
