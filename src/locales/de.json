@@ -28,8 +28,8 @@
     "calculate": "Berechnen",
     "canBuy": "Sie können Tickets für {{month}} kaufen am:",
     "pleaseSelectDate": "Bitte wählen Sie ein Datum",
-    "downloadIcs": "Zum Systemkalender hinzufügen",
-    "googleCalendar": "Google Kalender",
+    "downloadIcs": "Kalender",
+    "googleCalendar": "Google",
     "calendarEventTitle": "Nintendo Museum Tickets kaufen (für {{month}})",
     "calendarEventDesc": "Ticketverkauf für {{month}} startet. Machen Sie sich bereit für die Warteschlange!",
     "days": "T",
@@ -57,7 +57,9 @@
     "shareCopied": "Kopiert!",
     "releaseOverview": "Kommende Verkäufe",
     "visitMonth": "Besuchsmonat",
-    "tools": "Ticket-Tools"
+    "tools": "Ticket-Tools",
+    "googleCalendarShort": "Google",
+    "downloadIcsShort": "Kalender"
   },
   "about": {
     "title": "Über",

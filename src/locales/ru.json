@@ -28,8 +28,8 @@
     "calculate": "Рассчитать",
     "canBuy": "Вы можете купить билеты на {{month}}:",
     "pleaseSelectDate": "Выберите дату",
-    "downloadIcs": "Добавить в системный календарь",
-    "googleCalendar": "Google Календарь",
+    "downloadIcs": "Календарь",
+    "googleCalendar": "Google",
     "calendarEventTitle": "Купить билеты в музей Nintendo (на {{month}})",
     "calendarEventDesc": "Старт продаж на {{month}}. Будьте готовы к очереди!",
     "days": "д",
@@ -57,7 +57,9 @@
     "shareCopied": "Скопировано!",
     "releaseOverview": "Ближайшие продажи",
     "visitMonth": "Месяц посещения",
-    "tools": "Инструменты для билетов"
+    "tools": "Инструменты для билетов",
+    "googleCalendarShort": "Google",
+    "downloadIcsShort": "Календарь"
   },
   "about": {
     "title": "О проекте",

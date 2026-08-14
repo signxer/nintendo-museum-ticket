@@ -28,8 +28,8 @@
     "calculate": "Calcola",
     "canBuy": "Puoi acquistare biglietti per {{month}} il:",
     "pleaseSelectDate": "Seleziona una data",
-    "downloadIcs": "Aggiungi al calendario di sistema",
-    "googleCalendar": "Google Calendar",
+    "downloadIcs": "Agenda",
+    "googleCalendar": "Google",
     "calendarEventTitle": "Acquista Biglietti Nintendo Museum (per {{month}})",
     "calendarEventDesc": "Inizia vendita biglietti per {{month}}. Preparati per la coda!",
     "days": "g",
@@ -57,7 +57,9 @@
     "shareCopied": "Copiato!",
     "releaseOverview": "Prossime vendite",
     "visitMonth": "Mese di visita",
-    "tools": "Strumenti biglietti"
+    "tools": "Strumenti biglietti",
+    "googleCalendarShort": "Google",
+    "downloadIcsShort": "Agenda"
   },
   "about": {
     "title": "Info",

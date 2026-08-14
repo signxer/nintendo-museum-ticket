@@ -28,8 +28,8 @@
     "calculate": "احسب",
     "canBuy": "يمكنك شراء تذاكر لشهر {{month}} في:",
     "pleaseSelectDate": "يرجى اختيار تاريخ",
-    "downloadIcs": "إضافة إلى تقويم النظام",
-    "googleCalendar": "تقويم جوجل",
+    "downloadIcs": "التقويم",
+    "googleCalendar": "جوجل",
     "calendarEventTitle": "شراء تذاكر متحف نينتندو (لشهر {{month}})",
     "calendarEventDesc": "بدء بيع التذاكر لشهر {{month}}. استعد للطابور!",
     "days": "يوم",
@@ -57,7 +57,9 @@
     "shareCopied": "تم النسخ!",
     "releaseOverview": "عمليات البيع القادمة",
     "visitMonth": "شهر الزيارة",
-    "tools": "أدوات التذاكر"
+    "tools": "أدوات التذاكر",
+    "googleCalendarShort": "جوجل",
+    "downloadIcsShort": "التقويم"
   },
   "about": {
     "title": "حول",

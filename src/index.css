@@ -106,6 +106,15 @@
     "Microsoft YaHei", sans-serif;
 }
 
+/* One-row action buttons on the next-release card: compact horizontal
+   padding + smaller type so a short label + icon fit a third of the row.
+   (Official theme also needs a later, equal-specificity rule to beat the
+   generic button sizing overrides — see the official theme section.) */
+.nm-action-btn {
+  padding: 4px 6px;
+  font-size: 12px;
+}
+
 /* Long (non-Chinese) titles: shrink the type and let them wrap to two lines
    inside the brand block, so the theme/language/timezone controls always stay
    on one line. Chinese titles are short and keep the default size. */
@@ -344,6 +353,15 @@ input[type="month"]::-webkit-datetime-edit {
 .theme-official a.text-base {
   font-size: 17px;
   padding: 12px 24px;
+}
+/* Must come after the rules above to win at equal specificity. */
+.theme-official .nm-action-btn {
+  padding: 4px 6px;
+  font-size: 12px;
+}
+/* Japanese labels (e.g. カレンダー) are wide — one step smaller. */
+html[lang="ja"] .nm-action-btn {
+  font-size: 11px;
 }
 /* --nm-red is slate now; make the old red hover a deeper slate instead. */
 .theme-official .hover\:bg-red-600:hover {

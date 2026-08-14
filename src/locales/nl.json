@@ -28,8 +28,8 @@
     "calculate": "Berekenen",
     "canBuy": "Je kunt tickets voor {{month}} kopen op:",
     "pleaseSelectDate": "Selecteer een datum",
-    "downloadIcs": "Toevoegen aan systeemagenda",
-    "googleCalendar": "Google Agenda",
+    "downloadIcs": "Agenda",
+    "googleCalendar": "Google",
     "calendarEventTitle": "Koop Nintendo Museum Tickets (voor {{month}})",
     "calendarEventDesc": "Ticketverkoop voor {{month}} start. Wees klaar voor de wachtrij!",
     "days": "d",
@@ -57,7 +57,9 @@
     "shareCopied": "Gekopieerd!",
     "releaseOverview": "Aankomende verkoopdata",
     "visitMonth": "Bezoekmaand",
-    "tools": "Tickettools"
+    "tools": "Tickettools",
+    "googleCalendarShort": "Google",
+    "downloadIcsShort": "Agenda"
   },
   "about": {
     "title": "Over",

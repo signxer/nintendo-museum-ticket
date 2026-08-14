@@ -28,8 +28,8 @@
     "calculate": "คำนวณ",
     "canBuy": "คุณสามารถซื้อตั๋วสำหรับเดือน {{month}} ได้ในวันที่:",
     "pleaseSelectDate": "กรุณาเลือกวันที่",
-    "downloadIcs": "เพิ่มลงในปฏิทินระบบ",
-    "googleCalendar": "Google Calendar",
+    "downloadIcs": "ปฏิทิน",
+    "googleCalendar": "Google",
     "calendarEventTitle": "ซื้อตั๋วพิพิธภัณฑ์นินเทนโด (สำหรับ {{month}})",
     "calendarEventDesc": "เริ่มจำหน่ายตั๋วสำหรับ {{month}} เตรียมตัวเข้าคิวให้พร้อม!",
     "days": "วัน",
@@ -57,7 +57,9 @@
     "shareCopied": "คัดลอกแล้ว!",
     "releaseOverview": "การขายที่จะมาถึง",
     "visitMonth": "เดือนที่เยี่ยมชม",
-    "tools": "เครื่องมือตั๋ว"
+    "tools": "เครื่องมือตั๋ว",
+    "googleCalendarShort": "Google",
+    "downloadIcsShort": "ปฏิทิน"
   },
   "about": {
     "title": "เกี่ยวกับ",

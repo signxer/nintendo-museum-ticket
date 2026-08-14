@@ -28,8 +28,8 @@
     "calculate": "計算する",
     "canBuy": "{{month}} のチケットは以下の日時で購入可能です：",
     "pleaseSelectDate": "日付を選択してください",
-    "downloadIcs": "システムカレンダーに追加",
-    "googleCalendar": "Google カレンダー",
+    "downloadIcs": "カレンダー",
+    "googleCalendar": "Google",
     "calendarEventTitle": "ニンテンドーミュージアム チケット購入（{{month}}分）",
     "calendarEventDesc": "{{month}}入館分のチケット販売開始です。待機列に並ぶ準備を！",
     "days": "日",
@@ -57,7 +57,9 @@
     "shareCopied": "コピーしました！",
     "releaseOverview": "今後の販売スケジュール",
     "visitMonth": "来場月",
-    "tools": "チケットツール"
+    "tools": "チケットツール",
+    "googleCalendarShort": "Google",
+    "downloadIcsShort": "予定表"
   },
   "about": {
     "title": "について",

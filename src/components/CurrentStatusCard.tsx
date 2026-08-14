@@ -62,7 +62,7 @@ export function CurrentStatusCard() {
           href={getOfficialCalendarUrl(i18n.language)}
           target="_blank"
           rel="noopener noreferrer"
-          className="w-full justify-center flex items-center gap-2"
+          className="w-full justify-center flex items-center gap-2 h-10"
         >
           <ExternalLink className="w-4 h-4" />
           {t('home.goToPurchase')}

@@ -28,8 +28,8 @@
     "calculate": "계산하기",
     "canBuy": "{{month}} 티켓은 다음 일시에 구매 가능합니다:",
     "pleaseSelectDate": "날짜를 선택해주세요",
-    "downloadIcs": "시스템 캘린더에 추가",
-    "googleCalendar": "Google 캘린더",
+    "downloadIcs": "달력",
+    "googleCalendar": "Google",
     "calendarEventTitle": "닌텐도 박물관 티켓 구매 ({{month}} 입장)",
     "calendarEventDesc": "{{month}} 입장권 판매 시작. 대기열에 참여할 준비를 하세요!",
     "days": "일",
@@ -57,7 +57,9 @@
     "shareCopied": "복사됨!",
     "releaseOverview": "향후 판매 일정",
     "visitMonth": "방문 월",
-    "tools": "티켓 도구"
+    "tools": "티켓 도구",
+    "googleCalendarShort": "Google",
+    "downloadIcsShort": "달력"
   },
   "about": {
     "title": "정보",

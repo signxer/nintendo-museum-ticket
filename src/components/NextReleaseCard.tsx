@@ -159,47 +159,47 @@ export function NextReleaseCard() {
         </div>
       </a>
 
-      {/* One-row action buttons, filled with the theme color. Icon-only so
-          they stay on a single line in every language. */}
+      {/* One-row action buttons, filled with the theme color, with short
+          labels. Same height (h-10) as the "去抽选/购买" button. */}
       <div className="grid grid-cols-3 gap-2 mt-2" role="group" aria-label={t('home.tools')}>
         <PixelButton
           as="a"
           variant="primary"
-          size="sm"
           href={getGoogleCalendarUrl(calendarEvent)}
           target="_blank"
           rel="noopener noreferrer"
           aria-label={t('home.googleCalendar')}
-          title={t('home.googleCalendar')}
-          className="flex items-center justify-center"
+          className="nm-action-btn h-10 flex items-center justify-center gap-1"
           onClick={() => vibrate()}
         >
-          <CalendarIcon className="w-4 h-4" />
+          <CalendarIcon className="w-3.5 h-3.5 shrink-0" />
+          {/* Short label; the full name stays in aria-label above. Labels
+              need ~420px of viewport to fit a third of the row — below that,
+              keep the icon only. */}
+          <span className="hidden min-[420px]:inline">{t('home.googleCalendarShort')}</span>
         </PixelButton>
 
         <PixelButton
           variant="primary"
-          size="sm"
           aria-label={t('home.downloadIcs')}
-          title={t('home.downloadIcs')}
-          className="flex items-center justify-center"
+          className="nm-action-btn h-10 flex items-center justify-center gap-1"
           onClick={() => {
             vibrate();
             downloadIcsFile(calendarEvent);
           }}
         >
-          <Download className="w-4 h-4" />
+          <Download className="w-3.5 h-3.5 shrink-0" />
+          <span className="hidden min-[420px]:inline">{t('home.downloadIcsShort')}</span>
         </PixelButton>
 
         <PixelButton
           variant="primary"
-          size="sm"
           aria-label={t('home.share')}
-          title={t('home.share')}
-          className="flex items-center justify-center"
+          className="nm-action-btn h-10 flex items-center justify-center gap-1"
           onClick={handleShare}
         >
-          <Share2 className="w-4 h-4" />
+          <Share2 className="w-3.5 h-3.5 shrink-0" />
+          <span className="hidden min-[420px]:inline">{t('home.share')}</span>
         </PixelButton>
       </div>
 

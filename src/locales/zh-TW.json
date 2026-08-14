@@ -28,8 +28,8 @@
     "calculate": "計算",
     "canBuy": "您可以在以下時間購買 {{month}} 的門票：",
     "pleaseSelectDate": "請選擇日期",
-    "downloadIcs": "加入系統行事曆",
-    "googleCalendar": "Google 行事曆",
+    "downloadIcs": "系統日曆",
+    "googleCalendar": "谷歌日曆",
     "calendarEventTitle": "購買任天堂博物館門票（{{month}}入場）",
     "calendarEventDesc": "{{month}}入場的門票開始發售。請準備好排隊搶票！",
     "days": "天",
@@ -57,7 +57,9 @@
     "shareCopied": "已複製！",
     "releaseOverview": "未來開賣時間表",
     "visitMonth": "參觀月份",
-    "tools": "購票工具"
+    "tools": "購票工具",
+    "googleCalendarShort": "谷歌",
+    "downloadIcsShort": "日曆"
   },
   "about": {
     "title": "關於",

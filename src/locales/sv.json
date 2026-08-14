@@ -28,8 +28,8 @@
     "calculate": "Beräkna",
     "canBuy": "Du kan köpa biljetter för {{month}} den:",
     "pleaseSelectDate": "Välj ett datum",
-    "downloadIcs": "Lägg till i systemkalender",
-    "googleCalendar": "Google Kalender",
+    "downloadIcs": "Kalender",
+    "googleCalendar": "Google",
     "calendarEventTitle": "Köp Nintendo Museum Biljetter (för {{month}})",
     "calendarEventDesc": "Biljettsläpp för {{month}}. Var redo för kö!",
     "days": "d",
@@ -57,7 +57,9 @@
     "shareCopied": "Kopierat!",
     "releaseOverview": "Kommande släpp",
     "visitMonth": "Besöksmånad",
-    "tools": "Biljettverktyg"
+    "tools": "Biljettverktyg",
+    "googleCalendarShort": "Google",
+    "downloadIcsShort": "Kalender"
   },
   "about": {
     "title": "Om",
