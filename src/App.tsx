@@ -49,6 +49,13 @@ function Layout({ children }: { children: React.ReactNode }) {
       localStorage.setItem('nm-theme', theme);
     } catch { /* ignore */ }
 
+    // Match the favicon to the theme: museum = slate bg + white logo,
+    // pixel = the original red icon.
+    const favicon = document.querySelector('link[rel="icon"]');
+    if (favicon) {
+      favicon.setAttribute('href', theme === 'official' ? '/favicon-museum.svg' : '/favicon.svg');
+    }
+
     // The official theme loads the Noto Sans variant matching the active
     // language (JP/SC/TC/KR) so Chinese never renders with Japanese glyphs.
     if (theme === 'official') {

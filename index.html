@@ -13,6 +13,9 @@
         try {
           if (localStorage.getItem('nm-theme') !== 'pixel') {
             document.documentElement.classList.add('theme-official');
+            // Match the favicon to the theme before first paint.
+            var icon = document.querySelector('link[rel="icon"]');
+            if (icon) icon.setAttribute('href', '/favicon-museum.svg');
           }
         } catch (e) {}
       })();
