@@ -1,0 +1,19 @@
+{
+  "name": "Nintendo Museum Ticket Checker",
+  "short_name": "NMT Tickets",
+  "description": "Find out exactly when Nintendo Museum (Kyoto) tickets go on sale, in your local timezone.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#E5E5E5",
+  "theme_color": "#E60012",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

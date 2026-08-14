@@ -2,6 +2,7 @@ import React from 'react';
 import { NextReleaseCard } from '../components/NextReleaseCard';
 import { CurrentStatusCard } from '../components/CurrentStatusCard';
 import { TicketCalculator } from '../components/TicketCalculator';
+import { ReleaseScheduleCard } from '../components/ReleaseScheduleCard';
 import { PixelButton } from '../components/PixelButton';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
@@ -31,6 +32,10 @@ export default function Home() {
 
         <div className="w-full max-w-lg">
           <TicketCalculator />
+        </div>
+
+        <div className="w-full max-w-lg">
+          <ReleaseScheduleCard />
         </div>
       </div>
     </div>

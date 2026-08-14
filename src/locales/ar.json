@@ -11,7 +11,11 @@
     "trademark": "Nintendo هي علامة تجارية لشركة Nintendo.",
     "footerDisclaimer": "هذه أداة من صنع المعجبين وليست تابعة لشركة Nintendo.",
     "copyright": "© {{year}} أداة تذاكر متحف نينتندو",
-    "viewOnGithub": "عرض على GitHub"
+    "viewOnGithub": "عرض على GitHub",
+    "back": "رجوع",
+    "timezoneAuto": "تلقائي (الجهاز)",
+    "timezoneCommon": "مناطق زمنية شائعة",
+    "timezoneAll": "كل المناطق الزمنية"
   },
   "home": {
     "nextRelease": "إصدار التذاكر القادم",
@@ -19,11 +23,8 @@
     "calculator": "حاسبة التذاكر",
     "visitDate": "تاريخ الزيارة المخطط",
     "calculate": "احسب",
-    "result": "النتيجة",
-    "releaseDateIs": "تاريخ إصدار التذاكر هو:",
     "canBuy": "يمكنك شراء تذاكر لشهر {{month}} في:",
     "pleaseSelectDate": "يرجى اختيار تاريخ",
-    "addToCalendar": "إضافة إلى التقويم",
     "downloadIcs": "إضافة إلى تقويم النظام",
     "googleCalendar": "تقويم جوجل",
     "calendarEventTitle": "شراء تذاكر متحف نينتندو (لشهر {{month}})",
@@ -46,7 +47,18 @@
     "lotteryRegistering": "التسجيل في القرعة مفتوح",
     "firstComeAvailable": "متاح للشراء حسب الأسبقية",
     "goToPurchase": "إلى القرعة / شراء",
-    "visitDatePlaceholder": "YYYY-MM"
+    "visitDatePlaceholder": "YYYY-MM",
+    "noLottery": "لا يوجد سحب مفتوح الآن",
+    "remindMe": "ذكّرني قبل 10 دقائق",
+    "remindSet": "تم ضبط التذكير",
+    "remindNotifTitle": "تذاكر متحف نينتندو تُطرح قريبًا!",
+    "remindNotifBody": "يبدأ البيع خلال 10 دقائق. كن مستعدًا!",
+    "remindUnsupported": "المتصفح لا يدعم الإشعارات",
+    "share": "مشاركة",
+    "shareText": "تذاكر متحف نينتندو لشهر {{month}} تُطرح في {{date}} (بالتوقيت المحلي). لا تفوّتها!",
+    "shareCopied": "تم النسخ!",
+    "releaseOverview": "عمليات البيع القادمة",
+    "visitMonth": "شهر الزيارة"
   },
   "about": {
     "title": "حول",

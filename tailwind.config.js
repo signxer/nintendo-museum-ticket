@@ -18,7 +18,7 @@ export default {
       },
       fontFamily: {
         pixel: ['"FusionPixelLatin"', '"FusionPixelZhHans"', '"FusionPixelZhHant"', '"FusionPixelJa"', '"FusionPixelKo"', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', '"PingFang SC"', '"Hiragino Sans GB"', '"Microsoft YaHei"', '"Helvetica Neue"', 'Helvetica', 'Arial', 'sans-serif'],
-        sans: ['"Inter"', 'system-ui', 'sans-serif'],
+        sans: ['system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', '"PingFang SC"', '"Hiragino Sans GB"', '"Microsoft YaHei"', 'sans-serif'],
       },
       boxShadow: {
         'pixel': '4px 4px 0 0 #2D2D2D',

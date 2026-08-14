@@ -11,7 +11,11 @@
     "trademark": "Nintendo es una marca registrada de Nintendo.",
     "footerDisclaimer": "Esta es una herramienta hecha por fans y no está afiliada a Nintendo.",
     "copyright": "© {{year}} Herramienta de Entradas Museo Nintendo",
-    "viewOnGithub": "Ver en GitHub"
+    "viewOnGithub": "Ver en GitHub",
+    "back": "Atrás",
+    "timezoneAuto": "Auto (dispositivo)",
+    "timezoneCommon": "Zonas comunes",
+    "timezoneAll": "Todas las zonas"
   },
   "home": {
     "nextRelease": "Próxima Venta de Entradas",
@@ -19,11 +23,8 @@
     "calculator": "Calculadora de Entradas",
     "visitDate": "Fecha de Visita Planeada",
     "calculate": "Calcular",
-    "result": "Resultado",
-    "releaseDateIs": "La fecha de venta es:",
     "canBuy": "Puedes comprar entradas para {{month}} el:",
     "pleaseSelectDate": "Por favor selecciona una fecha",
-    "addToCalendar": "Añadir al Calendario",
     "downloadIcs": "Añadir al Calendario del Sistema",
     "googleCalendar": "Google Calendar",
     "calendarEventTitle": "Comprar Entradas Museo Nintendo (para {{month}})",
@@ -46,7 +47,18 @@
     "lotteryRegistering": "Inscripción al sorteo abierta",
     "firstComeAvailable": "A la venta por orden de llegada",
     "goToPurchase": "Ir al sorteo / Comprar",
-    "visitDatePlaceholder": "YYYY-MM"
+    "visitDatePlaceholder": "YYYY-MM",
+    "noLottery": "No hay sorteo abierto ahora",
+    "remindMe": "Avísame 10 min antes",
+    "remindSet": "Aviso activado",
+    "remindNotifTitle": "¡Las entradas del Nintendo Museum salen a la venta pronto!",
+    "remindNotifBody": "La venta empieza en 10 minutos. ¡Prepárate!",
+    "remindUnsupported": "El navegador no admite notificaciones",
+    "share": "Compartir",
+    "shareText": "Las entradas del Nintendo Museum para {{month}} salen a la venta el {{date}} (hora local). ¡No te las pierdas!",
+    "shareCopied": "¡Copiado!",
+    "releaseOverview": "Próximas ventas",
+    "visitMonth": "Mes de visita"
   },
   "about": {
     "title": "Acerca de",

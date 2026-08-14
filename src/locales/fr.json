@@ -11,7 +11,11 @@
     "trademark": "Nintendo est une marque déposée de Nintendo.",
     "footerDisclaimer": "Cet outil est créé par des fans et n'est pas affilié à Nintendo.",
     "copyright": "© {{year}} Outil Billets Musée Nintendo",
-    "viewOnGithub": "Voir sur GitHub"
+    "viewOnGithub": "Voir sur GitHub",
+    "back": "Retour",
+    "timezoneAuto": "Auto (appareil)",
+    "timezoneCommon": "Fuseaux courants",
+    "timezoneAll": "Tous les fuseaux"
   },
   "home": {
     "nextRelease": "Prochaine Vente de Billets",
@@ -19,11 +23,8 @@
     "calculator": "Calculateur de Billets",
     "visitDate": "Date de Visite Prévue",
     "calculate": "Calculer",
-    "result": "Résultat",
-    "releaseDateIs": "Date de mise en vente :",
     "canBuy": "Vous pouvez acheter des billets pour {{month}} le :",
     "pleaseSelectDate": "Veuillez sélectionner une date",
-    "addToCalendar": "Ajouter au Calendrier",
     "downloadIcs": "Ajouter au calendrier système",
     "googleCalendar": "Google Agenda",
     "calendarEventTitle": "Acheter Billets Musée Nintendo (pour {{month}})",
@@ -46,7 +47,18 @@
     "lotteryRegistering": "Inscription au tirage au sort ouverte",
     "firstComeAvailable": "En vente par ordre d'arrivée",
     "goToPurchase": "Aller au tirage au sort / Acheter",
-    "visitDatePlaceholder": "YYYY-MM"
+    "visitDatePlaceholder": "YYYY-MM",
+    "noLottery": "Aucun tirage au sort en cours",
+    "remindMe": "Me rappeler 10 min avant",
+    "remindSet": "Rappel activé",
+    "remindNotifTitle": "Les billets du Nintendo Museum seront bientôt en vente !",
+    "remindNotifBody": "La vente commence dans 10 minutes. Préparez-vous !",
+    "remindUnsupported": "Navigateur sans notifications",
+    "share": "Partager",
+    "shareText": "Les billets du Nintendo Museum pour {{month}} sont mis en vente le {{date}} (heure locale). À ne pas manquer !",
+    "shareCopied": "Copié !",
+    "releaseOverview": "Prochaines mises en vente",
+    "visitMonth": "Mois de visite"
   },
   "about": {
     "title": "À propos",

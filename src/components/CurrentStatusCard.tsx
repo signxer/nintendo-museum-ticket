@@ -6,16 +6,21 @@ import { ExternalLink } from 'lucide-react';
 import { getOpenLotteryEntryMonth } from '../utils/lotteryLogic';
 import { getFirstComeOnSaleMonths } from '../utils/ticketLogic';
 import { useTimezone } from '../hooks/useTimezone';
+import { useNow } from '../hooks/useNow';
+import { getOfficialCalendarUrl } from '../utils/officialLinks';
 
 /**
  * A prominent "what's happening right now" card: which lottery entry is open
  * and which months are currently on sale via first-come.
+ *
+ * Re-renders every minute (useNow) so month boundaries and the mid-month
+ * first-come release are reflected without a manual refresh.
  */
 export function CurrentStatusCard() {
   const { t, i18n } = useTranslation();
   const { timezone } = useTimezone();
+  const now = useNow(60_000);
 
-  const now = new Date();
   const openLotteryMonth = getOpenLotteryEntryMonth(now);
   const onSaleMonths = getFirstComeOnSaleMonths(now);
 
@@ -32,9 +37,15 @@ export function CurrentStatusCard() {
       <div className="space-y-5">
         <div>
           <p className="text-sm text-nintendo-grey mb-1">{t('home.lotteryRegistering')}</p>
-          <p className="text-lg md:text-xl font-pixel text-nintendo-dark leading-snug break-words">
-            {formatMonth(openLotteryMonth)}
-          </p>
+          {openLotteryMonth ? (
+            <p className="text-lg md:text-xl font-pixel text-nintendo-dark leading-snug break-words">
+              {formatMonth(openLotteryMonth)}
+            </p>
+          ) : (
+            <p className="text-lg md:text-xl font-pixel text-nintendo-grey leading-snug break-words">
+              {t('home.noLottery')}
+            </p>
+          )}
         </div>
 
         <div className="border-t-2 border-dashed border-nintendo-grey pt-4">
@@ -46,16 +57,16 @@ export function CurrentStatusCard() {
       </div>
 
       <div className="mt-5">
-        <a
-          href="https://museum-tickets.nintendo.com/en/calendar"
+        <PixelButton
+          as="a"
+          href={getOfficialCalendarUrl(i18n.language)}
           target="_blank"
           rel="noopener noreferrer"
+          className="w-full justify-center flex items-center gap-2"
         >
-          <PixelButton className="w-full justify-center flex items-center gap-2">
-            <ExternalLink className="w-4 h-4" />
-            {t('home.goToPurchase')}
-          </PixelButton>
-        </a>
+          <ExternalLink className="w-4 h-4" />
+          {t('home.goToPurchase')}
+        </PixelButton>
       </div>
     </PixelCard>
   );

@@ -1,6 +1,15 @@
 import { addDays, addWeeks } from 'date-fns';
 
 /**
+ * "YYYY-MM" for a date, using LOCAL calendar values — safe for the
+ * `<input type="month">` min/max attributes (unlike `toISOString()`, which is
+ * UTC and can be a month off for users far from UTC near a month boundary).
+ */
+export function getLocalYearMonth(date: Date): string {
+  return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}`;
+}
+
+/**
  * Get the date of the second Wednesday of a given year and month
  * @param year The year
  * @param month The month (0-11)

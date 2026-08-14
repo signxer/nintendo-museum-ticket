@@ -11,7 +11,11 @@
     "trademark": "Nintendo är ett varumärke som tillhör Nintendo.",
     "footerDisclaimer": "Detta är ett verktyg skapat av fans och är inte anslutet till Nintendo.",
     "copyright": "© {{year}} Nintendo Museum Biljettverktyg",
-    "viewOnGithub": "Visa på GitHub"
+    "viewOnGithub": "Visa på GitHub",
+    "back": "Tillbaka",
+    "timezoneAuto": "Auto (enhet)",
+    "timezoneCommon": "Vanliga zoner",
+    "timezoneAll": "Alla zoner"
   },
   "home": {
     "nextRelease": "Nästa Biljettsläpp",
@@ -19,11 +23,8 @@
     "calculator": "Biljettkalkylator",
     "visitDate": "Planerat Besöksdatum",
     "calculate": "Beräkna",
-    "result": "Resultat",
-    "releaseDateIs": "Biljettsläpp datum är:",
     "canBuy": "Du kan köpa biljetter för {{month}} den:",
     "pleaseSelectDate": "Välj ett datum",
-    "addToCalendar": "Lägg till i Kalender",
     "downloadIcs": "Lägg till i systemkalender",
     "googleCalendar": "Google Kalender",
     "calendarEventTitle": "Köp Nintendo Museum Biljetter (för {{month}})",
@@ -46,7 +47,18 @@
     "lotteryRegistering": "Lottningsanmälan öppen",
     "firstComeAvailable": "Till salu i turordning",
     "goToPurchase": "Till lotteriet / Köp",
-    "visitDatePlaceholder": "YYYY-MM"
+    "visitDatePlaceholder": "YYYY-MM",
+    "noLottery": "Ingen lottning är öppen just nu",
+    "remindMe": "Påminn mig 10 min före",
+    "remindSet": "Påminnelse aktiverad",
+    "remindNotifTitle": "Nintendo Museum-biljetterna börjar snart säljas!",
+    "remindNotifBody": "Försäljningen börjar om 10 minuter. Gör dig redo!",
+    "remindUnsupported": "Webbläsaren stöder inte notiser",
+    "share": "Dela",
+    "shareText": "Nintendo Museum-biljetter för {{month}} släpps {{date}} (lokal tid). Missa inte!",
+    "shareCopied": "Kopierat!",
+    "releaseOverview": "Kommande släpp",
+    "visitMonth": "Besöksmånad"
   },
   "about": {
     "title": "Om",

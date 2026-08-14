@@ -2,21 +2,49 @@ import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 
+// English is statically bundled as the fallback, so the very first paint never
+// depends on a network round trip. Every other locale is code-split into its
+// own chunk and fetched on demand (see ensureLocaleBundle).
 import en from './locales/en.json';
-import zhCN from './locales/zh-CN.json';
-import zhTW from './locales/zh-TW.json';
-import ja from './locales/ja.json';
-import ko from './locales/ko.json';
-import es from './locales/es.json';
-import fr from './locales/fr.json';
-import de from './locales/de.json';
-import it from './locales/it.json';
-import pt from './locales/pt.json';
-import ru from './locales/ru.json';
-import nl from './locales/nl.json';
-import sv from './locales/sv.json';
-import ar from './locales/ar.json';
-import th from './locales/th.json';
+
+const localeLoaders: Record<string, () => Promise<{ default: Record<string, unknown> }>> = {
+  'zh-CN': () => import('./locales/zh-CN.json'),
+  'zh-TW': () => import('./locales/zh-TW.json'),
+  ja: () => import('./locales/ja.json'),
+  ko: () => import('./locales/ko.json'),
+  es: () => import('./locales/es.json'),
+  fr: () => import('./locales/fr.json'),
+  de: () => import('./locales/de.json'),
+  it: () => import('./locales/it.json'),
+  pt: () => import('./locales/pt.json'),
+  ru: () => import('./locales/ru.json'),
+  nl: () => import('./locales/nl.json'),
+  sv: () => import('./locales/sv.json'),
+  ar: () => import('./locales/ar.json'),
+  th: () => import('./locales/th.json'),
+};
+
+/** LanguageDetector can report "zh" for Simplified Chinese — normalize it. */
+function normalizeLng(lng: string): string {
+  return lng.toLowerCase() === 'zh' ? 'zh-CN' : lng;
+}
+
+/**
+ * Ensure a locale's resource bundle is loaded, then re-emit `languageChanged`
+ * so React re-renders with the real strings (i18next already fell back to
+ * English while the chunk was loading).
+ */
+export async function ensureLocaleBundle(lng: string): Promise<void> {
+  const key = normalizeLng(lng);
+  const load = localeLoaders[key];
+  if (!load || i18n.hasResourceBundle(key, 'translation')) return;
+  const bundle = await load();
+  i18n.addResourceBundle(key, 'translation', bundle.default as never);
+  if (i18n.language === key || i18n.resolvedLanguage === key) {
+    // Re-announce so components pick up the freshly added strings.
+    i18n.emit('languageChanged', i18n.language);
+  }
+}
 
 i18n
   .use(LanguageDetector)
@@ -24,21 +52,6 @@ i18n
   .init({
     resources: {
       en: { translation: en },
-      'zh-CN': { translation: zhCN },
-      'zh': { translation: zhCN },
-      'zh-TW': { translation: zhTW },
-      ja: { translation: ja },
-      ko: { translation: ko },
-      es: { translation: es },
-      fr: { translation: fr },
-      de: { translation: de },
-      it: { translation: it },
-      pt: { translation: pt },
-      ru: { translation: ru },
-      nl: { translation: nl },
-      sv: { translation: sv },
-      ar: { translation: ar },
-      th: { translation: th },
     },
     fallbackLng: 'en',
     interpolation: {
@@ -64,7 +77,12 @@ function syncDocumentLangDir(lng: string): void {
   document.documentElement.dir = RTL_LOCALES.has(primary) ? 'rtl' : 'ltr';
 }
 
-i18n.on('languageChanged', syncDocumentLangDir);
+i18n.on('languageChanged', (lng) => {
+  syncDocumentLangDir(lng);
+  // Kick off lazy loading for the newly selected language (no-op for the
+  // statically bundled 'en' and for already-loaded locales).
+  void ensureLocaleBundle(lng);
+});
 syncDocumentLangDir(i18n.language);
 
 export default i18n;

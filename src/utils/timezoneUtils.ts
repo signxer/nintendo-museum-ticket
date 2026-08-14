@@ -11,6 +11,26 @@ export function getUserTimezone(): string {
 }
 
 /**
+ * The museum operates on Japan Standard Time, so "which month is it right now"
+ * must be answered in JST — not the device's local time (a user in the Americas
+ * can lag JST by up to 19 hours around a month boundary).
+ *
+ * Returns a Date whose year/month are the current JST year/month (day = 1st,
+ * local clock is irrelevant — only getFullYear/getMonth are consumed).
+ */
+export function getJSTMonth(date: Date = new Date()): Date {
+  const parts = new Intl.DateTimeFormat('en-CA', {
+    timeZone: 'Asia/Tokyo',
+    year: 'numeric',
+    month: '2-digit',
+  }).formatToParts(date);
+
+  const year = Number(parts.find((p) => p.type === 'year')?.value);
+  const month = Number(parts.find((p) => p.type === 'month')?.value) - 1;
+  return new Date(year, month, 1);
+}
+
+/**
  * Convert a Date object which represents Japan Standard Time to the same instant in Local Time.
  * Note: JavaScript Date objects are fundamentally timestamps (UTC). 
  * 
@@ -43,8 +63,10 @@ export interface TimezoneOption {
  * Canonical zones to prefer when several IANA zones collapse to the same
  * localized label (e.g. all China zones → "中国标准时间"), so the option that
  * survives carries a clean, well-known timezone value.
+ *
+ * Also used as the "common zones" shortcut list in the timezone picker.
  */
-const PREFERRED_ZONES = new Set([
+export const PREFERRED_ZONES = new Set([
   'Asia/Shanghai', 'Asia/Tokyo', 'Asia/Hong_Kong', 'Asia/Taipei', 'Asia/Seoul',
   'Asia/Singapore', 'Asia/Kolkata', 'Asia/Dubai', 'Asia/Bangkok', 'Asia/Jakarta',
   'Europe/London', 'Europe/Paris', 'Europe/Berlin', 'Europe/Madrid', 'Europe/Rome',

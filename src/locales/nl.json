@@ -11,7 +11,11 @@
     "trademark": "Nintendo is een handelsmerk van Nintendo.",
     "footerDisclaimer": "Dit is een door fans gemaakte tool en is niet gelieerd aan Nintendo.",
     "copyright": "© {{year}} Nintendo Museum Ticket Tool",
-    "viewOnGithub": "Bekijk op GitHub"
+    "viewOnGithub": "Bekijk op GitHub",
+    "back": "Terug",
+    "timezoneAuto": "Auto (apparaat)",
+    "timezoneCommon": "Veelgebruikte zones",
+    "timezoneAll": "Alle zones"
   },
   "home": {
     "nextRelease": "Volgende Ticketverkoop",
@@ -19,11 +23,8 @@
     "calculator": "Ticketcalculator",
     "visitDate": "Geplande Bezoekdatum",
     "calculate": "Berekenen",
-    "result": "Resultaat",
-    "releaseDateIs": "Verkoopdatum is:",
     "canBuy": "Je kunt tickets voor {{month}} kopen op:",
     "pleaseSelectDate": "Selecteer een datum",
-    "addToCalendar": "Toevoegen aan Agenda",
     "downloadIcs": "Toevoegen aan systeemagenda",
     "googleCalendar": "Google Agenda",
     "calendarEventTitle": "Koop Nintendo Museum Tickets (voor {{month}})",
@@ -46,7 +47,18 @@
     "lotteryRegistering": "Loterij-inschrijving open",
     "firstComeAvailable": "Te koop op volgorde van binnenkomst",
     "goToPurchase": "Naar de loterij / Kopen",
-    "visitDatePlaceholder": "YYYY-MM"
+    "visitDatePlaceholder": "YYYY-MM",
+    "noLottery": "Geen loterij open op dit moment",
+    "remindMe": "Herinner me 10 min van tevoren",
+    "remindSet": "Herinnering ingesteld",
+    "remindNotifTitle": "Nintendo Museum-kaartjes zijn binnenkort te koop!",
+    "remindNotifBody": "De verkoop begint over 10 minuten. Wees er klaar voor!",
+    "remindUnsupported": "Browser ondersteunt geen meldingen",
+    "share": "Delen",
+    "shareText": "Nintendo Museum-kaartjes voor {{month}} gaan op {{date}} (lokale tijd) in de verkoop. Mis het niet!",
+    "shareCopied": "Gekopieerd!",
+    "releaseOverview": "Aankomende verkoopdata",
+    "visitMonth": "Bezoekmaand"
   },
   "about": {
     "title": "Over",

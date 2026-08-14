@@ -11,7 +11,11 @@
     "footerDisclaimer": "เครื่องมือนี้สร้างขึ้นโดยแฟนคลับและไม่มีส่วนเกี่ยวข้องกับ Nintendo",
     "trademark": "Nintendo เป็นเครื่องหมายการค้าของ Nintendo",
     "copyright": "© {{year}} เครื่องมือจองตั๋วพิพิธภัณฑ์นินเทนโด",
-    "viewOnGithub": "ดูบน GitHub"
+    "viewOnGithub": "ดูบน GitHub",
+    "back": "กลับ",
+    "timezoneAuto": "อัตโนมัติ (อุปกรณ์)",
+    "timezoneCommon": "โซนเวลาที่ใช้บ่อย",
+    "timezoneAll": "ทุกโซนเวลา"
   },
   "home": {
     "nextRelease": "การจำหน่ายตั๋วรอบถัดไป",
@@ -19,11 +23,8 @@
     "calculator": "เครื่องคำนวณวันจองตั๋ว",
     "visitDate": "วันที่วางแผนเข้าชม",
     "calculate": "คำนวณ",
-    "result": "ผลลัพธ์",
-    "releaseDateIs": "วันที่เริ่มจำหน่ายตั๋วคือ:",
     "canBuy": "คุณสามารถซื้อตั๋วสำหรับเดือน {{month}} ได้ในวันที่:",
     "pleaseSelectDate": "กรุณาเลือกวันที่",
-    "addToCalendar": "เพิ่มลงในปฏิทิน",
     "downloadIcs": "เพิ่มลงในปฏิทินระบบ",
     "googleCalendar": "Google Calendar",
     "calendarEventTitle": "ซื้อตั๋วพิพิธภัณฑ์นินเทนโด (สำหรับ {{month}})",
@@ -46,7 +47,18 @@
     "lotteryRegistering": "เปิดรับสมัครจับฉลาก",
     "firstComeAvailable": "จำหน่ายตามลำดับ",
     "goToPurchase": "ไปจับฉลาก / ซื้อตั๋ว",
-    "visitDatePlaceholder": "YYYY-MM"
+    "visitDatePlaceholder": "YYYY-MM",
+    "noLottery": "ไม่มีการเปิดรับสมัครสุ่มในขณะนี้",
+    "remindMe": "แจ้งเตือนฉันก่อน 10 นาที",
+    "remindSet": "ตั้งการแจ้งเตือนแล้ว",
+    "remindNotifTitle": "ตั๋วพิพิธภัณฑ์นินเทนโดจะเปิดขายเร็วๆ นี้!",
+    "remindNotifBody": "เริ่มขายในอีก 10 นาที เตรียมตัวให้พร้อม!",
+    "remindUnsupported": "เบราว์เซอร์นี้ไม่รองรับการแจ้งเตือน",
+    "share": "แชร์",
+    "shareText": "ตั๋วพิพิธภัณฑ์นินเทนโดสำหรับ {{month}} เปิดขายวันที่ {{date}} (เวลาท้องถิ่น) อย่าพลาด!",
+    "shareCopied": "คัดลอกแล้ว!",
+    "releaseOverview": "การขายที่จะมาถึง",
+    "visitMonth": "เดือนที่เยี่ยมชม"
   },
   "about": {
     "title": "เกี่ยวกับ",

@@ -11,7 +11,7 @@ import { useTimezone } from "./hooks/useTimezone";
 import { useTranslation } from "react-i18next";
 
 function Layout({ children }: { children: React.ReactNode }) {
-  const { timezone, setTimezone } = useTimezone();
+  const { timezone, useAutoTimezone, setTimezone } = useTimezone();
   const { t } = useTranslation();
   const location = useLocation();
 
@@ -60,10 +60,14 @@ function Layout({ children }: { children: React.ReactNode }) {
           </div>
           
           <div className="flex flex-col items-center md:items-end gap-2">
-            <PixelClock className="text-white drop-shadow-md" />
-            <div className="flex flex-wrap justify-center gap-4 glass-pixel p-2 rounded border-2 border-nintendo-dark shadow-pixel-sm">
+            {/* Live clock is decorative chrome — hide it on small screens so
+                the sticky header stays compact on phones. */}
+            <div className="hidden md:block">
+              <PixelClock className="text-white drop-shadow-md" />
+            </div>
+            <div className="flex flex-wrap justify-center gap-4 glass-pixel p-1.5 sm:p-2 rounded border-2 border-nintendo-dark shadow-pixel-sm">
               <LanguageSwitcher />
-              <TimezoneDisplay timezone={timezone} onTimezoneChange={setTimezone} />
+              <TimezoneDisplay timezone={timezone} useAutoTimezone={useAutoTimezone} onTimezoneChange={setTimezone} />
             </div>
           </div>
         </div>

@@ -11,7 +11,11 @@
     "trademark": "Nintendo является торговой маркой Nintendo.",
     "footerDisclaimer": "Это фанатский инструмент, не связанный с Nintendo.",
     "copyright": "© {{year}} Инструмент билетов музея Nintendo",
-    "viewOnGithub": "Посмотреть на GitHub"
+    "viewOnGithub": "Посмотреть на GitHub",
+    "back": "Назад",
+    "timezoneAuto": "Авто (устройство)",
+    "timezoneCommon": "Частые часовые пояса",
+    "timezoneAll": "Все часовые пояса"
   },
   "home": {
     "nextRelease": "Следующая продажа",
@@ -19,11 +23,8 @@
     "calculator": "Калькулятор билетов",
     "visitDate": "Планируемая дата визита",
     "calculate": "Рассчитать",
-    "result": "Результат",
-    "releaseDateIs": "Дата начала продаж:",
     "canBuy": "Вы можете купить билеты на {{month}}:",
     "pleaseSelectDate": "Выберите дату",
-    "addToCalendar": "Добавить в календарь",
     "downloadIcs": "Добавить в системный календарь",
     "googleCalendar": "Google Календарь",
     "calendarEventTitle": "Купить билеты в музей Nintendo (на {{month}})",
@@ -46,7 +47,18 @@
     "lotteryRegistering": "Приём заявок на розыгрыш открыт",
     "firstComeAvailable": "В продаже в порядке очереди",
     "goToPurchase": "К розыгрышу / Купить",
-    "visitDatePlaceholder": "YYYY-MM"
+    "visitDatePlaceholder": "YYYY-MM",
+    "noLottery": "Сейчас лотерея не проводится",
+    "remindMe": "Напомнить за 10 минут",
+    "remindSet": "Напоминание включено",
+    "remindNotifTitle": "Билеты в Nintendo Museum скоро поступят в продажу!",
+    "remindNotifBody": "Продажа начнётся через 10 минут. Будьте готовы!",
+    "remindUnsupported": "Браузер не поддерживает уведомления",
+    "share": "Поделиться",
+    "shareText": "Билеты в Nintendo Museum на {{month}} поступят в продажу {{date}} (по местному времени). Не пропустите!",
+    "shareCopied": "Скопировано!",
+    "releaseOverview": "Ближайшие продажи",
+    "visitMonth": "Месяц посещения"
   },
   "about": {
     "title": "О проекте",

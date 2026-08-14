@@ -14,7 +14,7 @@ export default function About() {
       <div className="flex items-center gap-4">
         <PixelButton variant="secondary" size="sm" onClick={() => navigate('/')}>
           <ArrowLeft className="w-4 h-4 mr-2 inline-block" />
-          Back
+          {t('common.back')}
         </PixelButton>
         <h1 className="text-2xl text-nintendo-red">{t('about.title')}</h1>
       </div>

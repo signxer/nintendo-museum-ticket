@@ -4,14 +4,23 @@ import { cn } from '../lib/utils';
 interface PixelButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'primary' | 'secondary' | 'outline';
   size?: 'sm' | 'md' | 'lg';
+  /** Render as an anchor instead of a button — avoids invalid <a><button> nesting. */
+  as?: 'button' | 'a';
+  href?: string;
+  target?: string;
+  rel?: string;
 }
 
-export function PixelButton({ 
-  className, 
-  variant = 'primary', 
+export function PixelButton({
+  className,
+  variant = 'primary',
   size = 'md',
+  as = 'button',
+  href,
+  target,
+  rel,
   children,
-  ...props 
+  ...props
 }: PixelButtonProps) {
   const variants = {
     primary: "bg-nintendo-red text-white hover:bg-red-600 active:translate-y-1 active:shadow-none",
@@ -25,14 +34,30 @@ export function PixelButton({
     lg: "px-8 py-3 text-base"
   };
 
+  const classes = cn(
+    "font-pixel border-4 border-nintendo-dark shadow-pixel transition-all duration-100 active:transition-none pixel-focus inline-block",
+    variants[variant],
+    sizes[size],
+    className
+  );
+
+  if (as === 'a') {
+    return (
+      <a
+        href={href}
+        target={target}
+        rel={rel}
+        className={classes}
+        {...(props as unknown as React.AnchorHTMLAttributes<HTMLAnchorElement>)}
+      >
+        {children}
+      </a>
+    );
+  }
+
   return (
     <button
-      className={cn(
-        "font-pixel border-4 border-nintendo-dark shadow-pixel transition-all duration-100 active:transition-none pixel-focus",
-        variants[variant],
-        sizes[size],
-        className
-      )}
+      className={classes}
       {...props}
     >
       {children}

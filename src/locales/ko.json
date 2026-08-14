@@ -11,7 +11,11 @@
     "trademark": "Nintendo는 닌텐도의 상표입니다.",
     "footerDisclaimer": "이 도구는 팬이 제작했으며 Nintendo와 관련이 없습니다.",
     "copyright": "© {{year}} 닌텐도 박물관 티켓 도구",
-    "viewOnGithub": "GitHub에서 보기"
+    "viewOnGithub": "GitHub에서 보기",
+    "back": "뒤로",
+    "timezoneAuto": "자동 (기기 설정)",
+    "timezoneCommon": "자주 쓰는 시간대",
+    "timezoneAll": "전체 시간대"
   },
   "home": {
     "nextRelease": "다음 티켓 오픈",
@@ -19,11 +23,8 @@
     "calculator": "티켓 오픈일 계산기",
     "visitDate": "방문 예정일",
     "calculate": "계산하기",
-    "result": "결과",
-    "releaseDateIs": "티켓 오픈 일시는:",
     "canBuy": "{{month}} 티켓은 다음 일시에 구매 가능합니다:",
     "pleaseSelectDate": "날짜를 선택해주세요",
-    "addToCalendar": "캘린더에 추가",
     "downloadIcs": "시스템 캘린더에 추가",
     "googleCalendar": "Google 캘린더",
     "calendarEventTitle": "닌텐도 박물관 티켓 구매 ({{month}} 입장)",
@@ -46,7 +47,18 @@
     "lotteryRegistering": "추첨 신청 접수 중",
     "firstComeAvailable": "선착순 구매 가능",
     "goToPurchase": "추첨/구매하기",
-    "visitDatePlaceholder": "----년----월"
+    "visitDatePlaceholder": "----년----월",
+    "noLottery": "현재 추첨 접수 중이 없습니다",
+    "remindMe": "10분 전에 알림",
+    "remindSet": "알림 설정됨",
+    "remindNotifTitle": "닌텐도 뮤지엄 티켓 판매가 곧 시작됩니다!",
+    "remindNotifBody": "10분 후 판매 시작. 준비하세요!",
+    "remindUnsupported": "이 브라우저는 알림을 지원하지 않습니다",
+    "share": "공유",
+    "shareText": "닌텐도 뮤지엄 {{month}} 입장권이 {{date}}(현지 시간) 판매 시작됩니다. 놓치지 마세요!",
+    "shareCopied": "복사됨!",
+    "releaseOverview": "향후 판매 일정",
+    "visitMonth": "방문 월"
   },
   "about": {
     "title": "정보",

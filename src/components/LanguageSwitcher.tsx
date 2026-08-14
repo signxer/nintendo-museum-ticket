@@ -8,7 +8,7 @@ interface LanguageSwitcherProps {
 }
 
 export function LanguageSwitcher({ className }: LanguageSwitcherProps) {
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const changeLanguage = (lng: string) => {
     i18n.changeLanguage(lng);
@@ -41,6 +41,7 @@ export function LanguageSwitcher({ className }: LanguageSwitcherProps) {
       <select
         value={currentLang}
         onChange={(e) => changeLanguage(e.target.value)}
+        aria-label={t('common.language')}
         className="bg-transparent font-sans text-nintendo-dark focus:outline-none cursor-pointer border-b border-dashed border-nintendo-grey hover:border-nintendo-red transition-colors max-w-[120px] pixel-focus"
       >
         {languages.map(lang => (

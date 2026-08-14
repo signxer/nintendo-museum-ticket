@@ -1,22 +1,46 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useSearchParams } from 'react-router-dom';
 import { PixelCard } from './PixelCard';
 import { PixelButton } from './PixelButton';
 import { getTicketReleaseDateForVisit } from '../utils/ticketLogic';
 import { getLotteryScheduleForVisit } from '../utils/lotteryLogic';
 import { useTimezone } from '../hooks/useTimezone';
-import { Calendar, Calendar as CalendarIcon, Download, ExternalLink } from 'lucide-react';
+import { Calendar, Calendar as CalendarIcon, Download, ExternalLink, Share2 } from 'lucide-react';
 import { getGoogleCalendarUrl, downloadIcsFile } from '../utils/calendarUtils';
+import { getOfficialCalendarUrl } from '../utils/officialLinks';
 import { vibrate } from '../utils/haptics';
+import { getLocalYearMonth } from '../utils/dateHelper';
+import { shareText } from '../utils/share';
+
+/** Matches "YYYY-MM" so shared ?visit= links are validated before use. */
+const VISIT_PARAM_RE = /^\d{4}-(0[1-9]|1[0-2])$/;
 
 export function TicketCalculator() {
   const { t, i18n } = useTranslation();
   const { timezone } = useTimezone();
   const [visitMonth, setVisitMonth] = useState<string>('');
   const [result, setResult] = useState<Date | null>(null);
+  const [error, setError] = useState<string>('');
+  const [shareState, setShareState] = useState<'idle' | 'copied' | 'unsupported'>('idle');
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  // Pre-fill from a shared link: ?visit=YYYY-MM auto-calculates the release.
+  useEffect(() => {
+    const visit = searchParams.get('visit') || '';
+    if (!VISIT_PARAM_RE.test(visit)) return;
+    setVisitMonth(visit);
+    const [year, month] = visit.split('-').map(Number);
+    setResult(getTicketReleaseDateForVisit(new Date(year, month - 1, 1)));
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const handleCalculate = () => {
-    if (!visitMonth) return;
+    if (!visitMonth) {
+      setError(t('home.pleaseSelectDate'));
+      vibrate([10]);
+      return;
+    }
+    setError('');
     // visitMonth from input type="month" is "YYYY-MM"
     // Create date as first day of month
     const [year, month] = visitMonth.split('-').map(Number);
@@ -25,6 +49,9 @@ export function TicketCalculator() {
     const releaseDate = getTicketReleaseDateForVisit(date);
     setResult(releaseDate);
     vibrate([12]); // confirm the computation landed
+
+    // Keep the URL shareable without pushing a history entry.
+    setSearchParams({ visit: visitMonth }, { replace: true });
   };
 
   const formatDate = (date: Date) => {
@@ -61,7 +88,7 @@ export function TicketCalculator() {
       description: t('home.calendarEventDesc', { month: formatMonth(visitMonth) }),
       startTime: result,
       endTime: new Date(result.getTime() + 60 * 60 * 1000), // 1 hour duration
-      location: 'https://museum-tickets.nintendo.com/en/calendar'
+      location: getOfficialCalendarUrl(i18n.language)
     };
   };
 
@@ -74,6 +101,21 @@ export function TicketCalculator() {
 
   const isPast = result && result < new Date();
   const now = new Date();
+
+  const handleShare = async () => {
+    if (!result || !visitMonth) return;
+    const text = t('home.shareText', {
+      month: formatMonth(visitMonth),
+      date: formatDate(result),
+    });
+    const shareResult = await shareText(text, `${window.location.origin}${window.location.pathname}?visit=${visitMonth}`);
+    if (shareResult === 'copied') {
+      setShareState('copied');
+      window.setTimeout(() => setShareState('idle'), 2000);
+    } else if (shareResult === 'unsupported') {
+      setShareState('unsupported');
+    }
+  };
 
   const renderTimelineRow = (label: string, date: Date) => {
     const isDone = date <= now;
@@ -105,9 +147,12 @@ export function TicketCalculator() {
             <input
               type="month"
               value={visitMonth}
-              onChange={(e) => setVisitMonth(e.target.value)}
+              onChange={(e) => {
+                setVisitMonth(e.target.value);
+                setError('');
+              }}
               className="pixel-input w-full"
-              min={new Date().toISOString().slice(0, 7)}
+              min={getLocalYearMonth(new Date())}
             />
             {/* Native month-input text is hidden; this overlay renders the
                 localized placeholder (empty) or the chosen value. */}
@@ -123,6 +168,12 @@ export function TicketCalculator() {
             {t('home.calculate')}
           </PixelButton>
         </div>
+
+        {error && (
+          <p role="alert" className="text-xs text-nintendo-red font-pixel">
+            {error}
+          </p>
+        )}
 
         {result && (
           <div className="mt-4 p-4 bg-nintendo-light border-4 border-nintendo-grey animate-pixel-land">
@@ -145,17 +196,19 @@ export function TicketCalculator() {
 
             {calendarEvent && !isPast && (
               <div className="flex flex-wrap gap-2">
-                <a
+                <PixelButton
+                  as="a"
+                  variant="outline"
+                  size="sm"
                   href={getGoogleCalendarUrl(calendarEvent)}
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="flex items-center gap-2"
                   onClick={() => vibrate()}
                 >
-                  <PixelButton variant="outline" size="sm" className="flex items-center gap-2">
-                    <CalendarIcon className="w-4 h-4" />
-                    {t('home.googleCalendar')}
-                  </PixelButton>
-                </a>
+                  <CalendarIcon className="w-4 h-4" />
+                  {t('home.googleCalendar')}
+                </PixelButton>
 
                 <PixelButton
                   variant="outline"
@@ -169,6 +222,16 @@ export function TicketCalculator() {
                   <Download className="w-4 h-4" />
                   {t('home.downloadIcs')}
                 </PixelButton>
+
+                <PixelButton
+                  variant="outline"
+                  size="sm"
+                  className="flex items-center gap-2"
+                  onClick={handleShare}
+                >
+                  <Share2 className="w-4 h-4" />
+                  {shareState === 'copied' ? t('home.shareCopied') : t('home.share')}
+                </PixelButton>
               </div>
             )}
 
@@ -180,16 +243,17 @@ export function TicketCalculator() {
                 <p className="mb-3 text-gray-600">
                   {t('home.missedReleaseDesc')}
                 </p>
-                <a
-                  href="https://museum-tickets.nintendo.com/en/calendar"
+                <PixelButton
+                  as="a"
+                  size="sm"
+                  href={getOfficialCalendarUrl(i18n.language)}
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="w-full justify-center flex items-center gap-2"
                 >
-                  <PixelButton size="sm" className="w-full justify-center flex items-center gap-2">
-                    <ExternalLink className="w-4 h-4" />
-                    {t('home.officialCalendar')}
-                  </PixelButton>
-                </a>
+                  <ExternalLink className="w-4 h-4" />
+                  {t('home.officialCalendar')}
+                </PixelButton>
               </div>
             )}
           </div>

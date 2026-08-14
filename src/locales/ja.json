@@ -11,7 +11,11 @@
     "trademark": "Nintendoは任天堂の商標です。",
     "footerDisclaimer": "このツールはファンによって作成されたものであり、任天堂とは一切関係ありません。",
     "copyright": "© {{year}} ニンテンドーミュージアム チケットツール",
-    "viewOnGithub": "GitHubで見る"
+    "viewOnGithub": "GitHubで見る",
+    "back": "戻る",
+    "timezoneAuto": "自動（端末に合わせる）",
+    "timezoneCommon": "よく使うタイムゾーン",
+    "timezoneAll": "すべてのタイムゾーン"
   },
   "home": {
     "nextRelease": "次回のチケット販売",
@@ -19,11 +23,8 @@
     "calculator": "チケット販売日計算機",
     "visitDate": "来館予定日",
     "calculate": "計算する",
-    "result": "結果",
-    "releaseDateIs": "販売開始日時は：",
     "canBuy": "{{month}} のチケットは以下の日時で購入可能です：",
     "pleaseSelectDate": "日付を選択してください",
-    "addToCalendar": "カレンダーに追加",
     "downloadIcs": "システムカレンダーに追加",
     "googleCalendar": "Google カレンダー",
     "calendarEventTitle": "ニンテンドーミュージアム チケット購入（{{month}}分）",
@@ -46,7 +47,18 @@
     "lotteryRegistering": "抽選申込受付中",
     "firstComeAvailable": "先着順で購入可",
     "goToPurchase": "抽選・購入へ",
-    "visitDatePlaceholder": "----年----月"
+    "visitDatePlaceholder": "----年----月",
+    "noLottery": "現在抽選受付中の回はありません",
+    "remindMe": "10分前に通知する",
+    "remindSet": "通知を設定済み",
+    "remindNotifTitle": "任天堂ミュージアムのチケット販売が間もなく開始！",
+    "remindNotifBody": "10分後に販売開始です。準備しましょう！",
+    "remindUnsupported": "このブラウザは通知に対応していません",
+    "share": "シェア",
+    "shareText": "任天堂ミュージアム{{month}}入場チケットは{{date}}（現地時間）に販売開始です。お見逃しなく！",
+    "shareCopied": "コピーしました！",
+    "releaseOverview": "今後の販売スケジュール",
+    "visitMonth": "来場月"
   },
   "about": {
     "title": "について",

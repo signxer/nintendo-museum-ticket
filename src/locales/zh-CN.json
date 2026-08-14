@@ -11,7 +11,11 @@
     "trademark": "Nintendo是任天堂的商标。",
     "footerDisclaimer": "本工具为粉丝制作，与任天堂无关。",
     "copyright": "© {{year}} 任天堂博物馆购票助手",
-    "viewOnGithub": "在 GitHub 上查看"
+    "viewOnGithub": "在 GitHub 上查看",
+    "back": "返回",
+    "timezoneAuto": "自动（跟随设备）",
+    "timezoneCommon": "常用时区",
+    "timezoneAll": "全部时区"
   },
   "home": {
     "nextRelease": "下次放票时间",
@@ -19,11 +23,8 @@
     "calculator": "购票时间计算器",
     "visitDate": "计划参观日期",
     "calculate": "计算",
-    "result": "查询结果",
-    "releaseDateIs": "购票时间为：",
     "canBuy": "您可以在以下时间购买 {{month}} 的门票：",
     "pleaseSelectDate": "请选择日期",
-    "addToCalendar": "添加到日历",
     "downloadIcs": "添加到系统日历",
     "googleCalendar": "Google 日历",
     "calendarEventTitle": "购买任天堂博物馆门票（{{month}}入场）",
@@ -46,7 +47,18 @@
     "lotteryRegistering": "抽选登记中",
     "firstComeAvailable": "现可购买(先到先得)",
     "goToPurchase": "去抽选/购买",
-    "visitDatePlaceholder": "----年----月"
+    "visitDatePlaceholder": "----年----月",
+    "noLottery": "当前无抽选登记",
+    "remindMe": "开抢前10分钟提醒我",
+    "remindSet": "已设置提醒",
+    "remindNotifTitle": "任天堂博物馆门票即将开售！",
+    "remindNotifBody": "10分钟后开始发售，准备好抢票！",
+    "remindUnsupported": "当前浏览器不支持通知",
+    "share": "分享",
+    "shareText": "任天堂博物馆{{month}}门票将于{{date}}（当地时间）开售，别错过！",
+    "shareCopied": "已复制！",
+    "releaseOverview": "未来发售时间表",
+    "visitMonth": "参观月份"
   },
   "about": {
     "title": "关于",

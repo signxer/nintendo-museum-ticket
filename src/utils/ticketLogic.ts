@@ -1,6 +1,6 @@
 import { addMonths, startOfMonth, subMonths } from 'date-fns';
 import { calcSecondWednesday } from './dateHelper';
-import { getJSTDate } from './timezoneUtils';
+import { getJSTDate, getJSTMonth } from './timezoneUtils';
 
 export interface ReleaseInfo {
   releaseDate: Date; // The exact Date object (in local time) when tickets are released
@@ -59,10 +59,13 @@ export function getReleaseDateTimeForVisitMonth(year: number, month: number): Da
 
 /**
  * Get the next ticket release time based on current time.
+ *
+ * "Current month" is derived in JST (the museum's timezone), so the result is
+ * correct even for users whose local date lags JST near a month boundary.
  */
 export function getNextTicketReleaseTime(): ReleaseInfo {
   const now = new Date();
-  const thisMonth = startOfMonth(now);
+  const thisMonth = getJSTMonth(now);
 
   // Releases happen 2 months before the visit month, so the upcoming releases are
   // for visit months M+2, M+3, M+4. Pick the earliest one still in the future.
@@ -95,9 +98,11 @@ export function getTicketReleaseDateForVisit(visitDate: Date): Date {
  * A month is on sale once its verified (or heuristic) release time has passed:
  * the current month and next are always open, and the month after that opens
  * when its release date arrives (roughly the 8th–14th of the current month).
+ *
+ * The "current month" is JST-based — see getJSTMonth().
  */
 export function getFirstComeOnSaleMonths(now: Date): Date[] {
-  const base = startOfMonth(now);
+  const base = getJSTMonth(now);
   const onSale: Date[] = [base, addMonths(base, 1)];
 
   const next = addMonths(base, 2);

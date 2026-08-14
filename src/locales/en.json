@@ -11,7 +11,11 @@
     "trademark": "Nintendo is a trademark of Nintendo.",
     "footerDisclaimer": "This is a fan-made tool and is not affiliated with Nintendo.",
     "copyright": "© {{year}} Nintendo Museum Ticket Tool",
-    "viewOnGithub": "View on GitHub"
+    "viewOnGithub": "View on GitHub",
+    "back": "Back",
+    "timezoneAuto": "Auto (device)",
+    "timezoneCommon": "Common zones",
+    "timezoneAll": "All zones"
   },
   "home": {
     "nextRelease": "Next Ticket Release",
@@ -19,11 +23,8 @@
     "calculator": "Ticket Calculator",
     "visitDate": "Planned Visit Date",
     "calculate": "Calculate",
-    "result": "Result",
-    "releaseDateIs": "Ticket release date is:",
     "canBuy": "You can buy tickets for {{month}} on:",
     "pleaseSelectDate": "Please select a date",
-    "addToCalendar": "Add to Calendar",
     "downloadIcs": "Add to System Calendar",
     "googleCalendar": "Google Calendar",
     "calendarEventTitle": "Buy Nintendo Museum Tickets (for {{month}})",
@@ -46,7 +47,18 @@
     "lotteryRegistering": "Lottery entry open",
     "firstComeAvailable": "First-come on sale",
     "goToPurchase": "Enter lottery / Buy tickets",
-    "visitDatePlaceholder": "YYYY-MM"
+    "visitDatePlaceholder": "YYYY-MM",
+    "noLottery": "No lottery entry open now",
+    "remindMe": "Remind me 10 min before",
+    "remindSet": "Reminder set",
+    "remindNotifTitle": "Nintendo Museum tickets go on sale soon!",
+    "remindNotifBody": "Sales start in 10 minutes. Get ready!",
+    "remindUnsupported": "Notifications unavailable",
+    "share": "Share",
+    "shareText": "Nintendo Museum tickets for {{month}} go on sale {{date}} (your local time). Don't miss it!",
+    "shareCopied": "Copied!",
+    "releaseOverview": "Upcoming releases",
+    "visitMonth": "Visit month"
   },
   "about": {
     "title": "About",
