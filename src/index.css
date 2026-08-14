@@ -211,7 +211,12 @@ html.theme-official:not([lang^="zh"]):not([lang="ja"]):not([lang="ko"]) {
   }
 
   .pixel-input {
+    /* max-width: 100% is the canonical fix for iOS Safari, where an
+       input[type=month] falls back to a text field whose intrinsic width
+       (~180px) otherwise ignores the grid/flex track and spills over the
+       neighbouring button. */
     @apply w-full bg-white border-4 border-nintendo-dark px-4 py-2 font-pixel text-sm focus:outline-none focus:shadow-pixel transition-all;
+    max-width: 100%;
   }
 
   .container-pixel {

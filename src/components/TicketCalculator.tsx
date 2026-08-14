@@ -166,6 +166,7 @@ export function TicketCalculator() {
                 setError('');
               }}
               className="pixel-input w-full min-w-0"
+              size={1}
               min={getLocalYearMonth(new Date())}
             />
             {/* Native month-input text is hidden; this overlay renders the
