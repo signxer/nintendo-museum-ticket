@@ -24,6 +24,9 @@ export function TicketCalculator() {
   const { timezone } = useTimezone();
   const [visitMonth, setVisitMonth] = useState<string>('');
   const [result, setResult] = useState<Date | null>(null);
+  // The visit month of the last calculation — `result` is the RELEASE date,
+  // which is not the visit month, so the lottery timeline needs its own copy.
+  const [resultVisitMonth, setResultVisitMonth] = useState<string>('');
   const [error, setError] = useState<string>('');
   const [shareState, setShareState] = useState<'idle' | 'copied' | 'unsupported'>('idle');
   const [searchParams, setSearchParams] = useSearchParams();
@@ -35,6 +38,7 @@ export function TicketCalculator() {
     setVisitMonth(visit);
     const [year, month] = visit.split('-').map(Number);
     setResult(getTicketReleaseDateForVisit(new Date(year, month - 1, 1)));
+    setResultVisitMonth(visit);
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const handleCalculate = () => {
@@ -51,6 +55,7 @@ export function TicketCalculator() {
 
     const releaseDate = getTicketReleaseDateForVisit(date);
     setResult(releaseDate);
+    setResultVisitMonth(visitMonth);
     vibrate([12]); // confirm the computation landed
 
     // Keep the URL shareable without pushing a history entry.
@@ -85,11 +90,26 @@ export function TicketCalculator() {
     }).format(date);
   };
 
+  // Everything below derives from the CALCULATED result (not the draft
+  // input), so editing the month without pressing "Calculate" leaves the
+  // result panel — lottery times included — untouched.
+  const lottery = resultVisitMonth
+    ? getLotteryScheduleForVisit(
+        Number(resultVisitMonth.split('-')[0]),
+        Number(resultVisitMonth.split('-')[1]) - 1
+      )
+    : null;
+
+  const now = new Date();
+  // The visit month has truly ended (only reachable via an old ?visit= link,
+  // since the picker's min is the current month).
+  const visitEnded = result ? resultVisitMonth < getLocalYearMonth(now) : false;
+
   const getCalendarEvent = () => {
-    if (!result || !visitMonth) return null;
+    if (!result || !resultVisitMonth) return null;
     return {
-      title: t('home.calendarEventTitle', { month: formatMonth(visitMonth) }),
-      description: t('home.calendarEventDesc', { month: formatMonth(visitMonth) }),
+      title: t('home.calendarEventTitle', { month: formatMonth(resultVisitMonth) }),
+      description: t('home.calendarEventDesc', { month: formatMonth(resultVisitMonth) }),
       startTime: result,
       endTime: new Date(result.getTime() + 60 * 60 * 1000), // 1 hour duration
       location: getOfficialCalendarUrl(i18n.language)
@@ -98,21 +118,13 @@ export function TicketCalculator() {
 
   const calendarEvent = getCalendarEvent();
 
-  // Lottery schedule is a pure derivation of the chosen visit month.
-  const lottery = visitMonth
-    ? getLotteryScheduleForVisit(Number(visitMonth.split('-')[0]), Number(visitMonth.split('-')[1]) - 1)
-    : null;
-
-  const isPast = result && result < new Date();
-  const now = new Date();
-
   const handleShare = async () => {
-    if (!result || !visitMonth) return;
+    if (!result || !resultVisitMonth) return;
     const text = t('home.shareText', {
-      month: formatMonth(visitMonth),
+      month: formatMonth(resultVisitMonth),
       date: formatDate(result),
     });
-    const shareResult = await shareText(text, `${window.location.origin}${window.location.pathname}?visit=${visitMonth}`);
+    const shareResult = await shareText(text, `${window.location.origin}${window.location.pathname}?visit=${resultVisitMonth}`);
     if (shareResult === 'copied') {
       setShareState('copied');
       window.setTimeout(() => setShareState('idle'), 2000);
@@ -121,8 +133,20 @@ export function TicketCalculator() {
     }
   };
 
-  const renderTimelineRow = (label: string, date: Date, tone?: 'lottery' | 'sale') => {
-    const isDone = date <= now;
+  const renderTimelineRow = (
+    label: string,
+    date: Date,
+    tone: 'lottery' | 'sale',
+    status: 'upcoming' | 'ongoing' | 'past'
+  ) => {
+    const badgeClass =
+      status === 'past'
+        ? 'bg-nintendo-grey text-white'
+        : status === 'ongoing'
+          ? 'bg-nintendo-dark text-white'
+          : 'bg-nintendo-red text-white';
+    const badgeText =
+      status === 'past' ? t('home.past') : status === 'ongoing' ? t('home.ongoing') : t('home.upcoming');
     return (
       <div className="flex items-center justify-between gap-3">
         <span
@@ -135,13 +159,7 @@ export function TicketCalculator() {
           {label}
         </span>
         <span className="text-sm font-pixel text-nintendo-dark text-right flex-1">{formatDateTime(date)}</span>
-        <span
-          className={`text-[10px] px-1.5 py-0.5 shrink-0 ${
-            isDone ? 'bg-nintendo-grey text-white' : 'bg-nintendo-red text-white'
-          }`}
-        >
-          {isDone ? t('home.past') : t('home.upcoming')}
-        </span>
+        <span className={`text-[10px] px-1.5 py-0.5 shrink-0 ${badgeClass}`}>{badgeText}</span>
       </div>
     );
   };
@@ -180,7 +198,7 @@ export function TicketCalculator() {
 
         {result && (
           <div className="mt-4 p-4 bg-nintendo-light border-4 border-nintendo-grey animate-pixel-land">
-            <p className="text-sm text-nintendo-grey mb-1">{t('home.canBuy', { month: formatMonth(visitMonth) })}</p>
+            <p className="text-sm text-nintendo-grey mb-1">{t('home.canBuy', { month: formatMonth(resultVisitMonth) })}</p>
             <p className="text-lg font-pixel text-nintendo-red mb-4">
               {formatDate(result)}
             </p>
@@ -190,14 +208,36 @@ export function TicketCalculator() {
               <p className="text-xs font-bold text-nintendo-dark mb-1">{t('home.purchasePath')}</p>
               {lottery && (
                 <>
-                  {renderTimelineRow(t('home.lotteryEntry'), lottery.entryOpen, 'lottery')}
-                  {renderTimelineRow(t('home.lotteryResult'), lottery.result, 'lottery')}
+                  {renderTimelineRow(
+                    t('home.lotteryEntry'),
+                    lottery.entryOpen,
+                    'lottery',
+                    now < lottery.entryOpen
+                      ? 'upcoming'
+                      : now < lottery.result
+                        ? 'ongoing'
+                        : 'past'
+                  )}
+                  {renderTimelineRow(
+                    t('home.lotteryResult'),
+                    lottery.result,
+                    'lottery',
+                    now < lottery.result ? 'upcoming' : 'past'
+                  )}
                 </>
               )}
-              {renderTimelineRow(t('home.firstCome'), result, 'sale')}
+              {/* First-come sale stays "in progress" while the visit month is
+                  still current — you can keep buying this month's tickets.
+                  Only a visit month that has fully ended is "past". */}
+              {renderTimelineRow(
+                t('home.firstCome'),
+                result,
+                'sale',
+                visitEnded ? 'past' : now < result ? 'upcoming' : 'ongoing'
+              )}
             </div>
 
-            {calendarEvent && !isPast && (
+            {calendarEvent && !visitEnded && (
               <div className="flex flex-wrap gap-2">
                 <PixelButton
                   as="a"
@@ -238,7 +278,7 @@ export function TicketCalculator() {
               </div>
             )}
 
-            {isPast && (
+            {visitEnded && (
               <div className="bg-white p-3 border-2 border-nintendo-grey text-sm">
                 <p className="font-bold text-nintendo-red mb-1">
                   {t('home.missedReleaseTitle')}
