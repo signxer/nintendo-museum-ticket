@@ -126,7 +126,7 @@ export function NextReleaseCard() {
 
   return (
     <PixelCard title={t('home.nextRelease')} className="text-center">
-      <div className="text-xl md:text-2xl font-bold mb-2 font-pixel leading-snug whitespace-nowrap">
+      <div className="text-xl md:text-2xl mb-2 font-pixel leading-snug whitespace-nowrap">
         {formatDate(releaseInfo.releaseDate)}
       </div>
 

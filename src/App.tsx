@@ -11,15 +11,24 @@ import { useTimezone } from "./hooks/useTimezone";
 import { useTheme } from "./hooks/useTheme";
 import { useTranslation } from "react-i18next";
 
+/** Google Fonts family name for the active language's Noto Sans variant. */
+function getNotoFontFamily(lng: string): string {
+  const lang = (lng || '').toLowerCase();
+  if (lang === 'zh-tw' || lang === 'zh-hant') return 'Noto+Sans+TC';
+  if (lang === 'zh-cn' || lang === 'zh' || lang === 'zh-hans') return 'Noto+Sans+SC';
+  if (lang === 'ko') return 'Noto+Sans+KR';
+  return 'Noto+Sans+JP';
+}
+
 function Layout({ children }: { children: React.ReactNode }) {
   const { timezone, useAutoTimezone, setTimezone } = useTimezone();
   const { theme, toggleTheme } = useTheme();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const location = useLocation();
 
-  // Apply the active theme to <html> (classes + Noto Sans JP for the official
-  // theme) and persist it. The index.html inline script pre-applies the class
-  // before first paint, so there is no flash of the wrong theme.
+  // Apply the active theme to <html> (classes + Noto Sans font for the
+  // official theme) and persist it. The index.html inline script pre-applies
+  // the class before first paint, so there is no flash of the wrong theme.
   useEffect(() => {
     const root = document.documentElement;
     root.classList.remove('theme-pixel', 'theme-official');
@@ -29,19 +38,22 @@ function Layout({ children }: { children: React.ReactNode }) {
       localStorage.setItem('nm-theme', theme);
     } catch { /* ignore */ }
 
-    const existing = document.getElementById('nm-noto-font');
+    // The official theme loads the Noto Sans variant matching the active
+    // language (JP/SC/TC/KR) so Chinese never renders with Japanese glyphs.
     if (theme === 'official') {
-      if (!existing) {
-        const link = document.createElement('link');
+      const family = getNotoFontFamily(i18n.language);
+      let link = document.getElementById('nm-noto-font') as HTMLLinkElement | null;
+      if (!link) {
+        link = document.createElement('link');
         link.id = 'nm-noto-font';
         link.rel = 'stylesheet';
-        link.href = 'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap';
         document.head.appendChild(link);
       }
-    } else if (existing) {
-      existing.remove();
+      link.href = `https://fonts.googleapis.com/css2?family=${family}:wght@400;500;700&display=swap`;
+    } else {
+      document.getElementById('nm-noto-font')?.remove();
     }
-  }, [theme]);
+  }, [theme, i18n.language]);
 
   useEffect(() => {
     // Route-aware, localized document title.
