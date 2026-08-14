@@ -52,6 +52,9 @@ export function MonthPicker({ value, onChange, min }: MonthPickerProps) {
 
   const isDisabled = (month: number) => `${viewYear}-${pad(month + 1)}` < min;
 
+  // Earliest year allowed by `min` — the year-nav can't go back beyond it.
+  const minYear = Number(min.slice(0, 4)) || new Date().getFullYear();
+
   return (
     <div className="relative min-w-0">
       {/* Theme-styled trigger, sized like the pixel input. A focusable div
@@ -93,8 +96,9 @@ export function MonthPicker({ value, onChange, min }: MonthPickerProps) {
                 variant="outline"
                 size="sm"
                 onClick={() => setViewYear((y) => y - 1)}
+                disabled={viewYear <= minYear}
                 aria-label="◀"
-                className="flex items-center"
+                className="flex items-center disabled:opacity-40 disabled:cursor-not-allowed"
               >
                 <ChevronLeft className="w-4 h-4" />
               </PixelButton>
