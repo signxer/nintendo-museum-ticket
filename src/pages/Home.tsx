@@ -14,13 +14,14 @@ export default function Home() {
 
   return (
     <div className="container-pixel py-8 space-y-8">
-      {/* Toolbar row: live clock badge on the left, About button on the right. */}
+      {/* Toolbar row: live clock badge on the left, About button on the right.
+          Both share h-9 so the two sit at the same height in every theme. */}
       <div className="flex items-center justify-between gap-4">
-        <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white border-2 border-nintendo-dark shadow-pixel-sm">
+        <div className="inline-flex items-center gap-2 h-9 px-3 bg-white border-2 border-nintendo-dark shadow-pixel-sm">
           <Clock className="w-4 h-4 text-nintendo-red shrink-0" />
           <PixelClock className="text-sm text-nintendo-dark" />
         </div>
-        <PixelButton variant="secondary" size="sm" onClick={() => navigate('/about')}>
+        <PixelButton variant="secondary" size="sm" className="h-9 flex items-center" onClick={() => navigate('/about')}>
           <Info className="w-4 h-4 mr-2 inline-block" />
           {t('about.title')}
         </PixelButton>
