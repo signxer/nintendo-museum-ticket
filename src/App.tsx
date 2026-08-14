@@ -18,6 +18,32 @@ function Layout({ children }: { children: React.ReactNode }) {
   const { t } = useTranslation();
   const location = useLocation();
 
+  // Apply the active theme to <html> (classes + Noto Sans JP for the official
+  // theme) and persist it. The index.html inline script pre-applies the class
+  // before first paint, so there is no flash of the wrong theme.
+  useEffect(() => {
+    const root = document.documentElement;
+    root.classList.remove('theme-pixel', 'theme-official');
+    root.classList.add(theme === 'official' ? 'theme-official' : 'theme-pixel');
+
+    try {
+      localStorage.setItem('nm-theme', theme);
+    } catch { /* ignore */ }
+
+    const existing = document.getElementById('nm-noto-font');
+    if (theme === 'official') {
+      if (!existing) {
+        const link = document.createElement('link');
+        link.id = 'nm-noto-font';
+        link.rel = 'stylesheet';
+        link.href = 'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap';
+        document.head.appendChild(link);
+      }
+    } else if (existing) {
+      existing.remove();
+    }
+  }, [theme]);
+
   useEffect(() => {
     // Route-aware, localized document title.
     document.title = location.pathname === '/about'

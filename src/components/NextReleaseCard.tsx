@@ -4,6 +4,7 @@ import { getNextTicketReleaseTime, ReleaseInfo } from '../utils/ticketLogic';
 import { PixelCard } from './PixelCard';
 import { PixelButton } from './PixelButton';
 import { useTimezone } from '../hooks/useTimezone';
+import { useTheme } from '../hooks/useTheme';
 import confetti from 'canvas-confetti';
 import { Calendar as CalendarIcon, Download, ExternalLink, Share2, Bell, BellOff } from 'lucide-react';
 import { getGoogleCalendarUrl, downloadIcsFile } from '../utils/calendarUtils';
@@ -40,6 +41,7 @@ function readStoredReminder(): StoredReminder | null {
 export function NextReleaseCard() {
   const { t, i18n } = useTranslation();
   const { timezone } = useTimezone();
+  const { isOfficial } = useTheme();
   const [timeLeft, setTimeLeft] = useState<string>('');
   const [releaseInfo, setReleaseInfo] = useState<ReleaseInfo>(() => getNextTicketReleaseTime());
   const [remindState, setRemindState] = useState<'idle' | 'set' | 'unsupported'>(() =>
@@ -68,7 +70,10 @@ export function NextReleaseCard() {
               particleCount: 100,
               spread: 70,
               origin: { y: 0.6 },
-              colors: ['#E60012', '#FFFFFF', '#2D2D2D'], // Nintendo colors
+              // The official theme has no red — celebrate in its palette.
+              colors: isOfficial
+                ? ['#76738A', '#FFFFFF', '#3A9CE2']
+                : ['#E60012', '#FFFFFF', '#2D2D2D'],
             });
           }
           vibrate([30, 60, 30]);
@@ -98,7 +103,7 @@ export function NextReleaseCard() {
     }, 1000);
 
     return () => clearInterval(timer);
-  }, [releaseInfo.releaseDate, t]);
+  }, [releaseInfo.releaseDate, t, isOfficial]);
 
   const formatDate = (date: Date) => {
     return new Intl.DateTimeFormat(i18n.language, {
