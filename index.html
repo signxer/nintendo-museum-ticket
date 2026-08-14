@@ -7,11 +7,11 @@
     <title>Nintendo Museum Tickets — Release Dates & How to Buy (Kyoto)</title>
 
     <!-- Pre-apply the saved theme before first paint to avoid a flash of the
-         wrong theme (see src/hooks/useTheme.ts). -->
+         wrong theme (see src/hooks/useTheme.ts). Museum is the default. -->
     <script>
       (function () {
         try {
-          if (localStorage.getItem('nm-theme') === 'official') {
+          if (localStorage.getItem('nm-theme') !== 'pixel') {
             document.documentElement.classList.add('theme-official');
           }
         } catch (e) {}

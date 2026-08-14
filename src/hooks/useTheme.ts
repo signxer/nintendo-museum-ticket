@@ -6,9 +6,11 @@ const THEME_KEY = 'nm-theme';
 
 function getInitialTheme(): Theme {
   try {
-    return localStorage.getItem(THEME_KEY) === 'official' ? 'official' : 'pixel';
+    // Museum is the default on first visit; only an explicit "pixel" choice
+    // (persisted) overrides it.
+    return localStorage.getItem(THEME_KEY) === 'pixel' ? 'pixel' : 'official';
   } catch {
-    return 'pixel';
+    return 'official';
   }
 }
 
