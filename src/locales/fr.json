@@ -67,5 +67,13 @@
     "guideContent": "Consultez la carte 'Prochaine Vente de Billets' sur la page d'accueil. Utilisez le calculateur ci-dessous pour planifier votre voyage.",
     "disclaimerTitle": "Avis de non-responsabilité",
     "disclaimerContent": "Cet outil est créé par des fans et n'est pas affilié à Nintendo. Les heures de mise en vente des billets sont basées sur des modèles historiques. Nous ne sommes pas responsables des erreurs ou des billets manqués."
+  },
+  "disclaimer": {
+    "title": "Aviso legal",
+    "intro": "Cet outil est créé par des fans et n'est PAS le site officiel du Nintendo Museum. Il n'est ni affilié à Nintendo, ni approuvé par Nintendo.",
+    "timeNote": "Les dates de mise en vente sont déduites de schémas historiques et d'annonces officielles, à titre indicatif uniquement. Consultez toujours le site officiel.",
+    "responsibility": "Cet outil ne garantit pas l'achat de billets. Nous ne sommes pas responsables des pertes liées aux changements de dates ou aux achats manqués.",
+    "trademark": "Nintendo et toutes les marques et noms associés appartiennent à leurs propriétaires respectifs.",
+    "acknowledge": "J'ai compris et j'accepte — continuer"
   }
 }

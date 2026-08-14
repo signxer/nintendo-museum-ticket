@@ -67,5 +67,13 @@
     "guideContent": "Check the 'Next Ticket Release' card on the home page to see the upcoming opportunity. Use the calculator below to plan ahead for a specific trip.",
     "disclaimerTitle": "Disclaimer",
     "disclaimerContent": "This tool is fan-made and not affiliated with Nintendo. Ticket release times are based on historical patterns. We are not responsible for any errors or missed tickets."
+  },
+  "disclaimer": {
+    "title": "Disclaimer",
+    "intro": "This is a fan-made tool and is NOT the official Nintendo Museum website. It is not affiliated with, endorsed by, or approved by Nintendo.",
+    "timeNote": "Ticket release times are inferred from historical patterns and official announcements and are provided for reference only. Always check the official Nintendo Museum website for the latest schedule.",
+    "responsibility": "This tool makes no guarantee that you will be able to purchase tickets. We are not responsible for any losses caused by schedule changes or failed purchases.",
+    "trademark": "Nintendo and all related trademarks and names are the property of their respective owners.",
+    "acknowledge": "I understand and agree — continue"
   }
 }

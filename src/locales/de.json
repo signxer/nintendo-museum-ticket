@@ -67,5 +67,13 @@
     "guideContent": "Prüfen Sie die Karte 'Nächster Ticketverkauf' auf der Startseite. Nutzen Sie den Rechner unten für Ihre Reiseplanung.",
     "disclaimerTitle": "Haftungsausschluss",
     "disclaimerContent": "Dieses Tool wurde von Fans erstellt und steht in keiner Verbindung zu Nintendo. Die Ticketveröffentlichungszeiten basieren auf historischen Daten. Wir übernehmen keine Verantwortung für Fehler oder verpasste Tickets."
+  },
+  "disclaimer": {
+    "title": "Haftungsausschluss",
+    "intro": "Dieses Tool ist ein Fan-Projekt und KEINE offizielle Nintendo-Museum-Website. Es ist weder mit Nintendo verbunden noch von Nintendo genehmigt.",
+    "timeNote": "Die Verkaufszeiten basieren auf historischen Mustern und offiziellen Ankündigungen und dienen nur als Referenz. Prüfen Sie immer die offizielle Website.",
+    "responsibility": "Dieses Tool garantiert keinen Ticketkauf. Wir haften nicht für Verluste durch Terminänderungen oder fehlgeschlagene Käufe.",
+    "trademark": "Nintendo und alle zugehörigen Marken und Namen sind Eigentum ihrer jeweiligen Inhaber.",
+    "acknowledge": "Ich habe verstanden und stimme zu — weiter"
   }
 }

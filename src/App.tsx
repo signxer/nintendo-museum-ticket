@@ -7,6 +7,7 @@ import { LanguageSwitcher } from "./components/LanguageSwitcher";
 import { TimezoneDisplay } from "./components/TimezoneDisplay";
 import { PageTransition } from "./components/PageTransition";
 import { ThemeSwitcher } from "./components/ThemeSwitcher";
+import { DisclaimerModal } from "./components/DisclaimerModal";
 import { useTimezone } from "./hooks/useTimezone";
 import { useTheme } from "./hooks/useTheme";
 import { useTranslation } from "react-i18next";
@@ -126,6 +127,9 @@ function Layout({ children }: { children: React.ReactNode }) {
       <main className="flex-grow">
         <PageTransition>{children}</PageTransition>
       </main>
+
+      {/* First-visit disclaimer — blocks the page until acknowledged. */}
+      <DisclaimerModal />
 
       <footer className="bg-nintendo-dark text-white p-5 text-center mt-auto border-t-4 border-nintendo-grey">
         {/* Compact two-row layout: identity row + legal row, both wrapping

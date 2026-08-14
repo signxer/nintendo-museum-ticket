@@ -67,5 +67,13 @@
     "guideContent": "Verifique o cartão 'Próxima Venda de Bilhetes' na página inicial. Use a calculadora abaixo para planejar sua viagem.",
     "disclaimerTitle": "Isenção de Responsabilidade",
     "disclaimerContent": "Esta ferramenta é feita por fãs e não é afiliada à Nintendo. Os horários de liberação de ingressos baseiam-se em padrões históricos. Não nos responsabilizamos por erros ou ingressos perdidos."
+  },
+  "disclaimer": {
+    "title": "Aviso legal",
+    "intro": "Esta ferramenta é feita por fãs e NÃO é o site oficial do Nintendo Museum. Não é afiliada nem aprovada pela Nintendo.",
+    "timeNote": "As datas de venda são inferidas de padrões históricos e anúncios oficiais, apenas como referência. Verifique sempre o site oficial.",
+    "responsibility": "Esta ferramenta não garante a compra de ingressos. Não nos responsabilizamos por perdas devido a mudanças de datas ou compras falhadas.",
+    "trademark": "A Nintendo e todas as marcas e nomes relacionados pertencem aos seus respetivos proprietários.",
+    "acknowledge": "Entendi e aceito — continuar"
   }
 }

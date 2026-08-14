@@ -67,5 +67,13 @@
     "guideContent": "Bekijk de 'Volgende Ticketverkoop' kaart op de startpagina. Gebruik de calculator hieronder om je reis te plannen.",
     "disclaimerTitle": "Disclaimer",
     "disclaimerContent": "Deze tool is gemaakt door fans en is niet gelieerd aan Nintendo. De vrijgaves van tickets zijn gebaseerd op historische gegevens. Wij zijn niet verantwoordelijk voor fouten of gemiste tickets."
+  },
+  "disclaimer": {
+    "title": "Disclaimer",
+    "intro": "Deze tool is door fans gemaakt en is NIET de officiële Nintendo Museum-website. Het is niet verbonden aan of goedgekeurd door Nintendo.",
+    "timeNote": "Verkoopdata zijn gebaseerd op historische patronen en officiële aankondigingen, alleen ter referentie. Raadpleeg altijd de officiële website.",
+    "responsibility": "Deze tool garandeert geen aankoop van tickets. Wij zijn niet verantwoordelijk voor verlies door gewijzigde data of mislukte aankopen.",
+    "trademark": "Nintendo en alle gerelateerde merken en namen zijn eigendom van hun respectievelijke eigenaren.",
+    "acknowledge": "Ik begrijp het en ga akkoord — doorgaan"
   }
 }

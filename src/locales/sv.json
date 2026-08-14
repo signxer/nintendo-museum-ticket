@@ -67,5 +67,13 @@
     "guideContent": "Kolla kortet 'Nästa Biljettsläpp' på startsidan. Använd kalkylatorn nedan för att planera din resa.",
     "disclaimerTitle": "Ansvarsfriskrivning",
     "disclaimerContent": "Detta verktyg är skapat av fans och är inte anslutet till Nintendo. Biljettsläppstider baseras på historiska mönster. Vi ansvarar inte för fel eller missade biljetter."
+  },
+  "disclaimer": {
+    "title": "Ansvarsfriskrivning",
+    "intro": "Det här verktyget är skapat av fans och är INTE Nintendos officiella museumwebbplats. Det är inte anslutet till eller godkänt av Nintendo.",
+    "timeNote": "Försäljningstider baseras på historiska mönster och officiella meddelanden, endast som referens. Kontrollera alltid den officiella webbplatsen.",
+    "responsibility": "Detta verktyg garanterar inte biljettköp. Vi ansvarar inte för förluster på grund av ändrade tider eller misslyckade köp.",
+    "trademark": "Nintendo och alla relaterade varumärken och namn tillhör respektive ägare.",
+    "acknowledge": "Jag förstår och godkänner — fortsätt"
   }
 }

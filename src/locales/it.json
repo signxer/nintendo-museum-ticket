@@ -67,5 +67,13 @@
     "guideContent": "Controlla la scheda 'Prossimo Rilascio Biglietti' nella home. Usa il calcolatore qui sotto per pianificare il tuo viaggio.",
     "disclaimerTitle": "Disclaimer",
     "disclaimerContent": "Questo strumento è creato dai fan e non è affiliato con Nintendo. Gli orari di rilascio dei biglietti si basano su dati storici. Non siamo responsabili per errori o biglietti persi."
+  },
+  "disclaimer": {
+    "title": "Avvertenza legale",
+    "intro": "Questo strumento è creato da fan e NON è il sito ufficiale del Nintendo Museum. Non è affiliato né approvato da Nintendo.",
+    "timeNote": "Le date di vendita sono dedotte da modelli storici e annunci ufficiali, solo come riferimento. Controlla sempre il sito ufficiale.",
+    "responsibility": "Questo strumento non garantisce l'acquisto dei biglietti. Non siamo responsabili di perdite dovute a cambi di data o acquisti falliti.",
+    "trademark": "Nintendo e tutti i marchi e nomi correlati appartengono ai rispettivi proprietari.",
+    "acknowledge": "Ho capito e accetto — continua"
   }
 }
