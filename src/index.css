@@ -409,6 +409,25 @@ input[type="month"]::-webkit-datetime-edit {
   background: transparent;
   border-width: 0;
 }
+
+/* Brand block: the logo and the site title sit together on ONE connected
+   #76738A slate background with white content — the official museum
+   branding. The block bleeds flush to the header edges on desktop. */
+.theme-official .header-brand {
+  background-color: #76738a;
+  padding: 8px 16px;
+}
+@media (min-width: 768px) {
+  .theme-official .header-brand {
+    margin: -16px 0 -16px -16px;
+  }
+}
+.theme-official .header-brand h1 {
+  color: #ffffff;
+}
+.theme-official .header-brand svg {
+  color: #ffffff;
+}
 .theme-official .pixel-clock {
   color: #76738a;
   font-size: 14px;

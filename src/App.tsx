@@ -89,7 +89,7 @@ function Layout({ children }: { children: React.ReactNode }) {
     <div className="min-h-screen flex flex-col">
       <header className="bg-nintendo-red border-b-4 border-nintendo-dark p-4 shadow-pixel sticky top-0 z-50">
         <div className="container-pixel flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="flex items-center gap-4">
+          <div className="header-brand flex items-center gap-4">
             {/* Logo / Title */}
             <div className="logo-tile bg-white p-2 border-2 border-nintendo-dark shadow-pixel-sm transform rotate-[-2deg]">
               <Landmark className="text-nintendo-red w-6 h-6 md:w-8 md:h-8" />
