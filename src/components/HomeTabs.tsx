@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Calculator, CalendarRange } from 'lucide-react';
+import type { LucideIcon } from 'lucide-react';
 import { PixelButton } from './PixelButton';
 import { TicketCalculator } from './TicketCalculator';
 import { ReleaseScheduleCard } from './ReleaseScheduleCard';
@@ -16,9 +18,9 @@ export function HomeTabs() {
   const { t } = useTranslation();
   const [active, setActive] = useState<ToolTab>('calculator');
 
-  const tabs: { id: ToolTab; label: string }[] = [
-    { id: 'calculator', label: t('home.calculator') },
-    { id: 'schedule', label: t('home.releaseOverview') },
+  const tabs: { id: ToolTab; label: string; icon: LucideIcon }[] = [
+    { id: 'calculator', label: t('home.calculator'), icon: Calculator },
+    { id: 'schedule', label: t('home.releaseOverview'), icon: CalendarRange },
   ];
 
   const onKeyDown = (e: React.KeyboardEvent) => {
@@ -34,7 +36,7 @@ export function HomeTabs() {
 
   return (
     <div>
-      <div role="tablist" aria-label={t('home.tools')} className="flex flex-wrap gap-2" onKeyDown={onKeyDown}>
+      <div role="tablist" aria-label={t('home.tools')} className="flex flex-wrap justify-center gap-2" onKeyDown={onKeyDown}>
         {tabs.map((tab) => {
           const isActive = tab.id === active;
           return (
@@ -46,9 +48,11 @@ export function HomeTabs() {
               aria-controls={`panel-${tab.id}`}
               tabIndex={isActive ? 0 : -1}
               variant={isActive ? 'primary' : 'outline'}
-              size="sm"
+              size="md"
+              className="h-10 flex items-center"
               onClick={() => setActive(tab.id)}
             >
+              <tab.icon className="w-4 h-4 mr-1.5 shrink-0" />
               {tab.label}
             </PixelButton>
           );

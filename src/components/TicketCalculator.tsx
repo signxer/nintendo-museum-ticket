@@ -6,7 +6,7 @@ import { PixelButton } from './PixelButton';
 import { getTicketReleaseDateForVisit } from '../utils/ticketLogic';
 import { getLotteryScheduleForVisit } from '../utils/lotteryLogic';
 import { useTimezone } from '../hooks/useTimezone';
-import { Calendar, Calendar as CalendarIcon, Download, ExternalLink, Share2 } from 'lucide-react';
+import { Calendar, Calendar as CalendarIcon, Calculator as CalcIcon, Download, ExternalLink, Share2 } from 'lucide-react';
 import { getGoogleCalendarUrl, downloadIcsFile } from '../utils/calendarUtils';
 import { getOfficialCalendarUrl } from '../utils/officialLinks';
 import { vibrate } from '../utils/haptics';
@@ -178,7 +178,8 @@ export function TicketCalculator() {
               {visitMonth || t('home.visitDatePlaceholder')}
             </span>
           </div>
-          <PixelButton onClick={handleCalculate} className="shrink-0">
+          <PixelButton onClick={handleCalculate} className="shrink-0 flex items-center">
+            <CalcIcon className="w-4 h-4 mr-1.5 shrink-0" />
             {t('home.calculate')}
           </PixelButton>
         </div>
