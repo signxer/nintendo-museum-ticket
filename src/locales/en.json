@@ -61,7 +61,8 @@
     "shareText": "Nintendo Museum tickets for {{month}} go on sale {{date}} (your local time). Don't miss it!",
     "shareCopied": "Copied!",
     "releaseOverview": "Upcoming releases",
-    "visitMonth": "Visit month"
+    "visitMonth": "Visit month",
+    "tools": "Ticket tools"
   },
   "about": {
     "title": "About",

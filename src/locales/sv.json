@@ -61,7 +61,8 @@
     "shareText": "Nintendo Museum-biljetter för {{month}} släpps {{date}} (lokal tid). Missa inte!",
     "shareCopied": "Kopierat!",
     "releaseOverview": "Kommande släpp",
-    "visitMonth": "Besöksmånad"
+    "visitMonth": "Besöksmånad",
+    "tools": "Biljettverktyg"
   },
   "about": {
     "title": "Om",

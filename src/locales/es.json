@@ -61,7 +61,8 @@
     "shareText": "Las entradas del Nintendo Museum para {{month}} salen a la venta el {{date}} (hora local). ¡No te las pierdas!",
     "shareCopied": "¡Copiado!",
     "releaseOverview": "Próximas ventas",
-    "visitMonth": "Mes de visita"
+    "visitMonth": "Mes de visita",
+    "tools": "Herramientas de entradas"
   },
   "about": {
     "title": "Acerca de",

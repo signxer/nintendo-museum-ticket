@@ -61,7 +61,8 @@
     "shareText": "Билеты в Nintendo Museum на {{month}} поступят в продажу {{date}} (по местному времени). Не пропустите!",
     "shareCopied": "Скопировано!",
     "releaseOverview": "Ближайшие продажи",
-    "visitMonth": "Месяц посещения"
+    "visitMonth": "Месяц посещения",
+    "tools": "Инструменты для билетов"
   },
   "about": {
     "title": "О проекте",

@@ -61,7 +61,8 @@
     "shareText": "닌텐도 뮤지엄 {{month}} 입장권이 {{date}}(현지 시간) 판매 시작됩니다. 놓치지 마세요!",
     "shareCopied": "복사됨!",
     "releaseOverview": "향후 판매 일정",
-    "visitMonth": "방문 월"
+    "visitMonth": "방문 월",
+    "tools": "티켓 도구"
   },
   "about": {
     "title": "정보",

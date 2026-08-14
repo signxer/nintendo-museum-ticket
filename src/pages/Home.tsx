@@ -1,8 +1,7 @@
 import React from 'react';
 import { NextReleaseCard } from '../components/NextReleaseCard';
 import { CurrentStatusCard } from '../components/CurrentStatusCard';
-import { TicketCalculator } from '../components/TicketCalculator';
-import { ReleaseScheduleCard } from '../components/ReleaseScheduleCard';
+import { HomeTabs } from '../components/HomeTabs';
 import { PixelButton } from '../components/PixelButton';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
@@ -21,23 +20,15 @@ export default function Home() {
         </PixelButton>
       </div>
 
-      <div className="flex flex-col items-center justify-center gap-8">
-        <div className="w-full max-w-lg">
-          <CurrentStatusCard />
-        </div>
-
-        <div className="w-full max-w-lg">
-          <NextReleaseCard />
-        </div>
-
-        <div className="w-full max-w-lg">
-          <TicketCalculator />
-        </div>
-
-        <div className="w-full max-w-lg">
-          <ReleaseScheduleCard />
-        </div>
+      {/* Status area: side-by-side on desktop, stacked on mobile. */}
+      <div className="grid gap-8 lg:grid-cols-2 items-start">
+        <CurrentStatusCard />
+        <NextReleaseCard />
       </div>
+
+      {/* Tools (calculator / release schedule) live in tabs to save vertical
+          space on desktop. */}
+      <HomeTabs />
     </div>
   );
 }

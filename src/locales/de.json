@@ -61,7 +61,8 @@
     "shareText": "Nintendo-Museum-Tickets für {{month}} starten am {{date}} (Ortszeit). Nicht verpassen!",
     "shareCopied": "Kopiert!",
     "releaseOverview": "Kommende Verkäufe",
-    "visitMonth": "Besuchsmonat"
+    "visitMonth": "Besuchsmonat",
+    "tools": "Ticket-Tools"
   },
   "about": {
     "title": "Über",

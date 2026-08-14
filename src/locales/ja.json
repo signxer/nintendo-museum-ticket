@@ -61,7 +61,8 @@
     "shareText": "任天堂ミュージアム{{month}}入場チケットは{{date}}（現地時間）に販売開始です。お見逃しなく！",
     "shareCopied": "コピーしました！",
     "releaseOverview": "今後の販売スケジュール",
-    "visitMonth": "来場月"
+    "visitMonth": "来場月",
+    "tools": "チケットツール"
   },
   "about": {
     "title": "について",

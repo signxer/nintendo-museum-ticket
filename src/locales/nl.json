@@ -61,7 +61,8 @@
     "shareText": "Nintendo Museum-kaartjes voor {{month}} gaan op {{date}} (lokale tijd) in de verkoop. Mis het niet!",
     "shareCopied": "Gekopieerd!",
     "releaseOverview": "Aankomende verkoopdata",
-    "visitMonth": "Bezoekmaand"
+    "visitMonth": "Bezoekmaand",
+    "tools": "Tickettools"
   },
   "about": {
     "title": "Over",

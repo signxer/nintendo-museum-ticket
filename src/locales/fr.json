@@ -61,7 +61,8 @@
     "shareText": "Les billets du Nintendo Museum pour {{month}} sont mis en vente le {{date}} (heure locale). À ne pas manquer !",
     "shareCopied": "Copié !",
     "releaseOverview": "Prochaines mises en vente",
-    "visitMonth": "Mois de visite"
+    "visitMonth": "Mois de visite",
+    "tools": "Outils de billets"
   },
   "about": {
     "title": "À propos",
