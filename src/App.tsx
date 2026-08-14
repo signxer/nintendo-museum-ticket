@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from "react-route
 import { Landmark, Github } from 'lucide-react';
 import Home from "./pages/Home";
 import About from "./pages/About";
-import { PixelClock } from "./components/PixelClock";
 import { LanguageSwitcher } from "./components/LanguageSwitcher";
 import { TimezoneDisplay } from "./components/TimezoneDisplay";
 import { PageTransition } from "./components/PageTransition";
@@ -88,15 +87,11 @@ function Layout({ children }: { children: React.ReactNode }) {
             </h1>
           </div>
           
-          <div className="flex flex-col items-center md:items-end gap-2">
-            {/* Live clock is decorative chrome — hide it on small screens so
-                the sticky header stays compact on phones. */}
-            <div className="hidden md:block">
-              <PixelClock className="text-white drop-shadow-md" />
-            </div>
+          <div className="flex flex-wrap items-center justify-center md:justify-end gap-2 sm:gap-3">
+            {/* Theme toggle sits outside the language/timezone panel. */}
+            <ThemeSwitcher theme={theme} onToggle={toggleTheme} />
             <div className="flex flex-wrap justify-center gap-2 sm:gap-4 glass-pixel p-1.5 sm:p-2 rounded border-2 border-nintendo-dark shadow-pixel-sm">
               <LanguageSwitcher />
-              <ThemeSwitcher theme={theme} onToggle={toggleTheme} />
               <TimezoneDisplay timezone={timezone} useAutoTimezone={useAutoTimezone} onTimezoneChange={setTimezone} />
             </div>
           </div>
