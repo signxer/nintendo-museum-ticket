@@ -7,7 +7,8 @@ import { PixelButton } from './PixelButton';
 import { useTimezone } from '../hooks/useTimezone';
 import { useTheme } from '../hooks/useTheme';
 import confetti from 'canvas-confetti';
-import { Calendar as CalendarIcon, Download, ExternalLink } from 'lucide-react';
+import { Calendar as CalendarIcon, ExternalLink } from 'lucide-react';
+import { GoogleGIcon } from './GoogleGIcon';
 import { getGoogleCalendarUrl, downloadIcsFile } from '../utils/calendarUtils';
 import { getOfficialCalendarUrl } from '../utils/officialLinks';
 import { vibrate } from '../utils/haptics';
@@ -150,7 +151,7 @@ export function NextReleaseCard() {
           className="nm-action-btn h-10 flex items-center justify-center gap-1"
           onClick={() => vibrate()}
         >
-          <CalendarIcon className="w-3.5 h-3.5 shrink-0" />
+          <GoogleGIcon className="w-3.5 h-3.5 shrink-0" />
           <span>{t('home.googleCalendar')}</span>
         </PixelButton>
 
@@ -163,7 +164,7 @@ export function NextReleaseCard() {
             downloadIcsFile(calendarEvent);
           }}
         >
-          <Download className="w-3.5 h-3.5 shrink-0" />
+          <CalendarIcon className="w-3.5 h-3.5 shrink-0" />
           <span>{t('home.downloadIcs')}</span>
         </PixelButton>
 

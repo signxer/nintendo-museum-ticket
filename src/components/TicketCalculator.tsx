@@ -6,7 +6,8 @@ import { PixelButton } from './PixelButton';
 import { getTicketReleaseDateForVisit } from '../utils/ticketLogic';
 import { getLotteryScheduleForVisit } from '../utils/lotteryLogic';
 import { useTimezone } from '../hooks/useTimezone';
-import { Calendar, Calendar as CalendarIcon, Calculator as CalcIcon, Download, ExternalLink, Share2 } from 'lucide-react';
+import { Calendar, Calendar as CalendarIcon, Calculator as CalcIcon, ExternalLink, Share2 } from 'lucide-react';
+import { GoogleGIcon } from './GoogleGIcon';
 import { getGoogleCalendarUrl, downloadIcsFile } from '../utils/calendarUtils';
 import { getOfficialCalendarUrl } from '../utils/officialLinks';
 import { vibrate } from '../utils/haptics';
@@ -221,7 +222,7 @@ export function TicketCalculator() {
                   className="flex items-center gap-2"
                   onClick={() => vibrate()}
                 >
-                  <CalendarIcon className="w-4 h-4" />
+                  <GoogleGIcon className="w-4 h-4 shrink-0" />
                   {t('home.googleCalendar')}
                 </PixelButton>
 
@@ -234,7 +235,7 @@ export function TicketCalculator() {
                     downloadIcsFile(calendarEvent);
                   }}
                 >
-                  <Download className="w-4 h-4" />
+                  <CalendarIcon className="w-4 h-4 shrink-0" />
                   {t('home.downloadIcs')}
                 </PixelButton>
 

@@ -19,7 +19,7 @@ export function ThemeSwitcher({ theme, onToggle }: ThemeSwitcherProps) {
       onClick={onToggle}
       aria-label={t('common.theme')}
       title={t('common.theme')}
-      className="flex items-center gap-1.5"
+      className="flex items-center gap-1.5 self-stretch border-2 border-nintendo-dark shadow-pixel-sm rounded"
     >
       <Palette className="w-3.5 h-3.5" />
       {theme === 'pixel' ? t('common.themePixel') : t('common.themeOfficial')}
