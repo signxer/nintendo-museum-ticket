@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import { Landmark, Github } from 'lucide-react';
 import Home from "./pages/Home";
@@ -25,6 +25,16 @@ function Layout({ children }: { children: React.ReactNode }) {
   const { theme, toggleTheme } = useTheme();
   const { t, i18n } = useTranslation();
   const location = useLocation();
+  const [headerShrunk, setHeaderShrunk] = useState(false);
+
+  // Shrink the header (logo/title/padding) once the page scrolls — the
+  // effect is CSS-gated to mobile, so desktop is untouched.
+  useEffect(() => {
+    const onScroll = () => setHeaderShrunk(window.scrollY > 12);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   // Apply the active theme to <html> (classes + Noto Sans font for the
   // official theme) and persist it. The index.html inline script pre-applies
@@ -87,7 +97,7 @@ function Layout({ children }: { children: React.ReactNode }) {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <header className="bg-nintendo-red border-b-4 border-nintendo-dark p-4 shadow-pixel sticky top-0 z-50">
+      <header className={`bg-nintendo-red border-b-4 border-nintendo-dark p-4 shadow-pixel sticky top-0 z-50${headerShrunk ? ' header-shrunk' : ''}`}>
         <div className="container-pixel flex flex-col md:flex-row justify-between items-center gap-4">
           {/* Brand: shrink-to-fit — the slate block hugs logo + title. It
               shrinks (never grows) so long titles wrap inside instead of

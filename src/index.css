@@ -294,6 +294,42 @@ html.theme-official:not([lang^="zh"]):not([lang="ja"]):not([lang="ko"]) {
   }
 }
 
+/* ---- Shrinking header on scroll (mobile only) -----------------------------
+   Once the page scrolls, the logo + title + header padding collapse smoothly
+   so more vertical space goes to content. Reduced-motion users get the space
+   savings instantly (the global reduced-motion rule zeroes transitions). */
+@media (max-width: 767px) {
+  header,
+  header .logo-tile,
+  header .logo-tile svg,
+  header h1,
+  header .header-brand {
+    transition:
+      padding 220ms ease,
+      gap 220ms ease,
+      width 220ms ease,
+      height 220ms ease,
+      font-size 220ms ease;
+  }
+  header.header-shrunk {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  header.header-shrunk .header-brand {
+    gap: 0.5rem;
+  }
+  header.header-shrunk .logo-tile {
+    padding: 0.125rem;
+  }
+  header.header-shrunk .logo-tile svg {
+    width: 1.125rem;
+    height: 1.125rem;
+  }
+  header.header-shrunk h1 {
+    font-size: 0.75rem;
+  }
+}
+
 /* ---- Official theme: strip the pixel look --------------------------------
    These rules are intentionally UNLAYERED so they beat Tailwind's layered
    utilities: in the official theme the same markup renders as flat, rounded,

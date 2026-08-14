@@ -21,8 +21,12 @@ export function ThemeSwitcher({ theme, onToggle }: ThemeSwitcherProps) {
       title={t('common.theme')}
       className="flex items-center gap-1.5 self-stretch border-2 border-nintendo-dark shadow-pixel-sm rounded"
     >
-      <Palette className="w-3.5 h-3.5" />
-      {theme === 'pixel' ? t('common.themePixel') : t('common.themeOfficial')}
+      <Palette className="w-3.5 h-3.5 shrink-0" />
+      {/* Icon-only below sm so the language/timezone/theme controls all fit
+          on one line on phones. */}
+      <span className="hidden sm:inline">
+        {theme === 'pixel' ? t('common.themePixel') : t('common.themeOfficial')}
+      </span>
     </PixelButton>
   );
 }
