@@ -7,10 +7,9 @@ import { PixelButton } from './PixelButton';
 import { useTimezone } from '../hooks/useTimezone';
 import { useTheme } from '../hooks/useTheme';
 import confetti from 'canvas-confetti';
-import { Calendar as CalendarIcon, Download, ExternalLink, Share2 } from 'lucide-react';
+import { Calendar as CalendarIcon, Download, ExternalLink } from 'lucide-react';
 import { getGoogleCalendarUrl, downloadIcsFile } from '../utils/calendarUtils';
 import { getOfficialCalendarUrl } from '../utils/officialLinks';
-import { shareText } from '../utils/share';
 import { vibrate } from '../utils/haptics';
 
 /** Localized countdown string for a release date ("还有 26天 5时 ..."), or ''
@@ -40,13 +39,11 @@ export function NextReleaseCard() {
   // Initialize the countdown synchronously so the first paint already shows
   // it — no empty moment, no height jump one second later.
   const [timeLeft, setTimeLeft] = useState<string>(() => buildTimeLeft(releaseInfo.releaseDate, t));
-  const [shareState, setShareState] = useState<'idle' | 'copied' | 'unsupported'>('idle');
 
   // Was the countdown still positive on the previous tick? Tracks the exact
   // instant the countdown crosses zero so we can celebrate once and advance
   // to the next release.
   const wasPositiveRef = useRef(true);
-  const shareTimerRef = useRef<number | null>(null);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -84,12 +81,6 @@ export function NextReleaseCard() {
     return () => clearInterval(timer);
   }, [releaseInfo.releaseDate, t, isOfficial]);
 
-  useEffect(() => {
-    return () => {
-      if (shareTimerRef.current !== null) window.clearTimeout(shareTimerRef.current);
-    };
-  }, []);
-
   const formatDate = (date: Date) => {
     // dateStyle 'long' = no weekday, so the big release date stays on one line.
     return new Intl.DateTimeFormat(i18n.language, {
@@ -107,23 +98,9 @@ export function NextReleaseCard() {
     }).format(date);
   };
 
-  // ---- Share --------------------------------------------------------------
+  // ---- Share (moved to the home toolbar — see pages/Home.tsx) ----
 
   const officialUrl = getOfficialCalendarUrl(i18n.language);
-
-  const handleShare = async () => {
-    const text = t('home.shareText', {
-      month: formatMonth(releaseInfo.forMonth),
-      date: formatDate(releaseInfo.releaseDate),
-    });
-    const result = await shareText(text, officialUrl);
-    if (result === 'copied') {
-      setShareState('copied');
-      shareTimerRef.current = window.setTimeout(() => setShareState('idle'), 2000);
-    } else if (result === 'unsupported') {
-      setShareState('unsupported');
-    }
-  };
 
   const calendarEvent = {
     title: t('home.calendarEventTitle', { month: formatMonth(releaseInfo.forMonth) }),
@@ -159,9 +136,10 @@ export function NextReleaseCard() {
         </div>
       </a>
 
-      {/* One-row action buttons, filled with the theme color, with short
-          labels. Same height (h-10) as the "去抽选/购买" button. */}
-      <div className="grid grid-cols-3 gap-2 mt-2" role="group" aria-label={t('home.tools')}>
+      {/* Two action buttons side by side — with the share button moved to the
+          toolbar they have plenty of room for full text labels. Same height
+          (h-10) as the "去抽选/购买" button. */}
+      <div className="grid grid-cols-2 gap-2 mt-2" role="group" aria-label={t('home.tools')}>
         <PixelButton
           as="a"
           variant="primary"
@@ -173,10 +151,7 @@ export function NextReleaseCard() {
           onClick={() => vibrate()}
         >
           <CalendarIcon className="w-3.5 h-3.5 shrink-0" />
-          {/* Short label; the full name stays in aria-label above. Labels
-              need ~420px of viewport to fit a third of the row — below that,
-              keep the icon only. */}
-          <span className="hidden min-[420px]:inline">{t('home.googleCalendarShort')}</span>
+          <span>{t('home.googleCalendar')}</span>
         </PixelButton>
 
         <PixelButton
@@ -189,25 +164,10 @@ export function NextReleaseCard() {
           }}
         >
           <Download className="w-3.5 h-3.5 shrink-0" />
-          <span className="hidden min-[420px]:inline">{t('home.downloadIcsShort')}</span>
+          <span>{t('home.downloadIcs')}</span>
         </PixelButton>
 
-        <PixelButton
-          variant="primary"
-          aria-label={t('home.share')}
-          className="nm-action-btn h-10 flex items-center justify-center gap-1"
-          onClick={handleShare}
-        >
-          <Share2 className="w-3.5 h-3.5 shrink-0" />
-          <span className="hidden min-[420px]:inline">{t('home.share')}</span>
-        </PixelButton>
       </div>
-
-      {shareState === 'copied' && (
-        <p role="status" className="text-xs text-nintendo-grey mt-2 font-pixel">
-          {t('home.shareCopied')}
-        </p>
-      )}
     </PixelCard>
   );
 }
