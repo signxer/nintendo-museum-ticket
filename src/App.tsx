@@ -89,12 +89,14 @@ function Layout({ children }: { children: React.ReactNode }) {
     <div className="min-h-screen flex flex-col">
       <header className="bg-nintendo-red border-b-4 border-nintendo-dark p-4 shadow-pixel sticky top-0 z-50">
         <div className="container-pixel flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="header-brand flex items-center gap-4">
+          {/* Brand: shrinkable so long titles truncate instead of pushing the
+              controls off one line (non-Chinese titles are very long). */}
+          <div className="header-brand flex items-center gap-4 min-w-0 md:flex-1">
             {/* Logo / Title */}
-            <div className="logo-tile bg-white p-2 border-2 border-nintendo-dark shadow-pixel-sm transform rotate-[-2deg]">
+            <div className="logo-tile shrink-0 bg-white p-2 border-2 border-nintendo-dark shadow-pixel-sm transform rotate-[-2deg]">
               <Landmark className="text-nintendo-red w-6 h-6 md:w-8 md:h-8" />
             </div>
-            <h1 className="text-white text-sm md:text-lg font-bold font-pixel tracking-wider drop-shadow-md truncate max-w-[200px] md:max-w-none">
+            <h1 className="text-white text-sm md:text-lg font-bold font-pixel tracking-wider drop-shadow-md leading-snug min-w-0 flex-1">
               {t('common.title')}
             </h1>
           </div>
@@ -102,7 +104,7 @@ function Layout({ children }: { children: React.ReactNode }) {
           <div className="flex flex-wrap items-center justify-center md:justify-end gap-2 sm:gap-3">
             {/* Theme toggle sits outside the language/timezone panel. */}
             <ThemeSwitcher theme={theme} onToggle={toggleTheme} />
-            <div className="flex flex-wrap justify-center gap-2 sm:gap-4 glass-pixel p-1.5 sm:p-2 rounded border-2 border-nintendo-dark shadow-pixel-sm">
+            <div className="flex flex-wrap justify-center gap-2 sm:gap-3 glass-pixel p-1.5 sm:p-2 rounded border-2 border-nintendo-dark shadow-pixel-sm">
               <LanguageSwitcher />
               <TimezoneDisplay timezone={timezone} useAutoTimezone={useAutoTimezone} onTimezoneChange={setTimezone} />
             </div>

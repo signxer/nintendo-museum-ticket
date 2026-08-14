@@ -32,7 +32,7 @@ export function TimezoneDisplay({ timezone, useAutoTimezone, onTimezoneChange, c
           value={useAutoTimezone ? 'auto' : timezone}
           onChange={(e) => onTimezoneChange(e.target.value)}
           aria-label={t('common.timezone')}
-          className="appearance-none bg-transparent font-pixel text-xs sm:text-sm text-nintendo-dark focus:outline-none cursor-pointer border-b border-dashed border-nintendo-grey hover:border-nintendo-red transition-colors pr-6 max-w-[200px] truncate pixel-focus"
+          className="appearance-none bg-transparent font-pixel text-xs sm:text-sm text-nintendo-dark focus:outline-none cursor-pointer border-b border-dashed border-nintendo-grey hover:border-nintendo-red transition-colors pr-6 max-w-[140px] lg:max-w-[200px] truncate pixel-focus"
         >
           <option value="auto">{t('common.timezoneAuto')}</option>
           <optgroup label={t('common.timezoneCommon')}>

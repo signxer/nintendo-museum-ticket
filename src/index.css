@@ -106,6 +106,19 @@
     "Microsoft YaHei", sans-serif;
 }
 
+/* Long (non-Chinese) titles: shrink the type and let them wrap to two lines
+   inside the brand block, so the theme/language/timezone controls always stay
+   on one line. Chinese titles are short and keep the default size. */
+html[lang]:not([lang^="zh"]) .header-brand h1 {
+  font-size: 13px;
+  line-height: 1.35;
+}
+@media (min-width: 768px) {
+  html[lang]:not([lang^="zh"]) .header-brand h1 {
+    font-size: 15px;
+  }
+}
+
 /* ---- Per-language font targeting -----------------------------------------
    CJK fonts carry language-specific glyph variants (Japanese shinjitai vs
    simplified/traditional hanzi), so each UI language must resolve to ITS OWN
