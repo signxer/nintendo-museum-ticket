@@ -54,19 +54,29 @@ export function MonthPicker({ value, onChange, min }: MonthPickerProps) {
 
   return (
     <div className="relative min-w-0">
-      {/* Theme-styled trigger, sized like the pixel input. */}
-      <button
-        type="button"
+      {/* Theme-styled trigger, sized like the pixel input. A focusable div
+          (role=button) rather than a <button>, so the official theme's
+          "button-ify the input" overrides (border-width:0 etc.) can't hit it
+          — the picker trigger must keep its input border. */}
+      <div
+        role="button"
+        tabIndex={0}
         onClick={() => setOpen((v) => !v)}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            setOpen((v) => !v);
+          }
+        }}
         aria-haspopup="dialog"
         aria-expanded={open}
-        className="pixel-input w-full flex items-center justify-between cursor-pointer text-left"
+        className="pixel-input w-full flex items-center justify-between cursor-pointer text-left select-none"
       >
         <span className={`truncate ${value ? 'text-nintendo-dark' : 'text-nintendo-grey'}`}>
           {value || t('home.visitDatePlaceholder')}
         </span>
         <CalendarIcon className="w-4 h-4 text-nintendo-red shrink-0" />
-      </button>
+      </div>
 
       {open && (
         <>
