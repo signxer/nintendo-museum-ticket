@@ -106,8 +106,9 @@ export function NextReleaseCard() {
   }, [releaseInfo.releaseDate, t, isOfficial]);
 
   const formatDate = (date: Date) => {
+    // dateStyle 'long' = no weekday, so the big release date stays on one line.
     return new Intl.DateTimeFormat(i18n.language, {
-      dateStyle: 'full',
+      dateStyle: 'long',
       timeStyle: 'short',
       timeZone: timezone
     }).format(date);
@@ -258,7 +259,7 @@ export function NextReleaseCard() {
 
   return (
     <PixelCard title={t('home.nextRelease')} className="text-center">
-      <div className="text-xl md:text-3xl font-bold mb-2 font-pixel leading-relaxed break-words">
+      <div className="text-xl md:text-2xl font-bold mb-2 font-pixel leading-snug whitespace-nowrap">
         {formatDate(releaseInfo.releaseDate)}
       </div>
 

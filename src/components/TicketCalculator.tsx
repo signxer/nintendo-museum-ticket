@@ -56,8 +56,9 @@ export function TicketCalculator() {
   };
 
   const formatDate = (date: Date) => {
+    // dateStyle 'long' = no weekday, consistent with the next-release card.
     return new Intl.DateTimeFormat(i18n.language, {
-      dateStyle: 'full',
+      dateStyle: 'long',
       timeStyle: 'short',
       timeZone: timezone
     }).format(date);
