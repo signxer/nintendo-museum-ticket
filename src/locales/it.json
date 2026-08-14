@@ -62,10 +62,13 @@
   "about": {
     "title": "Info",
     "rules": "Regole Biglietti",
-    "rulesContent": "I biglietti vengono rilasciati il 2° mercoledì di ogni mese alle 16:00 JST (Japan Standard Time, UTC+9). Si vendono biglietti per visite 2 mesi dopo (es. a febbraio per aprile).",
     "guide": "Come usare",
-    "guideContent": "Controlla la scheda 'Prossimo Rilascio Biglietti' nella home. Usa il calcolatore qui sotto per pianificare il tuo viaggio.",
-    "disclaimerTitle": "Disclaimer"
+    "guideContent": "1. Lingua / fuso orario / tema: la barra superiore cambia lingua, fuso orario (tutti gli orari nel fuso scelto) e tema (Pixel / Museo).\n2. Stato attuale: vedi quali mesi accettano candidature e quali sono in vendita.\n3. Prossima vendita: data e conto alla rovescia della prossima vendita; aggiungi a Google Calendar o scarica il file .ics.\n4. Calcolatore biglietti: scegli il mese di visita per vedere la cronologia completa (estrazione → risultati → vendita diretta), aggiungerla al calendario o condividerla.\n5. Calendario vendite: panoramica dei prossimi 6 mesi.\n6. Tutti gli orari sono stime: controlla sempre il sito ufficiale e acquista solo lì per evitare truffe.",
+    "disclaimerTitle": "Disclaimer",
+    "rulesIntro": "I biglietti del Nintendo Museum sono venduti attraverso due canali (entrambi richiedono un account Nintendo):",
+    "rulesLottery": "Estrazione (Drawing): le candidature aprono 3 mesi prima del mese di visita (il 1° del mese alle 10:00 JST) e i risultati sono annunciati 2 mesi prima (il 1° alle 16:00 JST). I vincitori devono pagare entro il termine.",
+    "rulesFirstCome": "Vendita diretta (On Sale): dopo l'estrazione, i biglietti si aprono a metà mese (di solito il 2° mercoledì alle 16:00 JST), fino a esaurimento.",
+    "rulesNote": "Alcuni mesi sono eccezioni (es. i biglietti di maggio 2026 sono usciti il 2° giovedì mattina). Le regole possono cambiare in qualsiasi momento: controlla sempre il sito ufficiale."
   },
   "disclaimer": {
     "title": "Avvertenza legale",

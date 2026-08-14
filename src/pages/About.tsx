@@ -20,13 +20,16 @@ export default function About() {
       </div>
 
       <PixelCard title={t('about.rules')}>
-        <p className="leading-relaxed">
-          {t('about.rulesContent')}
-        </p>
+        <p className="leading-relaxed mb-3">{t('about.rulesIntro')}</p>
+        <ul className="list-disc pl-5 space-y-3 text-sm leading-relaxed">
+          <li>{t('about.rulesLottery')}</li>
+          <li>{t('about.rulesFirstCome')}</li>
+        </ul>
+        <p className="leading-relaxed mt-3 text-nintendo-grey text-sm">{t('about.rulesNote')}</p>
       </PixelCard>
 
       <PixelCard title={t('about.guide')}>
-        <p className="leading-relaxed">
+        <p className="leading-relaxed whitespace-pre-line">
           {t('about.guideContent')}
         </p>
       </PixelCard>

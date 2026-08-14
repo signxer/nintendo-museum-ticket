@@ -62,10 +62,13 @@
   "about": {
     "title": "Sobre",
     "rules": "Regras de Bilhetes",
-    "rulesContent": "Os bilhetes são liberados na 2ª quarta-feira de cada mês às 16:00 JST (Horário Padrão do Japão, UTC+9). Vendas para visitas 2 meses depois (ex: em fevereiro para abril).",
     "guide": "Como usar",
-    "guideContent": "Verifique o cartão 'Próxima Venda de Bilhetes' na página inicial. Use a calculadora abaixo para planejar sua viagem.",
-    "disclaimerTitle": "Isenção de Responsabilidade"
+    "guideContent": "1. Idioma / fuso horário / tema: a barra superior troca idioma, fuso horário (todos os horários no fuso escolhido) e tema (Pixel / Museu).\n2. Estado atual: veja quais meses aceitam inscrições e quais estão à venda.\n3. Próxima venda: data e contagem regressiva da próxima venda; adicione ao Google Agenda ou baixe o arquivo .ics.\n4. Calculadora de ingressos: escolha seu mês de visita para ver a linha do tempo completa (sorteio → resultados → venda direta), adicionar ao calendário ou compartilhar.\n5. Calendário de vendas: visão geral dos próximos 6 meses.\n6. Todos os horários são estimativas: confirme sempre no site oficial e compre apenas lá para evitar golpes.",
+    "disclaimerTitle": "Isenção de Responsabilidade",
+    "rulesIntro": "Os ingressos do Nintendo Museum são vendidos por dois canais (ambos exigem conta Nintendo):",
+    "rulesLottery": "Sorteio (Drawing): as inscrições abrem 3 meses antes do seu mês de visita (dia 1 do mês às 10:00 JST) e os resultados são anunciados 2 meses antes (dia 1 às 16:00 JST). Os vencedores devem pagar dentro do prazo.",
+    "rulesFirstCome": "Venda direta (On Sale): após o sorteio, os ingressos abrem no meio do mês (geralmente na 2ª quarta-feira às 16:00 JST), até esgotar.",
+    "rulesNote": "Alguns meses são exceções (ex.: ingressos de maio de 2026 saíram na 2ª quinta-feira de manhã). As regras podem mudar a qualquer momento: confirme sempre no site oficial."
   },
   "disclaimer": {
     "title": "Aviso legal",

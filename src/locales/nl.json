@@ -62,10 +62,13 @@
   "about": {
     "title": "Over",
     "rules": "Ticketregels",
-    "rulesContent": "Tickets worden vrijgegeven op de 2e woensdag van elke maand om 16:00 JST (Japanse Standaardtijd, UTC+9). Tickets worden verkocht voor bezoeken 2 maanden later (bijv. in februari voor april).",
     "guide": "Hoe te gebruiken",
-    "guideContent": "Bekijk de 'Volgende Ticketverkoop' kaart op de startpagina. Gebruik de calculator hieronder om je reis te plannen.",
-    "disclaimerTitle": "Disclaimer"
+    "guideContent": "1. Taal / tijdzone / thema: de bovenste balk wisselt taal, tijdzone (alle tijden in de gekozen zone) en thema (Pixel / Museum).\n2. Huidige status: zie welke maanden loterij-inschrijvingen aannemen en welke nu te koop zijn.\n3. Volgende verkoop: datum en aftelling van de volgende verkoop; voeg toe aan Google Agenda of download het .ics-bestand.\n4. Ticketcalculator: kies uw bezoekmaand voor de volledige tijdlijn (loterij → resultaten → directe verkoop), voeg toe aan de agenda of deel.\n5. Verkoopkalender: overzicht van de komende 6 maanden.\n6. Alle tijden zijn schattingen: controleer altijd de officiële website en koop alleen daar om oplichting te voorkomen.",
+    "disclaimerTitle": "Disclaimer",
+    "rulesIntro": "Tickets voor het Nintendo Museum worden via twee kanalen verkocht (beide vereisen een Nintendo-account):",
+    "rulesLottery": "Loterij (Drawing): inschrijvingen openen 3 maanden voor uw bezoekmaand (op de 1e van de maand om 10:00 JST) en resultaten worden 2 maanden van tevoren bekendgemaakt (op de 1e om 16:00 JST). Winnaars moeten binnen de termijn betalen.",
+    "rulesFirstCome": "Directe verkoop (On Sale): na de loterij openen de tickets halverwege die maand (meestal de 2e woensdag om 16:00 JST), tot uitverkocht.",
+    "rulesNote": "Sommige maanden zijn uitzonderingen (bijv. tickets voor mei 2026 gingen op de 2e donderdagochtend in de verkoop). Regels kunnen op elk moment veranderen: raadpleeg altijd de officiële website."
   },
   "disclaimer": {
     "title": "Disclaimer",

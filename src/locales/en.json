@@ -62,10 +62,13 @@
   "about": {
     "title": "About",
     "rules": "Ticket Rules",
-    "rulesContent": "Tickets are released on the 2nd Wednesday of every month at 16:00 JST (Japan Standard Time, UTC+9). Tickets are sold for visits 2 months later (e.g., in February, tickets for April are sold).",
     "guide": "How to use",
-    "guideContent": "Check the 'Next Ticket Release' card on the home page to see the upcoming opportunity. Use the calculator below to plan ahead for a specific trip.",
-    "disclaimerTitle": "Disclaimer"
+    "guideContent": "1. Language / timezone / theme: the toolbar switches language, timezone (all times shown in your chosen timezone) and theme (Pixel / Museum).\n2. Current status: see which months are accepting lottery entries and which are on sale now.\n3. Next release: see the next on-sale date with a countdown; add it to Google Calendar or download the .ics file for your system calendar.\n4. Ticket calculator: pick your planned visit month to see the full timeline (lottery entry → results → first-come sale), then add it to a calendar or share it.\n5. Release schedule: an overview of the next 6 months of lottery and sale dates.\n6. All times are estimates — always confirm on the official website, and buy only there to avoid scams.",
+    "disclaimerTitle": "Disclaimer",
+    "rulesIntro": "Nintendo Museum tickets are sold through two channels (both require a Nintendo Account):",
+    "rulesLottery": "Lottery (Drawing): entries open 3 months before your visit month (on the 1st of the month at 10:00 JST), and results are announced 2 months before (on the 1st at 16:00 JST). Winners must pay within the given deadline.",
+    "rulesFirstCome": "First-come (On Sale): after the lottery results, tickets open for direct purchase in the middle of that month (usually the 2nd Wednesday at 16:00 JST), until sold out.",
+    "rulesNote": "Some months are exceptions (e.g. May 2026 tickets went on sale on the 2nd Thursday morning). Rules may change at any time — always check the official Nintendo Museum website."
   },
   "disclaimer": {
     "title": "Disclaimer",

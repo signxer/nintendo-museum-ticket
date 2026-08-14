@@ -62,10 +62,13 @@
   "about": {
     "title": "Om",
     "rules": "Biljettregler",
-    "rulesContent": "Biljetter släpps den 2:a onsdagen varje månad kl 16:00 JST (Japansk Standardtid, UTC+9). Biljetter säljs för besök 2 månader senare (t.ex. i februari för april).",
     "guide": "Hur man använder",
-    "guideContent": "Kolla kortet 'Nästa Biljettsläpp' på startsidan. Använd kalkylatorn nedan för att planera din resa.",
-    "disclaimerTitle": "Ansvarsfriskrivning"
+    "guideContent": "1. Språk / tidszon / tema: det övre fältet byter språk, tidszon (alla tider i vald zon) och tema (Pixel / Museum).\n2. Aktuell status: se vilka månader som tar emot lotteriansökningar och vilka som är till salu nu.\n3. Nästa försäljning: datum och nedräkning för nästa försäljning; lägg till i Google Kalender eller ladda ner .ics-filen.\n4. Biljettkalkylator: välj din besöksmånad för att se hela tidslinjen (lotteri → resultat → direktförsäljning), lägg till i kalendern eller dela.\n5. Försäljningskalender: översikt över de kommande 6 månaderna.\n6. Alla tider är uppskattningar – kontrollera alltid den officiella webbplatsen och köp bara där för att undvika bedrägerier.",
+    "disclaimerTitle": "Ansvarsfriskrivning",
+    "rulesIntro": "Biljetter till Nintendo Museum säljs via två kanaler (båda kräver ett Nintendo-konto):",
+    "rulesLottery": "Lotteri (Drawing): ansökningar öppnar 3 månader före din besöksmånad (den 1:a i månaden kl. 10:00 JST) och resultat meddelas 2 månader före (den 1:a kl. 16:00 JST). Vinnare måste betala inom tiden.",
+    "rulesFirstCome": "Direktförsäljning (On Sale): efter lotteriet öppnar biljetterna i mitten av månaden (vanligtvis den 2:a onsdagen kl. 16:00 JST), tills de tar slut.",
+    "rulesNote": "Vissa månader är undantag (t.ex. biljetter för maj 2026 släpptes den 2:a torsdagen på morgonen). Reglerna kan ändras när som helst – kontrollera alltid den officiella webbplatsen."
   },
   "disclaimer": {
     "title": "Ansvarsfriskrivning",

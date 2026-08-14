@@ -62,10 +62,13 @@
   "about": {
     "title": "À propos",
     "rules": "Règles des Billets",
-    "rulesContent": "Les billets sont mis en vente le 2ème mercredi de chaque mois à 16:00 JST (Heure Standard du Japon, UTC+9). Les ventes concernent les visites 2 mois plus tard (ex: en février pour avril).",
     "guide": "Comment utiliser",
-    "guideContent": "Consultez la carte 'Prochaine Vente de Billets' sur la page d'accueil. Utilisez le calculateur ci-dessous pour planifier votre voyage.",
-    "disclaimerTitle": "Avis de non-responsabilité"
+    "guideContent": "1. Langue / fuseau / thème : la barre supérieure change la langue, le fuseau horaire (toutes les heures s'affichent dans le fuseau choisi) et le thème (Pixel / Musée).\n2. État actuel : voyez quels mois acceptent les candidatures et lesquels sont en vente.\n3. Prochaine vente : date et compte à rebours de la prochaine vente ; ajoutez-la à Google Agenda ou téléchargez le fichier .ics.\n4. Calculateur de billets : choisissez votre mois de visite pour voir la chronologie complète (tirage → résultats → vente directe), l'ajouter au calendrier ou la partager.\n5. Calendrier des ventes : aperçu des 6 prochains mois de tirages et ventes.\n6. Toutes les heures sont des estimations : confirmez toujours sur le site officiel et achetez uniquement là-bas pour éviter les arnaques.",
+    "disclaimerTitle": "Avis de non-responsabilité",
+    "rulesIntro": "Les billets du Nintendo Museum sont vendus par deux canaux (les deux nécessitent un compte Nintendo) :",
+    "rulesLottery": "Tirage au sort (Drawing) : les candidatures ouvrent 3 mois avant votre mois de visite (le 1er du mois à 10:00 JST) et les résultats sont annoncés 2 mois avant (le 1er à 16:00 JST). Les gagnants doivent payer dans les délais.",
+    "rulesFirstCome": "Vente directe (On Sale) : après le tirage, les billets s'ouvrent à la mi-mois (généralement le 2e mercredi à 16:00 JST), jusqu'à épuisement.",
+    "rulesNote": "Certains mois font exception (ex. les billets de mai 2026 sont sortis le 2e jeudi matin). Les règles peuvent changer à tout moment : consultez toujours le site officiel."
   },
   "disclaimer": {
     "title": "Aviso legal",

@@ -62,10 +62,13 @@
   "about": {
     "title": "Über",
     "rules": "Ticket-Regeln",
-    "rulesContent": "Tickets werden am 2. Mittwoch jeden Monats um 16:00 JST (Japan Standard Time, UTC+9) veröffentlicht. Verkauft werden Tickets für Besuche in 2 Monaten (z.B. im Februar für April).",
     "guide": "Anleitung",
-    "guideContent": "Prüfen Sie die Karte 'Nächster Ticketverkauf' auf der Startseite. Nutzen Sie den Rechner unten für Ihre Reiseplanung.",
-    "disclaimerTitle": "Haftungsausschluss"
+    "guideContent": "1. Sprache / Zeitzone / Design: Die obere Leiste wechselt Sprache, Zeitzone (alle Zeiten in der gewählten Zeitzone) und Design (Pixel / Museum).\n2. Aktueller Status: Sehen Sie, welche Monate Lotterie-Anmeldungen annehmen und welche jetzt im Verkauf sind.\n3. Nächster Verkauf: Datum und Countdown des nächsten Verkaufs; zu Google Kalender hinzufügen oder .ics-Datei herunterladen.\n4. Ticketrechner: Wählen Sie Ihren Besuchsmonat für die vollständige Zeitachse (Lotterie → Ergebnisse → Direktverkauf), zum Kalender hinzufügen oder teilen.\n5. Verkaufskalender: Überblick über die nächsten 6 Monate.\n6. Alle Zeiten sind Schätzungen – prüfen Sie immer die offizielle Website und kaufen Sie nur dort, um Betrug zu vermeiden.",
+    "disclaimerTitle": "Haftungsausschluss",
+    "rulesIntro": "Nintendo-Museum-Tickets werden über zwei Kanäle verkauft (beide erfordern ein Nintendo-Konto):",
+    "rulesLottery": "Lotterie (Drawing): Die Anmeldung öffnet 3 Monate vor Ihrem Besuchsmonat (am 1. des Monats um 10:00 JST), Ergebnisse werden 2 Monate vorher bekannt gegeben (am 1. um 16:00 JST). Gewinner müssen innerhalb der Frist zahlen.",
+    "rulesFirstCome": "Direktverkauf (On Sale): Nach der Lotterie öffnen die Tickets Mitte des Monats (meist der 2. Mittwoch um 16:00 JST), bis ausverkauft.",
+    "rulesNote": "Einige Monate sind Ausnahmen (z. B. Mai-2026-Tickets am 2. Donnerstag morgens). Die Regeln können sich jederzeit ändern – prüfen Sie immer die offizielle Website."
   },
   "disclaimer": {
     "title": "Haftungsausschluss",

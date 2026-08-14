@@ -62,10 +62,13 @@
   "about": {
     "title": "Acerca de",
     "rules": "Reglas de Entradas",
-    "rulesContent": "Las entradas se liberan el segundo miércoles de cada mes a las 16:00 JST (Hora Estándar de Japón, UTC+9). Se venden entradas para visitas 2 meses después (ej. en febrero se venden para abril).",
     "guide": "Cómo usar",
-    "guideContent": "Revisa la tarjeta 'Próxima Venta de Entradas' en la página de inicio. Usa la calculadora abajo para planear un viaje específico.",
-    "disclaimerTitle": "Aviso Legal"
+    "guideContent": "1. Idioma / zona horaria / tema: la barra superior cambia el idioma, la zona horaria (todas las horas se muestran en la zona elegida) y el tema (Píxel / Museo).\n2. Estado actual: vea qué meses aceptan solicitudes del sorteo y cuáles están a la venta ahora.\n3. Próxima venta: fecha y cuenta atrás de la próxima venta; añádala a Google Calendar o descargue el archivo .ics.\n4. Calculadora de entradas: elija su mes de visita para ver la línea temporal completa (sorteo → resultados → venta directa), añadirla al calendario o compartirla.\n5. Calendario de ventas: resumen de los próximos 6 meses de sorteos y ventas.\n6. Todas las horas son estimaciones: confirme siempre en el sitio oficial y compre solo allí para evitar estafas.",
+    "disclaimerTitle": "Aviso Legal",
+    "rulesIntro": "Las entradas del Nintendo Museum se venden por dos canales (ambos requieren cuenta de Nintendo):",
+    "rulesLottery": "Sorteo (Drawing): las solicitudes abren 3 meses antes de su mes de visita (el día 1 del mes a las 10:00 JST) y los resultados se anuncian 2 meses antes (el día 1 a las 16:00 JST). Los ganadores deben pagar dentro del plazo.",
+    "rulesFirstCome": "Venta directa (On Sale): tras el sorteo, las entradas se abren a mediados de ese mes (normalmente el segundo miércoles a las 16:00 JST), hasta agotar existencias.",
+    "rulesNote": "Algunos meses son excepciones (p. ej., las entradas de mayo de 2026 salieron el segundo jueves por la mañana). Las reglas pueden cambiar en cualquier momento: consulte siempre el sitio oficial."
   },
   "disclaimer": {
     "title": "Aviso legal",
