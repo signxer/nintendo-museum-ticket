@@ -22,7 +22,7 @@
   },
   "home": {
     "nextRelease": "下次放票时间",
-    "forMonth": "可购买 {{month}} 的门票",
+    "forMonth": "届时可购买 {{month}} 的门票",
     "calculator": "购票时间计算器",
     "visitDate": "计划参观日期",
     "calculate": "计算",
