@@ -20,8 +20,9 @@ export default function Home() {
         </PixelButton>
       </div>
 
-      {/* Status area: side-by-side on desktop, stacked on mobile. */}
-      <div className="grid gap-8 lg:grid-cols-2 items-start">
+      {/* Status area: side-by-side on desktop, stacked on mobile. Both cards
+          stretch to the same row height (no items-start). */}
+      <div className="grid gap-8 lg:grid-cols-2">
         <CurrentStatusCard />
         <NextReleaseCard />
       </div>
