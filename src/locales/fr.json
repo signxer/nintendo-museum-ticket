@@ -15,7 +15,10 @@
     "back": "Retour",
     "timezoneAuto": "Auto (appareil)",
     "timezoneCommon": "Fuseaux courants",
-    "timezoneAll": "Tous les fuseaux"
+    "timezoneAll": "Tous les fuseaux",
+    "theme": "Thème",
+    "themePixel": "Pixel",
+    "themeOfficial": "Style officiel"
   },
   "home": {
     "nextRelease": "Prochaine Vente de Billets",

@@ -7,11 +7,14 @@ import { PixelClock } from "./components/PixelClock";
 import { LanguageSwitcher } from "./components/LanguageSwitcher";
 import { TimezoneDisplay } from "./components/TimezoneDisplay";
 import { PageTransition } from "./components/PageTransition";
+import { ThemeSwitcher } from "./components/ThemeSwitcher";
 import { useTimezone } from "./hooks/useTimezone";
+import { useTheme } from "./hooks/useTheme";
 import { useTranslation } from "react-i18next";
 
 function Layout({ children }: { children: React.ReactNode }) {
   const { timezone, useAutoTimezone, setTimezone } = useTimezone();
+  const { theme, toggleTheme } = useTheme();
   const { t } = useTranslation();
   const location = useLocation();
 
@@ -51,7 +54,7 @@ function Layout({ children }: { children: React.ReactNode }) {
         <div className="container-pixel flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="flex items-center gap-4">
             {/* Logo / Title */}
-            <div className="bg-white p-2 border-2 border-nintendo-dark shadow-pixel-sm transform rotate-[-2deg]">
+            <div className="logo-tile bg-white p-2 border-2 border-nintendo-dark shadow-pixel-sm transform rotate-[-2deg]">
               <Landmark className="text-nintendo-red w-6 h-6 md:w-8 md:h-8" />
             </div>
             <h1 className="text-white text-sm md:text-lg font-bold font-pixel tracking-wider drop-shadow-md truncate max-w-[200px] md:max-w-none">
@@ -65,8 +68,9 @@ function Layout({ children }: { children: React.ReactNode }) {
             <div className="hidden md:block">
               <PixelClock className="text-white drop-shadow-md" />
             </div>
-            <div className="flex flex-wrap justify-center gap-4 glass-pixel p-1.5 sm:p-2 rounded border-2 border-nintendo-dark shadow-pixel-sm">
+            <div className="flex flex-wrap justify-center gap-2 sm:gap-4 glass-pixel p-1.5 sm:p-2 rounded border-2 border-nintendo-dark shadow-pixel-sm">
               <LanguageSwitcher />
+              <ThemeSwitcher theme={theme} onToggle={toggleTheme} />
               <TimezoneDisplay timezone={timezone} useAutoTimezone={useAutoTimezone} onTimezoneChange={setTimezone} />
             </div>
           </div>

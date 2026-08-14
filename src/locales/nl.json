@@ -15,7 +15,10 @@
     "back": "Terug",
     "timezoneAuto": "Auto (apparaat)",
     "timezoneCommon": "Veelgebruikte zones",
-    "timezoneAll": "Alle zones"
+    "timezoneAll": "Alle zones",
+    "theme": "Thema",
+    "themePixel": "Pixel",
+    "themeOfficial": "Officiële stijl"
   },
   "home": {
     "nextRelease": "Volgende Ticketverkoop",

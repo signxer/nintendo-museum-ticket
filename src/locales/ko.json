@@ -15,7 +15,10 @@
     "back": "뒤로",
     "timezoneAuto": "자동 (기기 설정)",
     "timezoneCommon": "자주 쓰는 시간대",
-    "timezoneAll": "전체 시간대"
+    "timezoneAll": "전체 시간대",
+    "theme": "테마",
+    "themePixel": "픽셀",
+    "themeOfficial": "공식 사이트 스타일"
   },
   "home": {
     "nextRelease": "다음 티켓 오픈",

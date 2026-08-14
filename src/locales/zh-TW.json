@@ -15,7 +15,10 @@
     "back": "返回",
     "timezoneAuto": "自動（跟隨裝置）",
     "timezoneCommon": "常用時區",
-    "timezoneAll": "全部時區"
+    "timezoneAll": "全部時區",
+    "theme": "主題",
+    "themePixel": "像素",
+    "themeOfficial": "官網風格"
   },
   "home": {
     "nextRelease": "下次放票時間",

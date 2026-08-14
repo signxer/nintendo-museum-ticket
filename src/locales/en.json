@@ -15,7 +15,10 @@
     "back": "Back",
     "timezoneAuto": "Auto (device)",
     "timezoneCommon": "Common zones",
-    "timezoneAll": "All zones"
+    "timezoneAll": "All zones",
+    "theme": "Theme",
+    "themePixel": "Pixel",
+    "themeOfficial": "Official"
   },
   "home": {
     "nextRelease": "Next Ticket Release",

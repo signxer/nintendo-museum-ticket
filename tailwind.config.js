@@ -8,17 +8,20 @@ export default {
     extend: {
       colors: {
         nintendo: {
-          red: '#E60012',
-          grey: '#8C8C8C',
-          dark: '#2D2D2D',
-          light: '#F0F0F0',
-          white: '#FFFFFF',
-          bg: '#E5E5E5',
+          // Values come from CSS variables so a second theme (the official
+          // museum ticket site look) can restyle the whole app by redefining
+          // them on .theme-official.
+          red: 'rgb(var(--nm-red) / <alpha-value>)',
+          grey: 'rgb(var(--nm-grey) / <alpha-value>)',
+          dark: 'rgb(var(--nm-dark) / <alpha-value>)',
+          light: 'rgb(var(--nm-light) / <alpha-value>)',
+          white: 'rgb(var(--nm-white) / <alpha-value>)',
+          bg: 'rgb(var(--nm-bg) / <alpha-value>)',
         }
       },
       fontFamily: {
-        pixel: ['"FusionPixelLatin"', '"FusionPixelZhHans"', '"FusionPixelZhHant"', '"FusionPixelJa"', '"FusionPixelKo"', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', '"PingFang SC"', '"Hiragino Sans GB"', '"Microsoft YaHei"', '"Helvetica Neue"', 'Helvetica', 'Arial', 'sans-serif'],
-        sans: ['system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', '"PingFang SC"', '"Hiragino Sans GB"', '"Microsoft YaHei"', 'sans-serif'],
+        pixel: 'var(--nm-font-pixel)',
+        sans: 'var(--nm-font-sans)',
       },
       boxShadow: {
         'pixel': '4px 4px 0 0 #2D2D2D',

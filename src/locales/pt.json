@@ -15,7 +15,10 @@
     "back": "Voltar",
     "timezoneAuto": "Automático (dispositivo)",
     "timezoneCommon": "Fusos comuns",
-    "timezoneAll": "Todos os fusos"
+    "timezoneAll": "Todos os fusos",
+    "theme": "Tema",
+    "themePixel": "Pixel",
+    "themeOfficial": "Estilo oficial"
   },
   "home": {
     "nextRelease": "Próxima Venda de Bilhetes",

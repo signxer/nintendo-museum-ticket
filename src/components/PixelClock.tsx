@@ -22,7 +22,7 @@ export function PixelClock({ className }: PixelClockProps) {
   });
 
   return (
-    <div className={cn("font-pixel text-nintendo-red text-xl tracking-wider", className)}>
+    <div className={cn("pixel-clock font-pixel text-nintendo-red text-xl tracking-wider", className)}>
       {timeString}
     </div>
   );

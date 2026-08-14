@@ -15,7 +15,10 @@
     "back": "Zurück",
     "timezoneAuto": "Auto (Gerät)",
     "timezoneCommon": "Häufige Zonen",
-    "timezoneAll": "Alle Zonen"
+    "timezoneAll": "Alle Zonen",
+    "theme": "Design",
+    "themePixel": "Pixel",
+    "themeOfficial": "Offizieller Stil"
   },
   "home": {
     "nextRelease": "Nächster Ticketverkauf",

@@ -59,6 +59,50 @@
   }
 }
 
+/* ---- Theme tokens ---------------------------------------------------------
+   Every Tailwind color/font utility resolves through these CSS variables, so
+   a theme is just a variable override. The pixel theme (default) and the
+   "official" theme (Nintendo Museum ticket site design language) share the
+   same markup. */
+
+:root,
+.theme-pixel {
+  /* Nintendo Museum pixel palette */
+  --nm-red: 230 0 18;          /* #E60012 */
+  --nm-grey: 140 140 140;      /* #8C8C8C */
+  --nm-dark: 45 45 45;         /* #2D2D2D */
+  --nm-light: 240 240 240;     /* #F0F0F0 */
+  --nm-white: 255 255 255;
+  --nm-bg: 229 229 229;        /* #E5E5E5 */
+
+  --nm-font-pixel: "FusionPixelLatin", "FusionPixelZhHans", "FusionPixelZhHant",
+    "FusionPixelJa", "FusionPixelKo", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+    "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --nm-font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+}
+
+/* Official Nintendo Museum ticket site look:
+   - fonts: ITC Avant Garde Gothic Pro (display) + Noto Sans JP (body),
+     approximated with Century Gothic + Noto Sans JP (loaded on demand).
+   - colors: #3C3C3C body text, #76738A slate accents, #E60012 CTAs,
+     white flat rounded surfaces on a light grey page. */
+.theme-official {
+  --nm-red: 230 0 18;          /* #E60012 — same brand red */
+  --nm-grey: 118 115 138;      /* #76738A — official slate accent */
+  --nm-dark: 60 60 60;         /* #3C3C3C — official body text */
+  --nm-light: 244 244 244;     /* #F4F4F4 */
+  --nm-white: 255 255 255;
+  --nm-bg: 245 245 245;        /* #F5F5F5 */
+
+  --nm-font-pixel: "Century Gothic", "ITC Avant Garde Gothic Pro", "Noto Sans JP",
+    -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+    "Microsoft YaHei", sans-serif;
+  --nm-font-sans: "Noto Sans JP", system-ui, -apple-system, "PingFang SC",
+    "Microsoft YaHei", sans-serif;
+}
+
 @layer components {
   .pixel-border {
     @apply border-4 border-nintendo-dark;
@@ -144,4 +188,121 @@ input[type="month"] {
 }
 input[type="month"]::-webkit-datetime-edit {
   color: transparent;
+}
+
+/* ---- Official theme: strip the pixel look --------------------------------
+   These rules are intentionally UNLAYERED so they beat Tailwind's layered
+   utilities: in the official theme the same markup renders as flat, rounded,
+   light surfaces in the museum ticket site's design language. */
+
+.theme-official body {
+  /* Remove the pixel checkerboard; flat light page background. */
+  background-image: none;
+}
+
+/* Cards / surfaces: thin light borders, soft shadows, rounded corners. */
+.theme-official .border-4 {
+  border-width: 1px;
+}
+.theme-official .border-2 {
+  border-width: 1px;
+}
+.theme-official .border-nintendo-dark {
+  border-color: #e5e5e5;
+}
+.theme-official .border-nintendo-grey,
+.theme-official .border-nintendo-grey\/50 {
+  border-color: #e5e5e5;
+}
+.theme-official .shadow-pixel {
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+.theme-official .shadow-pixel-sm {
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+.theme-official .shadow-pixel-lg {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Buttons: flat pills with a soft shadow, no chunky border. */
+.theme-official button.border-4,
+.theme-official a.border-4 {
+  border-width: 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+/* Inputs. */
+.theme-official .pixel-input {
+  border-width: 1px;
+  border-radius: 8px;
+  box-shadow: none;
+}
+
+/* Card title badge: from a centered floating banner to a static red pill. */
+.theme-official .pixel-card-title {
+  position: static;
+  transform: none;
+  border: none;
+  border-radius: 6px;
+  margin: 0 0 14px;
+}
+
+/* Header: white bar with a hairline bottom border, dark title, flat logo. */
+.theme-official header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
+}
+.theme-official header h1 {
+  color: #3c3c3c;
+}
+.theme-official .logo-tile {
+  transform: none;
+  box-shadow: none;
+  background: transparent;
+  border-width: 0;
+}
+.theme-official .pixel-clock {
+  color: #76738a;
+  font-size: 14px;
+  letter-spacing: normal;
+}
+.theme-official .glass-pixel {
+  background-color: rgba(255, 255, 255, 0.92);
+  border-color: #e5e5e5;
+  box-shadow: none;
+  border-radius: 8px;
+}
+
+/* Divider / timeline rows: hairline solid separators. */
+.theme-official .border-t-2,
+.theme-official .border-b-2 {
+  border-width: 0;
+}
+.theme-official .border-t-2 {
+  border-top-width: 1px;
+  border-style: solid;
+  border-color: #e8e8e8;
+}
+.theme-official .border-b-2 {
+  border-bottom-width: 1px;
+  border-style: solid;
+  border-color: #e8e8e8;
+}
+
+/* Schedule table. */
+.theme-official table .border-b-4 {
+  border-bottom-width: 1px;
+}
+
+/* Footer: light, muted text. */
+.theme-official footer {
+  background-color: #ffffff;
+  border-top: 1px solid #e5e5e5;
+}
+.theme-official footer p,
+.theme-official footer a {
+  color: #76738a;
 }

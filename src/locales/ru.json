@@ -15,7 +15,10 @@
     "back": "Назад",
     "timezoneAuto": "Авто (устройство)",
     "timezoneCommon": "Частые часовые пояса",
-    "timezoneAll": "Все часовые пояса"
+    "timezoneAll": "Все часовые пояса",
+    "theme": "Тема",
+    "themePixel": "Пиксель",
+    "themeOfficial": "Официальный стиль"
   },
   "home": {
     "nextRelease": "Следующая продажа",

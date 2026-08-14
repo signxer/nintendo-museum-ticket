@@ -15,7 +15,10 @@
     "back": "Atrás",
     "timezoneAuto": "Auto (dispositivo)",
     "timezoneCommon": "Zonas comunes",
-    "timezoneAll": "Todas las zonas"
+    "timezoneAll": "Todas las zonas",
+    "theme": "Tema",
+    "themePixel": "Píxel",
+    "themeOfficial": "Estilo oficial"
   },
   "home": {
     "nextRelease": "Próxima Venta de Entradas",

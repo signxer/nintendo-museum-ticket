@@ -15,7 +15,10 @@
     "back": "戻る",
     "timezoneAuto": "自動（端末に合わせる）",
     "timezoneCommon": "よく使うタイムゾーン",
-    "timezoneAll": "すべてのタイムゾーン"
+    "timezoneAll": "すべてのタイムゾーン",
+    "theme": "テーマ",
+    "themePixel": "ピクセル",
+    "themeOfficial": "公式サイト風"
   },
   "home": {
     "nextRelease": "次回のチケット販売",

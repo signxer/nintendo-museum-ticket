@@ -15,7 +15,10 @@
     "back": "رجوع",
     "timezoneAuto": "تلقائي (الجهاز)",
     "timezoneCommon": "مناطق زمنية شائعة",
-    "timezoneAll": "كل المناطق الزمنية"
+    "timezoneAll": "كل المناطق الزمنية",
+    "theme": "المظهر",
+    "themePixel": "بكسل",
+    "themeOfficial": "النمط الرسمي"
   },
   "home": {
     "nextRelease": "إصدار التذاكر القادم",

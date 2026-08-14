@@ -15,7 +15,7 @@ export function PixelCard({ className, title, children, ...props }: PixelCardPro
       {...props}
     >
       {title && (
-        <div className="absolute -top-5 left-1/2 -translate-x-1/2 bg-nintendo-red text-white px-4 py-1 border-4 border-nintendo-dark font-pixel text-sm whitespace-nowrap">
+        <div className="pixel-card-title absolute -top-5 left-1/2 -translate-x-1/2 bg-nintendo-red text-white px-4 py-1 border-4 border-nintendo-dark font-pixel text-sm whitespace-nowrap">
           {title}
         </div>
       )}

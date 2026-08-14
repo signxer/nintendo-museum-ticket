@@ -15,7 +15,10 @@
     "back": "Tillbaka",
     "timezoneAuto": "Auto (enhet)",
     "timezoneCommon": "Vanliga zoner",
-    "timezoneAll": "Alla zoner"
+    "timezoneAll": "Alla zoner",
+    "theme": "Tema",
+    "themePixel": "Pixel",
+    "themeOfficial": "Officiell stil"
   },
   "home": {
     "nextRelease": "Nästa Biljettsläpp",

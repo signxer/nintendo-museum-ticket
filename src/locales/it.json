@@ -15,7 +15,10 @@
     "back": "Indietro",
     "timezoneAuto": "Auto (dispositivo)",
     "timezoneCommon": "Fusi orari comuni",
-    "timezoneAll": "Tutti i fusi orari"
+    "timezoneAll": "Tutti i fusi orari",
+    "theme": "Tema",
+    "themePixel": "Pixel",
+    "themeOfficial": "Stile ufficiale"
   },
   "home": {
     "nextRelease": "Prossimo Rilascio Biglietti",

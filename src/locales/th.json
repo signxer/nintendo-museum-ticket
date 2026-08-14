@@ -15,7 +15,10 @@
     "back": "กลับ",
     "timezoneAuto": "อัตโนมัติ (อุปกรณ์)",
     "timezoneCommon": "โซนเวลาที่ใช้บ่อย",
-    "timezoneAll": "ทุกโซนเวลา"
+    "timezoneAll": "ทุกโซนเวลา",
+    "theme": "ธีม",
+    "themePixel": "พิกเซล",
+    "themeOfficial": "สไตล์เว็บทางการ"
   },
   "home": {
     "nextRelease": "การจำหน่ายตั๋วรอบถัดไป",

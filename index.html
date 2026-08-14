@@ -6,6 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nintendo Museum Tickets — Release Dates & How to Buy (Kyoto)</title>
 
+    <!-- Pre-apply the saved theme before first paint to avoid a flash of the
+         wrong theme (see src/hooks/useTheme.ts). -->
+    <script>
+      (function () {
+        try {
+          if (localStorage.getItem('nm-theme') === 'official') {
+            document.documentElement.classList.add('theme-official');
+          }
+        } catch (e) {}
+      })();
+    </script>
+
     <!-- Primary SEO -->
     <meta name="description" content="Find out exactly when Nintendo Museum (Kyoto, Uji) tickets go on sale. Lottery & first-come release dates auto-converted to your timezone, with a visit planner — in 15 languages." />
     <meta name="keywords" content="Nintendo Museum tickets, Nintendo Museum Kyoto, buy Nintendo Museum tickets, Nintendo Museum release date, Nintendo Museum lottery, 任天堂博物馆, 任天堂博物馆 门票, Kyoto museum tickets, when to buy Nintendo Museum tickets" />

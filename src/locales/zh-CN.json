@@ -15,7 +15,10 @@
     "back": "返回",
     "timezoneAuto": "自动（跟随设备）",
     "timezoneCommon": "常用时区",
-    "timezoneAll": "全部时区"
+    "timezoneAll": "全部时区",
+    "theme": "主题",
+    "themePixel": "像素",
+    "themeOfficial": "官网风格"
   },
   "home": {
     "nextRelease": "下次放票时间",
