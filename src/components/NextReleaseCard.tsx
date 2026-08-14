@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import type { TFunction } from 'i18next';
 import { getNextTicketReleaseTime, ReleaseInfo } from '../utils/ticketLogic';
 import { PixelCard } from './PixelCard';
 import { PixelButton } from './PixelButton';
@@ -12,12 +13,33 @@ import { getOfficialCalendarUrl } from '../utils/officialLinks';
 import { shareText } from '../utils/share';
 import { vibrate } from '../utils/haptics';
 
+/** Localized countdown string for a release date ("还有 26天 5时 ..."), or ''
+ *  once the release has passed. */
+function buildTimeLeft(releaseDate: Date, t: TFunction): string {
+  const diff = releaseDate.getTime() - Date.now();
+  if (diff <= 0) return '';
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+  const parts: string[] = [];
+  if (days > 0) parts.push(`${days}${t('home.days')}`);
+  parts.push(`${hours}${t('home.hours')}`);
+  parts.push(`${minutes}${t('home.minutes')}`);
+  parts.push(`${seconds}${t('home.seconds')}`);
+
+  return t('home.timeLeft', { time: parts.join(' ') });
+}
+
 export function NextReleaseCard() {
   const { t, i18n } = useTranslation();
   const { timezone } = useTimezone();
   const { isOfficial } = useTheme();
-  const [timeLeft, setTimeLeft] = useState<string>('');
   const [releaseInfo, setReleaseInfo] = useState<ReleaseInfo>(() => getNextTicketReleaseTime());
+  // Initialize the countdown synchronously so the first paint already shows
+  // it — no empty moment, no height jump one second later.
+  const [timeLeft, setTimeLeft] = useState<string>(() => buildTimeLeft(releaseInfo.releaseDate, t));
   const [shareState, setShareState] = useState<'idle' | 'copied' | 'unsupported'>('idle');
 
   // Was the countdown still positive on the previous tick? Tracks the exact
@@ -56,20 +78,7 @@ export function NextReleaseCard() {
 
       wasPositiveRef.current = true;
 
-      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
-      // Localized time string
-      const parts = [];
-      if (days > 0) parts.push(`${days}${t('home.days')}`);
-      parts.push(`${hours}${t('home.hours')}`);
-      parts.push(`${minutes}${t('home.minutes')}`);
-      parts.push(`${seconds}${t('home.seconds')}`);
-
-      const timeString = parts.join(' ');
-      setTimeLeft(t('home.timeLeft', { time: timeString }));
+      setTimeLeft(buildTimeLeft(releaseInfo.releaseDate, t));
     }, 1000);
 
     return () => clearInterval(timer);
@@ -131,7 +140,9 @@ export function NextReleaseCard() {
       </div>
 
       <div className="text-nintendo-grey text-sm mb-6 font-pixel" aria-live="polite">
-        {timeLeft ? `(${timeLeft})` : ''}
+        {/* A non-breaking space keeps the line height stable even before the
+            first tick or right at the rollover moment. */}
+        {timeLeft ? `(${timeLeft})` : '\u00A0'}
       </div>
 
       <a
