@@ -388,6 +388,7 @@ html[lang="ja"] .nm-action-btn {
   color: #3c3c3c;
   white-space: normal;
   font-weight: 700;
+  text-align: center;
   margin: -24px -24px 16px;
   padding: 10px 16px;
 }
