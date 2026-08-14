@@ -1,97 +1,126 @@
-# Nintendo Museum Ticket Tool / 任天堂博物馆购票助手
+<p align="center">
+  <img src="public/favicon-museum.svg" width="64" height="64" alt="Nintendo Museum Ticket Assistant logo" />
+</p>
 
-![Nintendo Style](https://img.shields.io/badge/Style-Pixel%20Art-red)
-![License](https://img.shields.io/badge/License-MIT-blue)
-![React](https://img.shields.io/badge/React-18-61DAFB?logo=react)
-![Vite](https://img.shields.io/badge/Vite-6.0-646CFF?logo=vite)
+<h1 align="center">Nintendo Museum Ticket Assistant</h1>
 
-## 🔗 Live Demo / 在线体验
+<p align="center">
+  <b>Know exactly when to buy your Nintendo Museum tickets — in your timezone.</b>
+  <br/>
+  A fan-made helper that converts the official JST sale times into your local time, with countdowns, calendar export, and a visit planner.
+</p>
 
-**[👉 Click here to visit the tool / 点击这里直接访问工具](https://signxer.github.io/nintendo-museum-ticket/)**
+<p align="center">
+  <a href="https://n.675277.xyz/"><img src="https://img.shields.io/badge/Live%20Demo-n.675277.xyz-%23E60012?style=flat-square" alt="Live demo" /></a>
+  <img src="https://img.shields.io/badge/license-MIT-blue?style=flat-square" alt="License" />
+  <img src="https://img.shields.io/badge/React-18-61DAFB?style=flat-square&logo=react" alt="React" />
+  <img src="https://img.shields.io/badge/TypeScript-5.8-3178C6?style=flat-square&logo=typescript" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Vite-6-646CFF?style=flat-square&logo=vite" alt="Vite" />
+  <img src="https://img.shields.io/badge/style-Pixel%20%26%20Museum-%2376738A?style=flat-square" alt="Themes" />
+</p>
 
----
-
-## 📖 Introduction / 简介
-
-### English
-A fan-made utility designed to help visitors plan their trip to the **Nintendo Museum** in Kyoto, Japan. This tool calculates exactly when tickets will be released for your planned visit date, converting the official JST release time to your local timezone. It also provides helpful tips for grabbing last-minute tickets if you missed the initial release.
-
-### 中文
-这是一个为计划前往日本京都**任天堂博物馆**的游客制作的辅助工具。它可以根据您的计划参观日期，精确计算门票发售的具体时间，并将官方的日本标准时间（JST）自动转换为您所在的本地时间。如果您错过了首发抢票，工具还会提供捡漏提示。
-
----
-
-## ✨ Features / 功能特点
-
-- **📅 Release Date Calculator / 发售日计算**:
-  - Automatically calculates the ticket release date based on your planned visit month.
-  - 自动根据计划参观月份计算门票发售日期（每月第二个周三）。
-
-- **🌍 Auto Timezone Conversion / 自动时区转换**:
-  - Converts the release time (16:00 JST for June 2026 visits onward, 14:00 JST before that) to your local device time, so you know exactly when to wake up or be ready.
-  - 将发售时间（2026年6月起的参观月为日本时间 16:00，此前为 14:00）自动转换为您本地时间，再也不用担心算错时差。
-
-- **📅 Calendar Integration / 日历集成**:
-  - One-click add to **Google Calendar** or download **.ics** file for system calendars (Apple/Outlook).
-  - 一键添加到 **Google 日历** 或下载 **.ics** 文件添加到系统日历（苹果/Outlook）。
-
-- **💡 Missed Release Tips / 捡漏提示**:
-  - If the release date has passed, it provides advice on how to catch canceled tickets on the official site.
-  - 如果发售日期已过，提供关于如何蹲守官网捡漏退票的实用建议。
-
-- **🌐 Multi-language Support / 多语言支持**:
-  - Supports 15 languages including English, Chinese (Simplified/Traditional), Japanese, Korean, Spanish, French, German, Italian, etc.
-  - 支持15种语言，包括英语、简体中文、繁体中文、日语、韩语、西班牙语、法语、德语、意大利语等。
-
-- **🎨 Pixel Art Style / 像素风格**:
-  - A nostalgic UI design inspired by classic Nintendo aesthetics.
-  - 充满怀旧感的任天堂经典像素风格界面设计。
+<p align="center">
+  <b>English</b> ·
+  <a href="README.zh-CN.md">简体中文</a> ·
+  <a href="README.zh-TW.md">繁體中文</a> ·
+  <a href="README.ja.md">日本語</a> ·
+  <a href="README.ko.md">한국어</a> ·
+  <a href="README.es.md">Español</a>
+</p>
 
 ---
 
-## 🛠️ Tech Stack / 技术栈
+## ✨ Features
 
-- **Framework**: React + Vite
-- **Styling**: Tailwind CSS
-- **Icons**: Lucide React
-- **Internationalization**: i18next + react-i18next
-- **Date Handling**: date-fns
-- **State Management**: Zustand
+| | |
+|---|---|
+| 🗓️ **Next release card** | The exact on-sale date & time with a live countdown, plus one-click **Google Calendar** / **.ics** export |
+| 📊 **Current status** | Which months are accepting **lottery entries** and which are **on sale** right now |
+| 🧮 **Visit calculator** | Pick your visit month → see the full timeline: lottery entry → results → first-come sale, then add to calendar or share |
+| 📅 **Release schedule** | The next 6 months of lottery and sale dates at a glance |
+| 🌍 **Timezone conversion** | All times shown in your timezone automatically — no math needed |
+| 🎨 **Two themes** | A retro **Pixel** theme and a clean **Museum** theme that mirrors the official site's design language |
+| 🌐 **15 languages** | UI fully localized, per-language fonts included |
+| 🔗 **Share links** | `?visit=2026-11` deep links that pre-fill the calculator |
+| 📱 **Mobile-first** | Responsive layout, custom month picker, installable PWA |
 
----
+## 🗺️ How ticket sales work
 
-## 🚀 Local Development / 本地开发
+Nintendo Museum tickets are sold through **two channels** (both need a Nintendo Account):
 
-To run this project locally:
-要在本地运行此项目：
+- **Lottery (Drawing)**
+  - Entries open on the **1st of the month, 3 months before** your visit month, at **10:00 JST**
+  - Results announced on the **1st, 2 months before**, at **16:00 JST**
+- **First-come (On Sale)**
+  - Opens on the **2nd Wednesday, 2 months before** your visit month
+  - Sale time: **16:00 JST** for visits from **June 2026** onward; **14:00 JST** before that
 
-1. **Clone the repository / 克隆仓库**
-   ```bash
-   git clone https://github.com/signxer/nintendo-museum-ticket.git
-   cd nintendo-museum-ticket
-   ```
+> [!WARNING]
+> These times are based on historical patterns and official announcements and **may change at any time** — always confirm on the official website before relying on them.
 
-2. **Install dependencies / 安装依赖**
-   ```bash
-   npm install
-   ```
+## 🚀 Getting started
 
-3. **Start development server / 启动开发服务器**
-   ```bash
-   npm run dev
-   ```
+> Requires [Node.js](https://nodejs.org) 18+ and [pnpm](https://pnpm.io).
 
-4. **Build for production / 打包生产环境**
-   ```bash
-   npm run build
-   ```
+```bash
+# Install dependencies
+pnpm install
 
----
+# Start the dev server
+pnpm dev
 
-## ⚠️ Disclaimer / 免责声明
+# Type-check
+pnpm check
 
-**English**:
-This is a fan-made tool and is **not affiliated with, endorsed, sponsored, or specifically approved by Nintendo**. All trademarks and registered trademarks are the property of their respective owners. The ticket release times are based on historical patterns and official rules, but are subject to change by the official Nintendo Museum.
+# Lint
+pnpm lint
 
-**中文**:
-本工具为粉丝制作，**与任天堂公司无关，未获得其授权、赞助或特别批准**。所有商标及注册商标均归其各自所有者所有。门票发售时间基于历史规律和官方规则推算，如有变动请以任天堂博物馆官网为准。
+# Production build (also generates dist/404.html for GitHub Pages SPA routing)
+pnpm build
+
+# Preview the production build
+pnpm preview
+```
+
+## 🧱 Tech stack
+
+| Layer | Tech |
+|---|---|
+| Framework | React 18 · TypeScript · Vite 6 |
+| Styling | Tailwind CSS 3 (CSS-variable theming) |
+| State | Zustand |
+| i18n | i18next · react-i18next (lazy-loaded locale chunks) |
+| Routing | react-router-dom 7 |
+| Utilities | date-fns · lucide-react · canvas-confetti |
+
+## 📁 Project structure
+
+```
+src/
+├── components/     # UI components (cards, pickers, modal, …)
+├── pages/          # Home & About
+├── hooks/          # timezone / theme stores
+├── utils/          # ticket & lottery logic, calendar/ics, sharing
+├── locales/        # 15 language packs
+└── fonts/          # subset pixel fonts (woff2)
+public/             # favicons, manifest, service worker
+```
+
+## 🤝 Contributing
+
+Found a bug or have an idea? Open an [issue](https://github.com/signxer/nintendo-museum-ticket/issues) or submit a pull request. If you spot a release-date correction, please include the source (official announcement) — the sale times are the part most worth keeping accurate.
+
+## ⚖️ Disclaimer
+
+> [!IMPORTANT]
+> This is a **fan-made tool**, not the official Nintendo Museum website, and is not affiliated with, endorsed by, or approved by Nintendo.
+>
+> - Sale times are **inferred from historical patterns and official announcements** — for reference only.
+> - This tool **does not guarantee** that you will be able to purchase tickets, and is **not responsible** for any losses caused by schedule changes or failed purchases.
+> - **Nintendo** and all related trademarks and names are the property of their respective owners.
+> - This tool does **not collect or upload** any personal information; all preferences are stored locally in your browser.
+> - **Buy only on the official website** and never share your Nintendo Account details with unofficial channels.
+
+## 📄 License
+
+[MIT](LICENSE) © 2026 Livrestrela
