@@ -14,6 +14,7 @@ import { vibrate } from '../utils/haptics';
 import { getLocalYearMonth } from '../utils/dateHelper';
 import { shareText } from '../utils/share';
 import { cn } from '../lib/utils';
+import { MonthPicker } from './MonthPicker';
 
 /** Matches "YYYY-MM" so shared ?visit= links are validated before use. */
 const VISIT_PARAM_RE = /^\d{4}-(0[1-9]|1[0-2])$/;
@@ -157,29 +158,14 @@ export function TicketCalculator() {
             the way down on mobile browsers, and the auto button column can
             never be covered. */}
         <div className="grid grid-cols-[minmax(0,1fr)_auto] gap-2">
-          <div className="relative min-w-0">
-            <input
-              type="month"
-              value={visitMonth}
-              onChange={(e) => {
-                setVisitMonth(e.target.value);
-                setError('');
-              }}
-              className="pixel-input w-full min-w-0"
-              size={1}
-              min={getLocalYearMonth(new Date())}
-            />
-            {/* Native month-input text is hidden; this overlay renders the
-                localized placeholder (empty) or the chosen value. overflow-hidden
-                guarantees the text can never spill onto the button. */}
-            <span
-              className={`pointer-events-none absolute inset-0 flex items-center overflow-hidden px-4 font-pixel text-sm ${
-                visitMonth ? 'text-nintendo-dark' : 'text-nintendo-grey'
-              }`}
-            >
-              {visitMonth || t('home.visitDatePlaceholder')}
-            </span>
-          </div>
+          <MonthPicker
+            value={visitMonth}
+            onChange={(v) => {
+              setVisitMonth(v);
+              setError('');
+            }}
+            min={getLocalYearMonth(new Date())}
+          />
           <PixelButton onClick={handleCalculate} className="flex items-center">
             <CalcIcon className="w-4 h-4 mr-1.5 shrink-0" />
             {t('home.calculate')}
