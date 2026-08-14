@@ -48,9 +48,9 @@ export function ReleaseScheduleCard() {
           <thead>
             <tr className="border-b-4 border-nintendo-grey">
               <th className="py-2 pr-3 font-pixel text-nintendo-grey whitespace-nowrap">{t('home.visitMonth')}</th>
-              <th className="nm-lottery py-2 pr-3 font-pixel text-nintendo-grey whitespace-nowrap">{t('home.lotteryEntry')}</th>
-              <th className="nm-lottery py-2 pr-3 font-pixel text-nintendo-grey whitespace-nowrap">{t('home.lotteryResult')}</th>
-              <th className="nm-sale py-2 font-pixel text-nintendo-grey whitespace-nowrap">{t('home.firstCome')}</th>
+              <th className="nm-chip-lottery py-2 pr-3 font-pixel text-nintendo-grey whitespace-nowrap">{t('home.lotteryEntry')}</th>
+              <th className="nm-chip-lottery py-2 pr-3 font-pixel text-nintendo-grey whitespace-nowrap">{t('home.lotteryResult')}</th>
+              <th className="nm-chip-sale py-2 font-pixel text-nintendo-grey whitespace-nowrap">{t('home.firstCome')}</th>
             </tr>
           </thead>
           <tbody>
@@ -62,7 +62,7 @@ export function ReleaseScheduleCard() {
                 <td className="py-2 pr-3 font-pixel text-nintendo-dark whitespace-nowrap">{formatMonth(row.visit)}</td>
                 <td className="py-2 pr-3 whitespace-nowrap">{formatDateTime(row.lottery.entryOpen)}</td>
                 <td className="py-2 pr-3 whitespace-nowrap">{formatDateTime(row.lottery.result)}</td>
-                <td className="nm-sale py-2 font-pixel text-nintendo-red whitespace-nowrap">{formatDateTime(row.firstCome)}</td>
+                <td className="nm-chip-sale py-2 font-pixel text-nintendo-red whitespace-nowrap">{formatDateTime(row.firstCome)}</td>
               </tr>
             ))}
           </tbody>

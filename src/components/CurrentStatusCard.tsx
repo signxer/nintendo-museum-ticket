@@ -36,7 +36,7 @@ export function CurrentStatusCard() {
     <PixelCard title={t('home.currentStatus')} className="w-full text-center flex flex-col">
       <div className="space-y-5 flex-grow">
         <div>
-          <p className="nm-chip-lottery nm-lottery text-sm text-nintendo-grey mb-1">{t('home.lotteryRegistering')}</p>
+          <p className="nm-chip-lottery text-sm text-nintendo-grey mb-1">{t('home.lotteryRegistering')}</p>
           {openLotteryMonth ? (
             <p className="text-lg md:text-xl font-pixel text-nintendo-dark leading-snug break-words">
               {formatMonth(openLotteryMonth)}
@@ -49,7 +49,7 @@ export function CurrentStatusCard() {
         </div>
 
         <div className="border-t-2 border-dashed border-nintendo-grey pt-4">
-          <p className="nm-chip-sale nm-sale text-sm text-nintendo-grey mb-1">{t('home.firstComeAvailable')}</p>
+          <p className="nm-chip-sale text-sm text-nintendo-grey mb-1">{t('home.firstComeAvailable')}</p>
           <p className="text-lg md:text-xl font-pixel text-nintendo-dark leading-snug break-words">
             {onSaleText}
           </p>

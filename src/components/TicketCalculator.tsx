@@ -126,8 +126,8 @@ export function TicketCalculator() {
         <span
           className={cn(
             'text-xs text-nintendo-grey shrink-0',
-            tone === 'lottery' && 'nm-lottery',
-            tone === 'sale' && 'nm-sale'
+            tone === 'lottery' && 'nm-chip-lottery',
+            tone === 'sale' && 'nm-chip-sale'
           )}
         >
           {label}

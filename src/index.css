@@ -374,13 +374,8 @@ input[type="month"]::-webkit-datetime-edit {
 
 /* Status colors from the official calendar:
    orange #F67E1A = lottery/drawing, blue #3A9CE2 = on-sale/first-come.
-   The status-card labels render as the official-style solid chips. */
-.theme-official .nm-lottery {
-  color: #f67e1a;
-}
-.theme-official .nm-sale {
-  color: #3a9ce2;
-}
+   These two colors are ALWAYS rendered as solid chips with white text —
+   never as plain text color. */
 .theme-official .nm-chip-lottery,
 .theme-official .nm-chip-sale {
   display: inline-block;
@@ -389,6 +384,7 @@ input[type="month"]::-webkit-datetime-edit {
   font-weight: 700;
   line-height: 1.5;
   padding: 2px 10px;
+  white-space: nowrap;
 }
 .theme-official .nm-chip-lottery {
   background-color: #f67e1a;
