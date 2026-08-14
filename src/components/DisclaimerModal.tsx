@@ -47,11 +47,16 @@ export function DisclaimerModal() {
     >
       <div className="w-full max-w-md bg-white border-4 border-nintendo-dark shadow-pixel p-6">
         <h2 className="font-pixel text-lg md:text-xl text-nintendo-red mb-4">{t('disclaimer.title')}</h2>
-        <ul className="list-disc pl-5 space-y-3 text-sm text-nintendo-dark leading-relaxed">
+        <ul className="list-disc pl-5 space-y-3 text-sm text-nintendo-dark leading-relaxed max-h-[55vh] overflow-y-auto pr-2">
           <li>{t('disclaimer.intro')}</li>
+          <li>{t('disclaimer.rulesChange')}</li>
           <li>{t('disclaimer.timeNote')}</li>
           <li>{t('disclaimer.responsibility')}</li>
+          <li>{t('disclaimer.scam')}</li>
           <li>{t('disclaimer.trademark')}</li>
+          <li>{t('disclaimer.privacy')}</li>
+          <li>{t('disclaimer.externalLinks')}</li>
+          <li>{t('disclaimer.asIs')}</li>
         </ul>
         <div className="mt-6 flex justify-center">
           <PixelButton onClick={acknowledge} className="h-10 flex items-center">

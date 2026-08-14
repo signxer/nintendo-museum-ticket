@@ -74,6 +74,11 @@
     "timeNote": "Verkoopdata zijn gebaseerd op historische patronen en officiële aankondigingen, alleen ter referentie. Raadpleeg altijd de officiële website.",
     "responsibility": "Deze tool garandeert geen aankoop van tickets. Wij zijn niet verantwoordelijk voor verlies door gewijzigde data of mislukte aankopen.",
     "trademark": "Nintendo en alle gerelateerde merken en namen zijn eigendom van hun respectievelijke eigenaren.",
-    "acknowledge": "Ik begrijp het en ga akkoord — doorgaan"
+    "acknowledge": "Ik begrijp het en ga akkoord — doorgaan",
+    "rulesChange": "De officiële verkoopregels (methode, data en tijden van loterij/directe verkoop) kunnen op elk moment zonder kennisgeving veranderen. Deze tool is niet realtime gesynchroniseerd: controleer altijd de officiële website.",
+    "privacy": "Deze tool verzamelt of uploadt geen persoonlijke gegevens. Alle voorkeuren (taal, tijdzone, thema) worden alleen lokaal in uw browser opgeslagen.",
+    "scam": "Pas op voor oplichting: koop tickets alleen op de officiële website en geef uw Nintendo-accountgegevens nooit aan niet-officiële kanalen.",
+    "externalLinks": "Externe links (zoals de officiële website) worden alleen ter referentie aangeboden; wij zijn niet verantwoordelijk voor hun inhoud of veiligheid.",
+    "asIs": "Deze tool wordt \"as is\" aangeboden, zonder enige garantie, en kan op elk moment zonder kennisgeving worden gewijzigd of beëindigd."
   }
 }

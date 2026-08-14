@@ -74,6 +74,11 @@
     "timeNote": "Försäljningstider baseras på historiska mönster och officiella meddelanden, endast som referens. Kontrollera alltid den officiella webbplatsen.",
     "responsibility": "Detta verktyg garanterar inte biljettköp. Vi ansvarar inte för förluster på grund av ändrade tider eller misslyckade köp.",
     "trademark": "Nintendo och alla relaterade varumärken och namn tillhör respektive ägare.",
-    "acknowledge": "Jag förstår och godkänner — fortsätt"
+    "acknowledge": "Jag förstår och godkänner — fortsätt",
+    "rulesChange": "De officiella försäljningsreglerna (metod, datum och tider för lottning/direktförsäljning) kan ändras när som helst utan föregående meddelande. Verktyget är inte synkroniserat i realtid – kontrollera alltid den officiella webbplatsen.",
+    "privacy": "Detta verktyg samlar inte in eller laddar upp personuppgifter. Alla preferenser (språk, tidszon, tema) lagras endast lokalt i din webbläsare.",
+    "scam": "Akta dig för bedrägerier: köp biljetter endast på den officiella webbplatsen och lämna aldrig ut dina Nintendo-kontouppgifter till inofficiella kanaler.",
+    "externalLinks": "Externa länkar (som den officiella webbplatsen) tillhandahålls endast som referens; vi ansvarar inte för deras innehåll eller säkerhet.",
+    "asIs": "Detta verktyg tillhandahålls \"i befintligt skick\" utan garantier av något slag och kan ändras eller avslutas när som helst utan föregående meddelande."
   }
 }

@@ -74,6 +74,11 @@
     "timeNote": "Las fechas de venta se infieren de patrones históricos y anuncios oficiales, y son solo orientativas. Consulte siempre el sitio oficial del Nintendo Museum.",
     "responsibility": "Esta herramienta no garantiza que pueda comprar entradas. No nos hacemos responsables de pérdidas por cambios de fechas o compras fallidas.",
     "trademark": "Nintendo y todas las marcas y nombres relacionados pertenecen a sus respectivos dueños.",
-    "acknowledge": "Entiendo y acepto — continuar"
+    "acknowledge": "Entiendo y acepto — continuar",
+    "rulesChange": "Las reglas oficiales de venta (método, fechas y horarios del sorteo/venta directa) pueden cambiar en cualquier momento sin aviso. Esta herramienta no está sincronizada en tiempo real: confirme siempre en el sitio oficial.",
+    "privacy": "Esta herramienta no recopila ni sube información personal. Todas las preferencias (idioma, zona horaria, tema) se guardan solo localmente en su navegador.",
+    "scam": "Cuidado con las estafas: compre entradas solo en el sitio oficial y nunca proporcione su información de cuenta de Nintendo a canales no oficiales.",
+    "externalLinks": "Los enlaces externos (como el sitio oficial) se ofrecen solo como referencia; no somos responsables de su contenido o seguridad.",
+    "asIs": "Esta herramienta se proporciona \"tal cual\", sin garantías de ningún tipo, y puede modificarse o suspenderse en cualquier momento sin aviso."
   }
 }

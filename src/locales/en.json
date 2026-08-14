@@ -74,6 +74,11 @@
     "timeNote": "Ticket release times are inferred from historical patterns and official announcements and are provided for reference only. Always check the official Nintendo Museum website for the latest schedule.",
     "responsibility": "This tool makes no guarantee that you will be able to purchase tickets. We are not responsible for any losses caused by schedule changes or failed purchases.",
     "trademark": "Nintendo and all related trademarks and names are the property of their respective owners.",
-    "acknowledge": "I understand and agree — continue"
+    "acknowledge": "I understand and agree — continue",
+    "rulesChange": "The official sale rules (lottery / first-come method, dates and times) may change at any time without notice. This tool is not synced in real time — always confirm on the official website.",
+    "privacy": "This tool does not collect or upload any personal information. All preferences (language, timezone, theme) are stored only locally in your browser.",
+    "scam": "Beware of scams: buy tickets only on the official website and never provide your Nintendo Account information to unofficial channels.",
+    "externalLinks": "External links (such as the official website) are provided for reference only; we are not responsible for their content or security.",
+    "asIs": "This tool is provided \"as is\" without warranties of any kind, and may be modified or discontinued at any time without notice."
   }
 }

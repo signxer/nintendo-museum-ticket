@@ -74,6 +74,11 @@
     "timeNote": "Die Verkaufszeiten basieren auf historischen Mustern und offiziellen Ankündigungen und dienen nur als Referenz. Prüfen Sie immer die offizielle Website.",
     "responsibility": "Dieses Tool garantiert keinen Ticketkauf. Wir haften nicht für Verluste durch Terminänderungen oder fehlgeschlagene Käufe.",
     "trademark": "Nintendo und alle zugehörigen Marken und Namen sind Eigentum ihrer jeweiligen Inhaber.",
-    "acknowledge": "Ich habe verstanden und stimme zu — weiter"
+    "acknowledge": "Ich habe verstanden und stimme zu — weiter",
+    "rulesChange": "Die offiziellen Verkaufsregeln (Verfahren, Termine und Zeiten von Lotterie/Erstverkauf) können jederzeit ohne Vorankündigung geändert werden. Dieses Tool ist nicht in Echtzeit synchronisiert – prüfen Sie immer die offizielle Website.",
+    "privacy": "Dieses Tool erhebt und überträgt keine persönlichen Daten. Alle Einstellungen (Sprache, Zeitzone, Design) werden nur lokal in Ihrem Browser gespeichert.",
+    "scam": "Vorsicht vor Betrug: Kaufen Sie Tickets nur auf der offiziellen Website und geben Sie Nintendo-Kontodaten niemals an inoffizielle Kanäle weiter.",
+    "externalLinks": "Externe Links (z. B. zur offiziellen Website) dienen nur der Referenz; wir haften nicht für deren Inhalt oder Sicherheit.",
+    "asIs": "Dieses Tool wird \"wie besehen\" ohne jegliche Garantie bereitgestellt und kann jederzeit ohne Vorankündigung geändert oder eingestellt werden."
   }
 }

@@ -74,6 +74,11 @@
     "timeNote": "Le date di vendita sono dedotte da modelli storici e annunci ufficiali, solo come riferimento. Controlla sempre il sito ufficiale.",
     "responsibility": "Questo strumento non garantisce l'acquisto dei biglietti. Non siamo responsabili di perdite dovute a cambi di data o acquisti falliti.",
     "trademark": "Nintendo e tutti i marchi e nomi correlati appartengono ai rispettivi proprietari.",
-    "acknowledge": "Ho capito e accetto — continua"
+    "acknowledge": "Ho capito e accetto — continua",
+    "rulesChange": "Le regole ufficiali di vendita (metodo, date e orari di estrazione/vendita diretta) possono cambiare in qualsiasi momento senza preavviso. Questo strumento non è sincronizzato in tempo reale: verifica sempre sul sito ufficiale.",
+    "privacy": "Questo strumento non raccoglie né carica dati personali. Tutte le preferenze (lingua, fuso orario, tema) sono salvate solo localmente nel tuo browser.",
+    "scam": "Attenzione alle truffe: acquista i biglietti solo sul sito ufficiale e non fornire mai le credenziali del tuo account Nintendo a canali non ufficiali.",
+    "externalLinks": "I link esterni (come il sito ufficiale) sono forniti solo come riferimento; non siamo responsabili del loro contenuto o della loro sicurezza.",
+    "asIs": "Questo strumento è fornito «così com'è», senza alcuna garanzia, e può essere modificato o sospeso in qualsiasi momento senza preavviso."
   }
 }
