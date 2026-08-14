@@ -14,18 +14,14 @@ interface MonthPickerProps {
 const pad = (n: number) => String(n).padStart(2, '0');
 
 /**
- * Visit-month picker with two render paths:
- *  - Touch devices (pointer: coarse): the native <input type="month">, so
- *    tapping opens the platform picker (iOS wheel / Android calendar).
- *  - Desktop (pointer: fine): a custom popup styled with the page theme, so
- *    the picker matches the pixel / museum look instead of Chrome's stock
- *    month control.
+ * Visit-month picker rendered as a theme-styled trigger + custom popup on
+ * EVERY device. Deliberately no native <input type="month"> anywhere: on iOS
+ * Safari the fallback text field has a fixed intrinsic width that overflows
+ * the layout and covers the neighbouring button — a plain <button> trigger
+ * shrinks correctly in the grid, so the overlap cannot happen.
  */
 export function MonthPicker({ value, onChange, min }: MonthPickerProps) {
   const { t, i18n } = useTranslation();
-  const [isCoarse] = useState(
-    () => typeof window !== 'undefined' && window.matchMedia('(pointer: coarse)').matches
-  );
   const [open, setOpen] = useState(false);
   const [viewYear, setViewYear] = useState(() => {
     const current = value ? Number(value.slice(0, 4)) : new Date().getFullYear();
@@ -41,30 +37,6 @@ export function MonthPicker({ value, onChange, min }: MonthPickerProps) {
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
   }, [open]);
-
-  // Mobile: native input (keeps the platform picker). The overlay renders the
-  // localized placeholder / value because the native text is transparent.
-  if (isCoarse) {
-    return (
-      <div className="relative min-w-0">
-        <input
-          type="month"
-          value={value}
-          onChange={(e) => onChange(e.target.value)}
-          className="pixel-input w-full min-w-0"
-          size={1}
-          min={min}
-        />
-        <span
-          className={`pointer-events-none absolute inset-0 flex items-center overflow-hidden px-4 font-pixel text-sm ${
-            value ? 'text-nintendo-dark' : 'text-nintendo-grey'
-          }`}
-        >
-          {value || t('home.visitDatePlaceholder')}
-        </span>
-      </div>
-    );
-  }
 
   const monthName = (month: number) =>
     new Intl.DateTimeFormat(i18n.language, { month: 'short' }).format(new Date(2026, month, 1));
@@ -123,7 +95,7 @@ export function MonthPicker({ value, onChange, min }: MonthPickerProps) {
               </PixelButton>
             </div>
 
-            {/* Month grid */}
+            {/* Month grid — py-2 keeps the tap targets comfortable on touch. */}
             <div className="grid grid-cols-4 gap-2">
               {Array.from({ length: 12 }, (_, m) => {
                 const selected = value === `${viewYear}-${pad(m + 1)}`;
@@ -137,7 +109,7 @@ export function MonthPicker({ value, onChange, min }: MonthPickerProps) {
                       onChange(`${viewYear}-${pad(m + 1)}`);
                       setOpen(false);
                     }}
-                    className={`px-1 py-1.5 font-pixel text-xs border-2 border-nintendo-dark transition-colors ${
+                    className={`px-1 py-2 font-pixel text-xs border-2 border-nintendo-dark transition-colors ${
                       selected
                         ? 'bg-nintendo-red text-white'
                         : disabled

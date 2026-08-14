@@ -283,16 +283,6 @@ html.theme-official:not([lang^="zh"]):not([lang="ja"]):not([lang="ko"]) {
   }
 }
 
-/* Month inputs: hide the native text (value/hint) so a localized overlay can
-   render the placeholder — iOS Safari otherwise shows nothing when empty,
-   while desktop Chrome shows a generic "YYYY-MM". */
-input[type="month"] {
-  color: transparent;
-}
-input[type="month"]::-webkit-datetime-edit {
-  color: transparent;
-}
-
 /* ---- Official theme: strip the pixel look --------------------------------
    These rules are intentionally UNLAYERED so they beat Tailwind's layered
    utilities: in the official theme the same markup renders as flat, rounded,
