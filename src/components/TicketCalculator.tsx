@@ -153,7 +153,10 @@ export function TicketCalculator() {
         </label>
 
         <div className="flex gap-2">
-          <div className="relative flex-1">
+          {/* min-w-0 lets the input shrink below the native month control's
+              intrinsic width on mobile; the button never shrinks — this keeps
+              input and button side by side without overlapping. */}
+          <div className="relative flex-1 min-w-0">
             <input
               type="month"
               value={visitMonth}
@@ -161,20 +164,21 @@ export function TicketCalculator() {
                 setVisitMonth(e.target.value);
                 setError('');
               }}
-              className="pixel-input w-full"
+              className="pixel-input w-full min-w-0"
               min={getLocalYearMonth(new Date())}
             />
             {/* Native month-input text is hidden; this overlay renders the
-                localized placeholder (empty) or the chosen value. */}
+                localized placeholder (empty) or the chosen value. overflow-hidden
+                guarantees the text can never spill onto the button. */}
             <span
-              className={`pointer-events-none absolute inset-0 flex items-center px-4 font-pixel text-sm ${
+              className={`pointer-events-none absolute inset-0 flex items-center overflow-hidden px-4 font-pixel text-sm ${
                 visitMonth ? 'text-nintendo-dark' : 'text-nintendo-grey'
               }`}
             >
               {visitMonth || t('home.visitDatePlaceholder')}
             </span>
           </div>
-          <PixelButton onClick={handleCalculate}>
+          <PixelButton onClick={handleCalculate} className="shrink-0">
             {t('home.calculate')}
           </PixelButton>
         </div>
