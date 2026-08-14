@@ -32,9 +32,18 @@ export default function About() {
       </PixelCard>
       
       <PixelCard title={t('about.disclaimerTitle')}>
-        <p className="leading-relaxed text-nintendo-red">
-          {t('about.disclaimerContent')}
-        </p>
+        {/* The full disclaimer, matching the first-visit modal (same keys). */}
+        <ul className="list-disc pl-5 space-y-3 text-sm leading-relaxed text-nintendo-red">
+          <li>{t('disclaimer.intro')}</li>
+          <li>{t('disclaimer.rulesChange')}</li>
+          <li>{t('disclaimer.timeNote')}</li>
+          <li>{t('disclaimer.responsibility')}</li>
+          <li>{t('disclaimer.scam')}</li>
+          <li>{t('disclaimer.trademark')}</li>
+          <li>{t('disclaimer.privacy')}</li>
+          <li>{t('disclaimer.externalLinks')}</li>
+          <li>{t('disclaimer.asIs')}</li>
+        </ul>
       </PixelCard>
     </div>
   );

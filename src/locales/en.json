@@ -65,8 +65,7 @@
     "rulesContent": "Tickets are released on the 2nd Wednesday of every month at 16:00 JST (Japan Standard Time, UTC+9). Tickets are sold for visits 2 months later (e.g., in February, tickets for April are sold).",
     "guide": "How to use",
     "guideContent": "Check the 'Next Ticket Release' card on the home page to see the upcoming opportunity. Use the calculator below to plan ahead for a specific trip.",
-    "disclaimerTitle": "Disclaimer",
-    "disclaimerContent": "This tool is fan-made and not affiliated with Nintendo. Ticket release times are based on historical patterns. We are not responsible for any errors or missed tickets."
+    "disclaimerTitle": "Disclaimer"
   },
   "disclaimer": {
     "title": "Disclaimer",
