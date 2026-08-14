@@ -39,7 +39,12 @@ export function MonthPicker({ value, onChange, min }: MonthPickerProps) {
   }, [open]);
 
   const monthName = (month: number) =>
-    new Intl.DateTimeFormat(i18n.language, { month: 'short' }).format(new Date(2026, month, 1));
+    // .trim() guards against engines that pad the standalone month name
+    // (e.g. " Sep" or "Sep ") — a stray space breaks centering and can push
+    // the text past the cell border.
+    new Intl.DateTimeFormat(i18n.language, { month: 'short' })
+      .format(new Date(2026, month, 1))
+      .trim();
 
   const yearLabel = new Intl.DateTimeFormat(i18n.language, { year: 'numeric' }).format(
     new Date(viewYear, 0, 1)
@@ -109,7 +114,7 @@ export function MonthPicker({ value, onChange, min }: MonthPickerProps) {
                       onChange(`${viewYear}-${pad(m + 1)}`);
                       setOpen(false);
                     }}
-                    className={`px-1 py-2 font-pixel text-xs border-2 border-nintendo-dark transition-colors ${
+                    className={`nm-month-cell overflow-hidden whitespace-nowrap text-center border-2 border-nintendo-dark transition-colors ${
                       selected
                         ? 'bg-nintendo-red text-white'
                         : disabled

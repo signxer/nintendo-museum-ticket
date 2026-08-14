@@ -115,6 +115,13 @@
   font-size: 12px;
 }
 
+/* Month cells in the picker popup: compact padding + small type so long
+   localized month names never overflow the cell border. */
+.nm-month-cell {
+  padding: 6px 4px;
+  font-size: 12px;
+}
+
 /* Long (non-Chinese) titles: shrink the type and let them wrap to two lines
    inside the brand block, so the theme/language/timezone controls always stay
    on one line. Chinese titles are short and keep the default size. */
@@ -356,6 +363,10 @@ html.theme-official:not([lang^="zh"]):not([lang="ja"]):not([lang="ko"]) {
 /* Must come after the rules above to win at equal specificity. */
 .theme-official .nm-action-btn {
   padding: 4px 6px;
+  font-size: 12px;
+}
+.theme-official .nm-month-cell {
+  padding: 6px 4px;
   font-size: 12px;
 }
 /* Japanese labels (e.g. カレンダー) are wide — one step smaller. */
