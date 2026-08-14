@@ -89,9 +89,10 @@ function Layout({ children }: { children: React.ReactNode }) {
     <div className="min-h-screen flex flex-col">
       <header className="bg-nintendo-red border-b-4 border-nintendo-dark p-4 shadow-pixel sticky top-0 z-50">
         <div className="container-pixel flex flex-col md:flex-row justify-between items-center gap-4">
-          {/* Brand: shrinkable so long titles truncate instead of pushing the
-              controls off one line (non-Chinese titles are very long). */}
-          <div className="header-brand flex items-center gap-4 min-w-0 md:flex-1">
+          {/* Brand: shrink-to-fit — the slate block hugs logo + title. It
+              shrinks (never grows) so long titles wrap inside instead of
+              pushing the controls off one line. */}
+          <div className="header-brand flex items-center gap-4 min-w-0 shrink">
             {/* Logo / Title */}
             <div className="logo-tile shrink-0 bg-white p-2 border-2 border-nintendo-dark shadow-pixel-sm transform rotate-[-2deg]">
               <Landmark className="text-nintendo-red w-6 h-6 md:w-8 md:h-8" />
@@ -101,7 +102,7 @@ function Layout({ children }: { children: React.ReactNode }) {
             </h1>
           </div>
           
-          <div className="flex flex-wrap items-center justify-center md:justify-end gap-2 sm:gap-3">
+          <div className="flex flex-wrap items-center justify-center md:justify-end gap-2 sm:gap-3 shrink-0">
             {/* Theme toggle sits outside the language/timezone panel. */}
             <ThemeSwitcher theme={theme} onToggle={toggleTheme} />
             <div className="flex flex-wrap justify-center gap-2 sm:gap-3 glass-pixel p-1.5 sm:p-2 rounded border-2 border-nintendo-dark shadow-pixel-sm">
