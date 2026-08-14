@@ -15,6 +15,13 @@ import { vibrate } from '../utils/haptics';
 const REMIND_LEAD_MS = 10 * 60 * 1000;
 const REMINDER_KEY = 'nmt-reminder';
 
+/**
+ * Browser timers clamp delays above 2^31−1 ms (~24.8 days) down to ~1 ms —
+ * a release 26 days out would otherwise fire the notification instantly.
+ * The reminder timer chains shorter timeouts instead (see scheduleReminder).
+ */
+const MAX_TIMEOUT_MS = 2_147_483_647;
+
 interface StoredReminder {
   releaseTime: number;
 }
@@ -111,15 +118,21 @@ export function NextReleaseCard() {
 
   // ---- Reminder ----------------------------------------------------------
 
-  /** Arms the in-page timer; returns false when it's already too late to arm. */
+  /**
+   * Arms the in-page timer; returns false when it's already too late to arm.
+   * The timeout is chained in ≤ MAX_TIMEOUT_MS steps so a far-future release
+   * never trips the browser's 32-bit timer clamp (which would fire instantly).
+   */
   const scheduleReminder = useCallback((release: Date): boolean => {
     if (remindTimerRef.current !== null) {
       window.clearTimeout(remindTimerRef.current);
       remindTimerRef.current = null;
     }
-    const delay = release.getTime() - REMIND_LEAD_MS - Date.now();
+    const fireAt = release.getTime() - REMIND_LEAD_MS;
+    const delay = fireAt - Date.now();
     if (delay <= 0) return false; // too late to arm
-    remindTimerRef.current = window.setTimeout(() => {
+
+    const fireReminder = () => {
       try {
         new Notification(t('home.remindNotifTitle'), {
           body: t('home.remindNotifBody'),
@@ -133,13 +146,25 @@ export function NextReleaseCard() {
       } catch { /* ignore */ }
       setRemindState('idle');
       remindTimerRef.current = null;
-    }, delay);
+    };
+
+    const tick = () => {
+      const remaining = fireAt - Date.now();
+      if (remaining <= 0) {
+        fireReminder();
+        return;
+      }
+      remindTimerRef.current = window.setTimeout(tick, Math.min(remaining, MAX_TIMEOUT_MS));
+    };
+
+    remindTimerRef.current = window.setTimeout(tick, Math.min(delay, MAX_TIMEOUT_MS));
     return true;
   }, [t]);
 
   // Re-arm a persisted reminder after reload; drop ones that no longer match
   // the current release (e.g. the countdown already rolled over, or the
-  // release passed while the page was closed).
+  // release passed while the page was closed). Always sync the button state —
+  // a stale localStorage entry must not leave the UI claiming a reminder is set.
   useEffect(() => {
     const stored = readStoredReminder();
     if (stored && stored.releaseTime === releaseInfo.releaseDate.getTime()) {
@@ -155,6 +180,7 @@ export function NextReleaseCard() {
       try {
         localStorage.removeItem(REMINDER_KEY);
       } catch { /* ignore */ }
+      setRemindState('idle');
     }
     return () => {
       if (remindTimerRef.current !== null) window.clearTimeout(remindTimerRef.current);
