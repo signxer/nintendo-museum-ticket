@@ -1,5 +1,5 @@
 {
-  "name": "Nintendo Museum Ticket Checker",
+  "name": "Nintendo Museum Ticket Assistant",
   "short_name": "NMT Tickets",
   "description": "Find out exactly when Nintendo Museum (Kyoto) tickets go on sale, in your local timezone.",
   "start_url": "/",
